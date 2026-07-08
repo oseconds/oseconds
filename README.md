@@ -3,6 +3,9 @@
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
 
+[![oseconds's GitHub stats](https://github-readme-stats.vercel.app/api?username=oseconds)&hide=stars,contribs&count_private=true&show_icons=true)
+
+
 <!--
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=4&display_format=percent&theme=great-gatsby)](https://wakatime.com/@oseconds)
 -->
