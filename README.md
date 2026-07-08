@@ -1,7 +1,7 @@
-## Hi there 👋
+## Hi
 
-[![oseconds's GitHub stats](https://github-stats-extended.vercel.app/api?username=oseconds)](https://github.com/stats-organization/github-stats-extended)
 
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
 <!--
 **oseconds/oseconds** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
