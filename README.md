@@ -2,6 +2,9 @@
 
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
+
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=4&display_format=percent&theme=great-gatsby)](https://wakatime.com/@oseconds)
+
 <!--
 **oseconds/oseconds** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
