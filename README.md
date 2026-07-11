@@ -6,6 +6,8 @@
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=6&theme=great-gatsby)](https://wakatime.com/@oseconds)
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=prs_merged_percentage,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage,prs_commented,prs_reviewed,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)
 
