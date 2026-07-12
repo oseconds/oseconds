@@ -4,8 +4,6 @@
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=6&theme=great-gatsby)](https://wakatime.com/@oseconds)
-
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-19%20hrs%206%20mins-blue?style=flat)
 
