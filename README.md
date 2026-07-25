@@ -5,13 +5,15 @@
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
 
 <!--START_SECTION:waka-->
-![Profile Views](http://img.shields.io/badge/Profile%20Views-36-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-21%20hrs%2030%20mins-blue?style=flat)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-38-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
 > 📦 6.6 MB Used in GitHub's Storage 
  > 
-> 🏆 217 Contributions in the Year 2026
+> 🏆 218 Contributions in the Year 2026
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -19,14 +21,53 @@
  > 
 > 🔑 7 Private Repositories 
  > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                11 commits          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.99 % 
+🌆 Daytime                492 commits         ███████████░░░░░░░░░░░░░░   44.24 % 
+🌃 Evening                320 commits         ███████░░░░░░░░░░░░░░░░░░   28.78 % 
+🌙 Night                  289 commits         ██████░░░░░░░░░░░░░░░░░░░   25.99 % 
+```
+📅 **I'm Most Productive on Tuesday** 
+
+```text
+Monday                   55 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.95 % 
+Tuesday                  348 commits         ████████░░░░░░░░░░░░░░░░░   31.29 % 
+Wednesday                214 commits         █████░░░░░░░░░░░░░░░░░░░░   19.24 % 
+Thursday                 125 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.24 % 
+Friday                   270 commits         ██████░░░░░░░░░░░░░░░░░░░   24.28 % 
+Saturday                 50 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.50 % 
+Sunday                   50 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.50 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Seoul
+
+💬 Programming Languages: 
+Text                     2 mins              █████████████████████████   100.00 % 
+
+🔥 Editors: 
+VS Code                  2 mins              █████████████████████████   100.00 % 
+
+🐱‍💻 Projects: 
+260711_Yanji_AeComp      2 mins              █████████████████████████   100.00 % 
+
+💻 Operating System: 
+Windows                  2 mins              █████████████████████████   100.00 % 
+```
+
 **I Mostly Code in JavaScript** 
 
 ```text
-JavaScript               10 repos            ███████████████░░░░░░░░░░   58.82 % 
-Svelte                   3 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.65 % 
-Python                   1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.88 % 
-SuperCollider            1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.88 % 
-HTML                     1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.88 % 
+JavaScript               10 repos            ██████████████░░░░░░░░░░░   55.56 % 
+Svelte                   3 repos             ████░░░░░░░░░░░░░░░░░░░░░   16.67 % 
+HTML                     2 repos             ███░░░░░░░░░░░░░░░░░░░░░░   11.11 % 
+Python                   1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.56 % 
+SuperCollider            1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.56 % 
 ```
 
 
@@ -36,7 +77,7 @@ HTML                     1 repo              █░░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/oseconds/oseconds/main/assets/bar_graph.png)
 
 
- Last Updated on 24/07/2026 19:55:54 UTC
+ Last Updated on 25/07/2026 19:42:48 UTC
 <!--END_SECTION:waka-->
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=prs_merged_percentage,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage,prs_commented,prs_reviewed,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)
