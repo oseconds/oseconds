@@ -5,15 +5,17 @@
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-21%20hrs%2030%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-22%20hrs%2036%20mins-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-4-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-6%20hrs%2024%20mins-blue?style=flat)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-2-blue?style=flat)
 
 **🐱 My GitHub Data** 
 
-> 📦 7.5 MB Used in GitHub's Storage 
+> 📦 8.4 MB Used in GitHub's Storage 
  > 
-> 🏆 237 Contributions in the Year 2026
+> 🏆 245 Contributions in the Year 2026
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -25,20 +27,20 @@
 
 ```text
 🌞 Morning                11 commits          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.97 % 
-🌆 Daytime                503 commits         ███████████░░░░░░░░░░░░░░   44.51 % 
-🌃 Evening                327 commits         ███████░░░░░░░░░░░░░░░░░░   28.94 % 
-🌙 Night                  289 commits         ██████░░░░░░░░░░░░░░░░░░░   25.58 % 
+🌆 Daytime                511 commits         ███████████░░░░░░░░░░░░░░   44.90 % 
+🌃 Evening                327 commits         ███████░░░░░░░░░░░░░░░░░░   28.73 % 
+🌙 Night                  289 commits         ██████░░░░░░░░░░░░░░░░░░░   25.40 % 
 ```
 📅 **I'm Most Productive on Tuesday** 
 
 ```text
-Monday                   55 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.87 % 
-Tuesday                  348 commits         ████████░░░░░░░░░░░░░░░░░   30.80 % 
-Wednesday                214 commits         █████░░░░░░░░░░░░░░░░░░░░   18.94 % 
-Thursday                 125 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.06 % 
-Friday                   270 commits         ██████░░░░░░░░░░░░░░░░░░░   23.89 % 
-Saturday                 50 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.42 % 
-Sunday                   68 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   06.02 % 
+Monday                   63 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.54 % 
+Tuesday                  348 commits         ████████░░░░░░░░░░░░░░░░░   30.58 % 
+Wednesday                214 commits         █████░░░░░░░░░░░░░░░░░░░░   18.80 % 
+Thursday                 125 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.98 % 
+Friday                   270 commits         ██████░░░░░░░░░░░░░░░░░░░   23.73 % 
+Saturday                 50 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.39 % 
+Sunday                   68 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.98 % 
 ```
 
 
@@ -48,18 +50,27 @@ Sunday                   68 commits          ██░░░░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Text                     2 hrs 4 mins        █████████████████████████   99.89 % 
-Other                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
+Text                     3 hrs 48 mins       ████████████████████████░   94.16 % 
+JSON                     8 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   03.35 % 
+INI                      5 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   02.19 % 
+CSS                      0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.21 % 
+Other                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
 
 🔥 Editors: 
-VS Code                  2 hrs 4 mins        █████████████████████████   100.00 % 
+VS Code                  4 hrs 2 mins        █████████████████████████   100.00 % 
 
 🐱‍💻 Projects: 
-Yanji_Zone_H             2 hrs 1 min         ████████████████████████░   97.72 % 
-260711_Yanji_AeComp      2 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   02.28 % 
+Yanji_Zone_H             3 hrs 59 mins       █████████████████████████   98.83 % 
+260711_Yanji_AeComp      2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.17 % 
 
 💻 Operating System: 
-Windows                  2 hrs 4 mins        █████████████████████████   100.00 % 
+Windows                  4 hrs 2 mins        █████████████████████████   100.00 % 
+```
+
+🤖 **AI Coding This Week** 
+
+```text
+No AI Coding Activity Tracked This Week
 ```
 
 **I Mostly Code in JavaScript** 
@@ -79,7 +90,7 @@ SuperCollider            1 repo              █░░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/oseconds/oseconds/main/assets/bar_graph.png)
 
 
- Last Updated on 26/07/2026 19:44:24 UTC
+ Last Updated on 27/07/2026 20:04:46 UTC
 <!--END_SECTION:waka-->
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=prs_merged_percentage,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage,prs_commented,prs_reviewed,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)
