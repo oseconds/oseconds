@@ -5,10 +5,6 @@
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-22%20hrs%2036%20mins-blue?style=flat)
-
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-6%20hrs%2024%20mins-blue?style=flat)
-
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-2-blue?style=flat)
 
 **🐱 My GitHub Data** 
@@ -26,21 +22,21 @@
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                11 commits          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.97 % 
-🌆 Daytime                511 commits         ███████████░░░░░░░░░░░░░░   44.90 % 
-🌃 Evening                327 commits         ███████░░░░░░░░░░░░░░░░░░   28.73 % 
-🌙 Night                  289 commits         ██████░░░░░░░░░░░░░░░░░░░   25.40 % 
+🌞 Morning                8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.75 % 
+🌆 Daytime                502 commits         ████████████░░░░░░░░░░░░░   47.36 % 
+🌃 Evening                291 commits         ███████░░░░░░░░░░░░░░░░░░   27.45 % 
+🌙 Night                  259 commits         ██████░░░░░░░░░░░░░░░░░░░   24.43 % 
 ```
 📅 **I'm Most Productive on Tuesday** 
 
 ```text
-Monday                   63 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.54 % 
-Tuesday                  348 commits         ████████░░░░░░░░░░░░░░░░░   30.58 % 
-Wednesday                214 commits         █████░░░░░░░░░░░░░░░░░░░░   18.80 % 
-Thursday                 125 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.98 % 
-Friday                   270 commits         ██████░░░░░░░░░░░░░░░░░░░   23.73 % 
-Saturday                 50 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.39 % 
-Sunday                   68 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.98 % 
+Monday                   56 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.28 % 
+Tuesday                  337 commits         ████████░░░░░░░░░░░░░░░░░   31.79 % 
+Wednesday                202 commits         █████░░░░░░░░░░░░░░░░░░░░   19.06 % 
+Thursday                 118 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.13 % 
+Friday                   257 commits         ██████░░░░░░░░░░░░░░░░░░░   24.25 % 
+Saturday                 40 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   03.77 % 
+Sunday                   50 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.72 % 
 ```
 
 
@@ -90,7 +86,7 @@ SuperCollider            1 repo              █░░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/oseconds/oseconds/main/assets/bar_graph.png)
 
 
- Last Updated on 27/07/2026 20:04:46 UTC
+ Last Updated on 28/07/2026 20:01:38 UTC
 <!--END_SECTION:waka-->
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=prs_merged_percentage,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)](https://github-stats-extended.vercel.app/api?username=oseconds&rank_icon=github&hide_title=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage,prs_commented,prs_reviewed,issues_commented&show_icons=true&include_all_commits=true&theme=default_repocard)
