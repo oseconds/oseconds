@@ -6,6 +6,8 @@
 
 ## ⚡ Activity Overview
 
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=6&theme=great-gatsby)](https://wakatime.com/@oseconds)
+
 <!--START_SECTION:activity-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-28%20hrs%2028%20mins-blue?style=flat)
 
