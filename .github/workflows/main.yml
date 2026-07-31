@@ -27,7 +27,7 @@ jobs:
           SHOW_COMMIT: "True"
 
           SHOW_LOC_CHART: "True"
-          SHOW_DAYS_OF_WEEK: "True"
+          SHOW_DAYS_OF_WEEK: "False"
 
           SHOW_AI_CODE_TIME: "False"
           SHOW_AI_CODING: "False"
@@ -44,10 +44,10 @@ jobs:
           COMMIT_BY_ME: "False"
           COMMIT_MESSAGE: "Update Activity Overview"
 
-          LOCALE: "en"
+          LOCALE: "ko"
           UPDATED_DATE_FORMAT: "%Y-%m-%d"
 
-          MAX_REPOS: "8"
+          
 
           SYMBOL_VERSION: "2"
           BADGE_STYLE: "flat"
