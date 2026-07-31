@@ -8,93 +8,58 @@
 ## ⚡ Activity Overview
 
 <!--START_SECTION:activity-->
-![Code Time](http://img.shields.io/badge/Code%20Time-24%20hrs%2034%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-28%20hrs%2028%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-6%20hrs%2024%20mins-blue?style=flat)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-681.84%20thousand%20lines%20of%20code-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-3-blue?style=flat)
-
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.37%20million%20lines%20of%20code-blue?style=flat)
-
-**🐱 My GitHub Data** 
-
-> 📦 8.5 MB Used in GitHub's Storage 
- > 
-> 🏆 358 Contributions in the Year 2026
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 20 Public Repositories 
- > 
-> 🔑 9 Private Repositories 
- > 
-**I'm a Night 🦉** 
+**I'm an Early 🐤** 
 
 ```text
-🌞 Morning                22 commits          ░░░░░░░░░░░░░░░░░░░░░░░░░   01.76 % 
-🌆 Daytime                554 commits         ███████████░░░░░░░░░░░░░░   44.32 % 
-🌃 Evening                384 commits         ████████░░░░░░░░░░░░░░░░░   30.72 % 
-🌙 Night                  290 commits         ██████░░░░░░░░░░░░░░░░░░░   23.20 % 
+🌞 Morning                11 commits          ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   08.27 % 
+🌆 Daytime                61 commits          ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   45.86 % 
+🌃 Evening                61 commits          ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   45.86 % 
+🌙 Night                  0 commits           ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.00 % 
 ```
-📅 **I'm Most Productive on Tuesday** 
+📅 **I'm Most Productive on Wednesday** 
 
 ```text
-Monday                   64 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.12 % 
-Tuesday                  348 commits         ███████░░░░░░░░░░░░░░░░░░   27.84 % 
-Wednesday                279 commits         ██████░░░░░░░░░░░░░░░░░░░   22.32 % 
-Thursday                 125 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
-Friday                   315 commits         ██████░░░░░░░░░░░░░░░░░░░   25.20 % 
-Saturday                 51 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.08 % 
-Sunday                   68 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.44 % 
+Monday                   9 commits           ⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   06.77 % 
+Tuesday                  0 commits           ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.00 % 
+Wednesday                65 commits          ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   48.87 % 
+Thursday                 0 commits           ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.00 % 
+Friday                   42 commits          ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   31.58 % 
+Saturday                 0 commits           ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.00 % 
+Sunday                   17 commits          ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   12.78 % 
 ```
 
 
 📊 **This Week I Spent My Time On** 
 
 ```text
-🕑︎ Time Zone: Asia/Seoul
-
 💬 Programming Languages: 
-Text                     3 hrs 45 mins       ████████████████████████░   94.10 % 
-JSON                     8 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   03.38 % 
-INI                      5 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   02.21 % 
-CSS                      0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.21 % 
-Other                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
+Text                     3 hrs 48 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   47.74 % 
+TypeScript               3 hrs 10 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   39.75 % 
+JSON                     20 mins             ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   04.31 % 
+TSConfig                 14 mins             ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   03.11 % 
+HTML                     6 mins              ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   01.39 % 
 
 🔥 Editors: 
-VS Code                  3 hrs 59 mins       █████████████████████████   100.00 % 
+VS Code                  7 hrs 58 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   100.00 % 
 
 🐱‍💻 Projects: 
-Yanji_Zone_H             3 hrs 59 mins       █████████████████████████   100.00 % 
-
-💻 Operating System: 
-Windows                  3 hrs 59 mins       █████████████████████████   100.00 % 
+Yanji_Zone_H             4 hrs 2 mins        ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   50.70 % 
+Ableton_Extension_test   2 hrs 30 mins       ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   31.37 % 
+extensions-sdk-1.0.0-beta1 hr 3 mins         ⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   13.36 % 
+Ablton_Extensions_SDK_1.011 mins             ⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   02.40 % 
+Ableton_Extensions_SDK_1.6 mins              ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   01.31 % 
 ```
-
-🤖 **AI Coding This Week** 
-
-```text
-No AI Coding Activity Tracked This Week
-```
-
-**I Mostly Code in JavaScript** 
-
-```text
-JavaScript               11 repos            ██████████████░░░░░░░░░░░   55.00 % 
-Svelte                   3 repos             ████░░░░░░░░░░░░░░░░░░░░░   15.00 % 
-HTML                     2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
-TypeScript               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.00 % 
-Python                   1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.00 % 
-```
-
-
 
 **Timeline**
 
 ![Lines of Code chart](https://raw.githubusercontent.com/oseconds/oseconds/main/assets/bar_graph.png)
 
 
- Last Updated on 31/07/2026 15:04:32 UTC
+ Last Updated on 2026-07-31 UTC
 <!--END_SECTION:activity-->
 
 
