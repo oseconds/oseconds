@@ -20,6 +20,7 @@ jobs:
 
           SHOW_TOTAL_CODE_TIME: "True"
           SHOW_LINES_OF_CODE: "True"
+
           SHOW_LANGUAGE: "True"
           LANG_COUNT: "10"
 
@@ -28,3 +29,12 @@ jobs:
 
           SHOW_EDITORS: "True"
           EDITORS_COUNT: "3"
+
+          SHOW_MACHINE: "True"
+
+          SHOW_COMMIT: "True"
+
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_OS: "False"
+          SHOW_TIMEZONE: "False"
+  
