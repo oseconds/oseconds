@@ -44,7 +44,7 @@ jobs:
           COMMIT_BY_ME: "False"
           COMMIT_MESSAGE: "Update Activity Overview"
 
-          LOCALE: "us"
+          LOCALE: "en"
           UPDATED_DATE_FORMAT: "%Y-%m-%d"
 
           
