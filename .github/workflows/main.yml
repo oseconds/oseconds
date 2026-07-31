@@ -11,6 +11,17 @@
       runs-on: ubuntu-latest
       steps:
         - uses: anmol098/waka-readme-stats@master
-          with:
-            WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-            GH_TOKEN: ${{ secrets.GH_TOKEN }}
+         with:
+  WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+  SECTION_NAME: "activity"
+
+  SHOW_TOTAL_CODE_TIME: "True"
+  SHOW_LINES_OF_CODE: "True"
+  SHOW_LANGUAGE: "True"
+  LANG_COUNT: "10"
+  SHOW_PROJECTS: "True"
+  PROJECTS_COUNT: "8"
+  SHOW_EDITORS: "True"
+  EDITORS_COUNT: "3"
