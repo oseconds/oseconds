@@ -3,7 +3,6 @@
 
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark)
-
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=5&theme=great-gatsby)](https://wakatime.com/@oseconds)
 
 ## ⚡ Activity Overview
