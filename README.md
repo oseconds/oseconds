@@ -4,9 +4,9 @@
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark)
 
-## ⚡ Activity Overview
-
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/wakatime?username=oseconds&langs_count=6&theme=great-gatsby)](https://wakatime.com/@oseconds)
+
+## ⚡ Activity Overview
 
 <!--START_SECTION:activity-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-28%20hrs%2028%20mins-blue?style=flat)
