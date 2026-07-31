@@ -2,8 +2,7 @@
 
 
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=8&theme=great-gatsby)
-
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark)](https://github-stats-extended.vercel.app/api/top-langs?username=oseconds&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark)
 
 ## ⚡ Activity Overview
 
