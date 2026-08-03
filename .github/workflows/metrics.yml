@@ -27,7 +27,7 @@ jobs:
     
     
           plugin_lines: yes
-          plugin_lines_sections: repositories,history
+          plugin_lines_sections: base
     
     
       - name: Topics
