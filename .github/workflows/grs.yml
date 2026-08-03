@@ -19,7 +19,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark&card_width=320
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_values=true&theme=vision-friendly-dark
           path: profile/top-langs.svg
           token: ${{ secrets.GH_TOKEN }}
 
@@ -27,7 +27,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: wakatime
-          options: username=oseconds&langs_count=5&theme=great-gatsby&card_width=320
+          options: username=oseconds&langs_count=5&theme=great-gatsby
           path: profile/wakatime.svg
           token: ${{ secrets.GH_TOKEN }}
 
