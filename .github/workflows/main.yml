@@ -18,7 +18,7 @@ jobs:
 
           SECTION_NAME: "activity"
 
-          SHOW_TOTAL_CODE_TIME: "True"
+          SHOW_TOTAL_CODE_TIME: "False"
           SHOW_LINES_OF_CODE: "True"
           SHOW_LANGUAGE: "False"
           SHOW_PROJECTS: "False"
