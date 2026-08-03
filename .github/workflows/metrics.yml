@@ -26,16 +26,6 @@ jobs:
           config_timezone: Asia/Seoul
     
     
-      - name: Lines
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: oseconds
-    
-          template: classic
-          base: ""
-          filename: profile/lines.svg
-    
           plugin_lines: yes
           plugin_lines_sections: repositories,history
     
