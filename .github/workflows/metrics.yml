@@ -1,4 +1,4 @@
-name: Metrics
+ㅏname: Metrics
 
 on:
   schedule:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Activity
-        uses: oseconds/metrics@master
+        uses: oseconds/metrics@main
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
@@ -24,10 +24,6 @@ jobs:
           filename: profile/activity.svg
     
           config_timezone: Asia/Seoul
-    
-    
-          plugin_lines: yes
-          plugin_lines_sections: base
     
     
       - name: Topics
