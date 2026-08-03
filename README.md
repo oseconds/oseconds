@@ -8,10 +8,10 @@
 
 
   <a href="https://github.com/oseconds">
-    <img height="200" src="./profile/top-langs.svg" />
+    <img width="320" height="200" src="./profile/top-langs.svg" />
   </a>
   &nbsp;&nbsp;
   <a href="https://wakatime.com/@oseconds">
-    <img height="200" src="./profile/wakatime.svg" />
+    <img width="320" height="200" src="./profile/wakatime.svg" />
   </a>
 
