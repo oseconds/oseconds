@@ -63,7 +63,7 @@ jobs:
     
           template: classic
           base: ""
-          filename: profile/wakatime.svg
+          filename: profile/mt-wakatime.svg
     
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
