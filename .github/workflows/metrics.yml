@@ -37,7 +37,7 @@ jobs:
           filename: profile/lines.svg
     
           plugin_lines: yes
-          plugin_lines_sections: base
+          plugin_lines_sections: repositories, history
     
     
       - name: Topics
