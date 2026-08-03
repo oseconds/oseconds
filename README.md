@@ -8,9 +8,9 @@
 
 
 <a href="https://github.com/oseconds">
-  <img width="320" height="200" src="./profile/top-langs.svg" />
+  <img height="200" src="./profile/top-langs.svg" />
 </a>
 
 <a href="https://wakatime.com/@oseconds">
-  <img width="320" height="200" src="./profile/wakatime.svg" />
+  <img height="200" src="./profile/wakatime.svg" />
 </a>
