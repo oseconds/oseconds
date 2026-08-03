@@ -6,11 +6,12 @@
 
 <!--END_SECTION:activity-->
 
-<a href="https://github.com/oseconds">
-  <img height="200" align="center" src="./profile/top-langs.svg" />
-</a>
-&nbsp;&nbsp;
-<a href="https://wakatime.com/@oseconds">
-  <img height="200" align="center" src="./profile/wakatime.svg" />
-</a>
-
+<p align="center">
+  <a href="https://github.com/oseconds">
+    <img height="200" src="./profile/top-langs.svg" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://wakatime.com/@oseconds">
+    <img height="200" src="./profile/wakatime.svg" />
+  </a>
+</p>
