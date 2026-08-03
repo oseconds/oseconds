@@ -1,0 +1,33 @@
+name: Metrics Languages Indepth
+
+on:
+  schedule:
+    - cron: "0 0 * * 3"
+  workflow_dispatch:
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Languages Recent
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+      
+          user: oseconds
+      
+          filename: metrics-languages-recent.svg
+      
+          base: ""
+      
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_sections: recently-used
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_languages_recent_load: 300
+          plugin_languages_recent_days: 14
