@@ -12,5 +12,5 @@
 </a>
 
 <a href="https://wakatime.com/@oseconds">
-  <img height="190" src="./profile/wakatime.svg" />
+  <img height="200" src="./profile/wakatime.svg" />
 </a>
