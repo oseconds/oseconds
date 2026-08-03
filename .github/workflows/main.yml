@@ -20,13 +20,13 @@ jobs:
 
           SHOW_TOTAL_CODE_TIME: "True"
           SHOW_LINES_OF_CODE: "True"
-          SHOW_LANGUAGE: "True"
-          SHOW_PROJECTS: "True"
+          SHOW_LANGUAGE: "False"
+          SHOW_PROJECTS: "False"
           SHOW_EDITORS: "False"
 
           SHOW_COMMIT: "False"
 
-          SHOW_LOC_CHART: "True"
+          SHOW_LOC_CHART: "False"
           SHOW_DAYS_OF_WEEK: "False"
 
           SHOW_AI_CODE_TIME: "False"
@@ -39,7 +39,7 @@ jobs:
           SHOW_PROFILE_VIEWS: "False"
           SHOW_SHORT_INFO: "False"
 
-          SHOW_UPDATED_DATE: "True"
+          SHOW_UPDATED_DATE: "False"
 
           COMMIT_BY_ME: "False"
           COMMIT_MESSAGE: "Update Activity Overview"
