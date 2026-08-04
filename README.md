@@ -16,6 +16,37 @@
 
 <!-- <img src="./profile/habits.svg" /> -->
 ![alt text](profile/habits.svg)
+
+
+
+
+## Stack
+
+### Audio  
+<div>
+<img src="./custom-icon/ableton.svg" height="32" title="Ableton"/>
+<img src="./custom-icon/max.svg" height="32" title="Max/MSP"/>
+<img src="./custom-icon/strudel.svg" height="32" title="Strudel"/>
+<img src="./custom-icon/tidalcycles.svg" height="32" title="TidalCycles"/>
+</div>
+
+### Visual  
+<div>
+<img src="./custom-icon/touchdesigner.svg" height="32" title="TouchDesigner"/>
+<img src="./custom-icon/aftereffect.svg" height="32" title="After Effects"/>
+<img src="./custom-icon/blender.svg" height="32" title="Blender"/>
+</div>
+
+### AI  
+<div>
+<img src="./custom-icon/comfyui.svg" height="32" title="ComfyUI"/>
+<img src="./custom-icon/kling.svg" height="32" title="Kling"/>
+<img src="./custom-icon/seedance.svg" height="32" title="Seedance"/>
+</div>
+
+
+
+
 <img src="./profile/topics.svg" />
 
 
