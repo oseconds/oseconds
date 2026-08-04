@@ -16,6 +16,8 @@ jobs:
       - name: Languages Recent
         uses: oseconds/metrics@master
         with:
+          use_prebuilt_image: no
+          
           token: ${{ secrets.METRICS_TOKEN }}
 
           user: oseconds
@@ -24,7 +26,7 @@ jobs:
           base: ""
 
           plugin_languages: yes
-          plugin_languages_indepth: no
+          plugin_languages_indepth: yes
           plugin_languages_sections: recently-used
 
           plugin_languages_limit: 6
