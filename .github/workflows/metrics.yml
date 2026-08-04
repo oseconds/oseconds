@@ -9,9 +9,6 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
 
-    env:
-      METRICS_USE_PREBUILT_IMAGE: no
-
     permissions:
       contents: write
 
@@ -19,6 +16,7 @@ jobs:
       - name: Activity
         uses: oseconds/metrics@master
         with:
+          use_prebuilt_image: no
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
     
@@ -47,6 +45,7 @@ jobs:
       - name: Code
         uses: oseconds/metrics@master
         with:
+          use_prebuilt_image: no
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
 
@@ -66,6 +65,7 @@ jobs:
       - name: WakaTime
         uses: oseconds/metrics@master
         with:
+          use_prebuilt_image: no
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
     
