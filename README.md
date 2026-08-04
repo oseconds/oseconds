@@ -6,7 +6,6 @@
 
 <!--END_SECTION:activity-->
 
-
 <img src="./metrics-languages-indepth.svg" />
 <!--
 <a href="https://wakatime.com/@oseconds">
@@ -15,10 +14,10 @@
 -->
 
 <!-- <img src="./profile/habits.svg" /> -->
+
+<!--
 ![alt text](profile/habits.svg)
-
-
-
+-->
 
 ## Stack
 
