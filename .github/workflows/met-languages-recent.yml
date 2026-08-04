@@ -19,7 +19,6 @@ jobs:
           user: oseconds
           token: ${{ secrets.METRICS_TOKEN }}
           use_prebuilt_image: yes
-          image: ghcr.io/oseconds/test-metrics:latest
           
           filename: metrics-languages-recent.svg
 
