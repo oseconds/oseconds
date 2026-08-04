@@ -40,7 +40,7 @@ jobs:
     
           plugin_topics: yes
           plugin_topics_mode: labels
-          plugin_topics_limit: 12
+          plugin_topics_limit: 15
     
     
       - name: Code
