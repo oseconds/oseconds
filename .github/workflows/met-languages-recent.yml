@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Languages Recent
-        uses: oseconds/metrics@master
+        uses: oseconds/metrics@5b76a6c5718d1b89918b3c8082a6f788ab742d7e
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
