@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #0b0f19; rx: 10px; }
+    
+    /* 갈색 씨앗 껍질 (정갈한 단선 처리) */
+    .seed-shell { fill: none; stroke: #a3704c; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+    
+    /* 초록색 통합 S-새싹 (하나의 매끄러운 패스) */
+    .sprout-path { fill: #22c55e; fill-rule: evenodd; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f8fafc; }
+      .seed-shell { stroke: #85522c; }
+      .sprout-path { fill: #16a34a; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <g transform="translate(0, 1)">
+    <!-- 1. 단단한 갈색 씨앗 껍질 -->
+    <path class="seed-shell" d="M 24 10 
+             C 14 10, 10 20, 10 26 
+             C 10 34, 16 40, 24 40 
+             C 32 40, 38 34, 38 26 
+             C 38 20, 34 10, 24 10 Z" />
+
+    <!-- 2. 매끈하게 일체화된 초록색 S-새싹 심볼 -->
+    <path class="sprout-path" d="
+      M 28 15 
+      C 30.5 12, 33.5 13, 33 15.5 
+      C 32.5 17.5, 30 18, 27.5 18 
+      C 22 18, 18.5 22, 22.5 25.5 
+      C 26.5 29, 23 35, 17.5 35 
+      C 15.5 35, 15 33.5, 16.5 33.5 
+      C 19.5 33.5, 22.5 29, 19.5 26.5 
+      C 16.5 24, 19.5 15.5, 26 15.5 
+      C 27 15.5, 27.5 15, 28 15 Z" />
+  </g>
+</svg>
