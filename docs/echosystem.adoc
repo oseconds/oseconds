@@ -1,0 +1,243 @@
+= Creative Ecosystem Graph
+:toc:
+
+[source,text]
+
+                                     FLUX
+                                      |
+                                      |
+                              MIDJOURNEY ---- COMFYUI ---- KLING ---- AFTER EFFECTS ---- TOPAZ
+                                      |             |                           |
+                                      |             |                           |
+                                      |          SEEDANCE                         |
+                                      |             |                           |
+                                      |             |                        FINAL VIDEO
+                                      |             |
+                                      |          H3 / MINIMAX
+                                      |
+                                      |
+                                      v
+
+
+                               TOUCHDESIGNER
+                 /          /        |        \          \
+                /          /         |         \          \
+               /          /          |          \          \
+              v          v           v           v          v
+
+           OSC         P5.JS      ARDUINO      GLSL      RESOLUME
+            |           |           |            |           |
+            |           |           |            |           |
+           MAX      JS LAYER    HARDWARE     SHADER LAYER   LIVE VJ
+            \           |           |            |           /
+             \          |           |            |          /
+              \         |           |            |         /
+               \        |           |            |        /
+                \       |           |            |       /
+                 \      |           |            |      /
+                  \     |           |            |     /
+                   \    |           |            |    /
+                    \   |           |            |   /
+                     \  |           |            |  /
+                      \ |           |            | /
+                       \|           |            |/
+                        ABLETON ---- STRUDEL ---- JAVASCRIPT
+                           |             |             |
+                           |             |             |
+                           |          PATTERN         WEB LOGIC
+                           |             |             |
+                           |             |             |
+                           +------+------+------+------+
+                                          |
+                                          |
+                                          v
+                                 LIVE OUTPUT / HUB
+                           /          |            |           \
+                          /           |            |            \
+                         v            v            v             v
+                    PROJECTION    INSTALLATION   STREAM       ARCHIVE
+
+---
+
+[source,text]
+
+                   CENTRAL RELATIONSHIP MAP
+
+                        [ TOUCHDESIGNER ]
+             /             /       |       \             \
+            /             /        |        \             \
+           v             v         v         v             v
+
+      [ OSC ]       [ P5.JS ]   [ ARDUINO ]  [ GLSL ]  [ RESOLUME ]
+         |              |            |           |           |
+         |              |            |           |           |
+       [ MAX ]      [ JS ]     [ HARDWARE ]  [ SHADERS ]   [ LIVE VJ ]
+         \              |            |           |           /
+          \             |            |           |          /
+           \            |            |           |         /
+            \           |            |           |        /
+             \          |            |           |       /
+              \         |            |           |      /
+               \        |            |           |     /
+                \       |            |           |    /
+                 \      |            |           |   /
+                  \     |            |           |  /
+                   \    |            |           | /
+                    \   |            |           |/
+                     \  |            |           /
+                      \ |            |          /
+                       \|            |         /
+                    [ ABLETON ] --- [ STRUDEL ] --- [ JAVASCRIPT ]
+                          |               |               |
+                          |               |               |
+                          +---------------+---------------+
+                                          |
+                                          v
+                                [ LIVE PERFORMANCE ]
+
+                          /               |                \
+                         v                v                 v
+
+                    [ PROJECTION ]   [ INSTALLATION ]    [ STREAM ]
+
+---
+
+[source,text]
+
+                 VIDEO / AI BRANCHES AROUND TD
+
+                             [ TOUCHDESIGNER ]
+                     /              |               \
+                    /               |                \
+                   v                v                 v
+
+              [ FLUX ]         [ COMFYUI ]         [ KLING ]
+                 |                |                 /   \
+                 |                |                /     \
+                 |                v               v       v
+           [ MIDJOURNEY ]     [ SEEDANCE ]   [ H3 ]   [ AFTER EFFECTS ]
+                 |                |                 \       /
+                 |                |                  \     /
+                 +----------------+-------------------\   /
+                                                     [ TOPAZ ]
+                                                         |
+                                                         v
+                                                   [ FINAL VIDEO ]
+
+---
+
+[source,text]
+
+                   HARDWARE / CONTROL BRANCH
+
+                             [ TOUCHDESIGNER ]
+                                      |
+                                      | OSC / CONTROL
+                                      v
+                                 [ ARDUINO ]
+                               /      |      \
+                              /       |       \
+                             v        v        v
+
+                       [ SENSOR ]  [ MOTOR ]  [ LIGHT ]
+                              \        |        /
+                               \       |       /
+                                \      |      /
+                                 \     |     /
+                                  \    |    /
+                                   \   |   /
+                                    \  |  /
+                                     \ | /
+                                  [ INSTALLATION ]
+
+---
+
+[source,text]
+
+                    AUDIO / PATTERN BRANCH
+
+                              [ ABLETON ]
+                                  |
+                                  | tempo / cue / arrangement
+                                  v
+                              [ MAX/MSP ]
+                             /     |      \
+                            /      |       \
+                           v       v        v
+
+                        [ OSC ]  [ MIDI ]  [ SIGNAL FX ]
+                           \       |        /
+                            \      |       /
+                             \     |      /
+                              \    |     /
+                               \   |    /
+                                \  |   /
+                                 [ TOUCHDESIGNER ]
+                                      |
+                                      v
+                                  [ VISUAL OUTPUT ]
+
+                              [ STRUDEL ]
+                                  |
+                                  | javascript patterns
+                                  v
+                              [ JAVASCRIPT ]
+
+---
+
+[source,text]
+
+                       TEXT / IDEA / CONCEPT
+
+                                  |
+                                  v
+
+                             [ TOUCHDESIGNER ]
+
+             /-----------+-----------+-----------+-----------\
+            /            |           |           |            \
+           v             v           v           v             v
+
+       [ AI ]        [ AUDIO ]   [ CODE ]   [ HARDWARE ]   [ OUTPUT ]
+
+        FLUX         ABLETON     P5.JS      ARDUINO      PROJECTION
+        COMFYUI      MAX/MSP     STRUDEL    OSC           INSTALLATION
+        KLING        MIDI        JAVASCRIPT  SENSOR       RESOLUME
+        SEEDANCE     OSC                    MOTOR
+        H3 / MINIMAX
+
+                             |
+                             v
+
+                       [ LIVE PERFORMANCE ]
+
+---
+
+[source,text]
+
+                     REUSABLE CONNECTION LOGIC
+
+        ABLETON <---- MIDI / OSC ----> MAX <---- OSC ----> TOUCHDESIGNER
+            |                                           |
+            |                                           |
+            +------------------- STRUDEL ---------------+
+            |                                           |
+            v                                           v
+     LIVE PERFORMANCE                              VISUAL OUTPUT
+
+        P5.JS <---- JS ----> STRUDEL <---- JS ----> WEB VISUAL
+
+        ARDUINO <---- SENSOR / MOTION ----> INSTALLATION
+
+        FLUX / COMFYUI / KLING / SEEDANCE / H3
+                          |
+                          v
+                    TOUCHDESIGNER
+                          |
+                          v
+                AFTER EFFECTS / TOPAZ
+                          |
+                          v
+                      FINAL EXPORT
+
+---
