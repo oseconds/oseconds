@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="560" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="351" class="">
     <defs>
         <style/>
     </defs>
-    <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#777}h2,h3{margin:8px 0 2px;padding:0;color:#0366d6;font-weight:400}h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3,svg{font-size:14px}.h-details{margin:0 4px;padding-top:4px;font-size:.8rem}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.row{display:flex}.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}.margin-bottom{margin-bottom:16px}.habits .facts{margin:0;list-style-type:none;padding-left:37px}.chart{padding:0 8px}.activity{margin-bottom:12px}.activity .field{width:100%;overflow:hidden;text-overflow:ellipsis;max-width:450px;white-space:nowrap;margin-bottom:0}.activity .code,code{background-color:#7777771f;border-radius:6px;color:#777;padding:1px 5px;font-size:80%;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.activity .code{margin:0 4px -3px}code{display:inline-block}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}#metrics-end{width:100%}</style>
+    <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;color:#777}h2,h3{margin:8px 0 2px;padding:0;color:#0366d6;font-weight:400}h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3,svg{font-size:14px}.h-details{margin:0 4px;padding-top:4px;font-size:.8rem}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.row{display:flex}.horizontal .field,.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}.horizontal{justify-content:space-around}svg.bar{margin:4px 0}.habits .facts{margin:0;list-style-type:none;padding-left:37px}.chart{padding:0 8px}.chart-bars{display:flex;justify-content:space-between;align-items:flex-end;width:100%;margin:8px 0 4px;flex-grow:1;min-height:70px}.chart-bars .entry{flex-grow:1;display:flex;flex-direction:column;align-items:center;font-size:10px;color:#666}.chart-bars .entry .value{font-size:6px}.chart-bars .bar{width:7px;background-color:var(--color-calendar-graph-day-bg);border:1px solid var(--color-calendar-graph-day-border);border-radius:5px}.chart-bars.horizontal{flex-direction:column;height:100%}.chart-bars.horizontal .entry{align-items:center;flex-direction:row;width:100%;min-height:1rem}.chart-bars.horizontal .bar{height:7px;width:auto;margin:0 6px}.activity{margin-bottom:12px}.activity .field{width:100%;overflow:hidden;text-overflow:ellipsis;max-width:450px;white-space:nowrap;margin-bottom:0}.activity .code,code,span.code{background-color:#7777771f;border-radius:6px;color:#777;padding:1px 5px;font-size:80%;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.activity .code,span.code{margin:0 4px -3px}code{display:inline-block}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}#metrics-end{width:100%}</style>
     <style/>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
@@ -12,12 +12,12 @@
                         <path fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"/>
                     </svg>
                     Recent coding habits
-                    <small class="h-details">(computed from last 526 commits)</small>
+                    <small class="h-details">(computed from last 528 commits)</small>
                 </h2>
                 <div class="row">
                     <ul class="facts">
                         <li>Uses spaces for indentation</li>
-                        <li>Has approximately 58.9 characters per line of code written</li>
+                        <li>Has approximately 58.2 characters per line of code written</li>
                         <li>Mostly pushes code around 14:00</li>
                         <li>Mostly active on Wednesday</li>
                     </ul>
@@ -26,258 +26,173 @@
             <section class="habits">
                 <div class="column chart largeable">
                     <h3>Commit activity per hour of day</h3>
-                    <div class="row margin-bottom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="480" height="160">
-                            <g transform="translate(10,115)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
-                                <path class="domain" stroke="rgba(127, 127, 127, .8)" d="M10.5,0.5H460.5"/>
-                                <g class="tick" opacity="1" transform="translate(10.5,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">0</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(30.065217391304348,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">1</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(49.630434782608695,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">2</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(69.19565217391305,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">3</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(88.76086956521739,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">4</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(108.32608695652173,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">5</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(127.8913043478261,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">6</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(147.45652173913044,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">7</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(167.02173913043478,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">8</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(186.58695652173913,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">9</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(206.15217391304347,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">10</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(225.7173913043478,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">11</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(245.2826086956522,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">12</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(264.8478260869565,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">13</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(284.4130434782609,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">14</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(303.9782608695652,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">15</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(323.54347826086956,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">16</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(343.10869565217394,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">17</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(362.67391304347825,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">18</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(382.2391304347826,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">19</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(401.80434782608694,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">20</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(421.3695652173913,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">21</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(440.9347826086956,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">22</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(460.5,0)">
-                                    <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                    <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">23</text>
-                                </g>
-                            </g>
-                            <g transform="translate(10,10)" fill="none" font-size="10" font-family="sans-serif" text-anchor="start">
-                                <g class="tick" opacity="1" transform="translate(0,35.12962962962963)">
-                                    <line stroke="currentColor" x2="460" stroke-opacity="0.5" stroke-dasharray="2,2"/>
-                                    <text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">40</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(0,70.31481481481482)">
-                                    <line stroke="currentColor" x2="460" stroke-opacity="0.5" stroke-dasharray="2,2"/>
-                                    <text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">20</text>
-                                </g>
-                                <g class="tick" opacity="1" transform="translate(0,105.5)">
-                                    <line stroke="currentColor" x2="460" stroke-opacity="0.5" stroke-dasharray="2,2"/>
-                                    <text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">0</text>
-                                </g>
-                            </g>
-                            <path transform="translate(10,10)" d="M10,64.537L29.565,75.093L49.13,90.926L68.696,105L88.261,105L107.826,105L127.391,105L146.957,105L166.522,105L186.087,105L205.652,101.481L225.217,64.537L244.783,66.296L264.348,45.185L283.913,10L303.478,13.519L323.043,17.037L342.609,24.074L362.174,43.426L381.739,20.556L401.304,48.704L420.87,43.426L440.435,71.574L460,59.259" fill="transparent" stroke="#87ceeb" stroke-width="2"/>
-                            <path transform="translate(10,10)" d="M10,105L29.565,105L49.13,105L68.696,105L88.261,105L107.826,105L127.391,105L146.957,105L166.522,105L186.087,105L205.652,105L225.217,105L244.783,105L264.348,105L283.913,105L303.478,105L323.043,105L342.609,105L362.174,105L381.739,105L401.304,105L420.87,105L440.435,105L460,105L460,59.259L440.435,71.574L420.87,43.426L401.304,48.704L381.739,20.556L362.174,43.426L342.609,24.074L323.043,17.037L303.478,13.519L283.913,10L264.348,45.185L244.783,66.296L225.217,64.537L205.652,101.481L186.087,105L166.522,105L146.957,105L127.391,105L107.826,105L88.261,105L68.696,105L49.13,90.926L29.565,75.093L10,64.537Z" fill="rgba(88, 166, 255, .1)"/>
-                            <g>
-                                <circle transform="translate(10,10)" cx="10" cy="64.53703703703704" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="29.565217391304348" cy="75.0925925925926" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="49.130434782608695" cy="90.92592592592592" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="68.69565217391305" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="88.26086956521739" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="107.82608695652173" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="127.3913043478261" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="146.95652173913044" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="166.52173913043478" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="186.08695652173913" cy="105" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="205.65217391304347" cy="101.48148148148148" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="225.2173913043478" cy="64.53703703703704" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="244.7826086956522" cy="66.29629629629629" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="264.3478260869565" cy="45.18518518518518" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="283.9130434782609" cy="10" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="303.4782608695652" cy="13.518518518518524" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="323.04347826086956" cy="17.037037037037038" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="342.60869565217394" cy="24.074074074074076" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="362.17391304347825" cy="43.425925925925924" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="381.7391304347826" cy="20.55555555555556" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="401.30434782608694" cy="48.7037037037037" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="420.8695652173913" cy="43.425925925925924" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="440.4347826086956" cy="71.57407407407408" r="2" fill="#106cbc"/>
-                                <circle transform="translate(10,10)" cx="460" cy="59.25925925925927" r="2" fill="#106cbc"/>
-                            </g>
-                            <g fill="currentColor" text-anchor="middle" font-family="sans-serif" font-size="10" stroke="rgba(88, 166, 255, .05)" stroke-linejoin="round" stroke-width="4" paint-order="stroke fill">
-                                <text transform="translate(10,6)" x="10" y="64.53703703703704" fill="rgba(127, 127, 127, .8)">23</text>
-                                <text transform="translate(10,6)" x="29.565217391304348" y="75.0925925925926" fill="rgba(127, 127, 127, .8)">17</text>
-                                <text transform="translate(10,6)" x="49.130434782608695" y="90.92592592592592" fill="rgba(127, 127, 127, .8)">8</text>
-                                <text transform="translate(10,6)" x="68.69565217391305" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="88.26086956521739" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="107.82608695652173" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="127.3913043478261" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="146.95652173913044" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="166.52173913043478" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="186.08695652173913" y="105" fill="rgba(127, 127, 127, .8)"/>
-                                <text transform="translate(10,6)" x="205.65217391304347" y="101.48148148148148" fill="rgba(127, 127, 127, .8)">2</text>
-                                <text transform="translate(10,6)" x="225.2173913043478" y="64.53703703703704" fill="rgba(127, 127, 127, .8)">23</text>
-                                <text transform="translate(10,6)" x="244.7826086956522" y="66.29629629629629" fill="rgba(127, 127, 127, .8)">22</text>
-                                <text transform="translate(10,6)" x="264.3478260869565" y="45.18518518518518" fill="rgba(127, 127, 127, .8)">34</text>
-                                <text transform="translate(10,6)" x="283.9130434782609" y="10" fill="rgba(127, 127, 127, .8)">54</text>
-                                <text transform="translate(10,6)" x="303.4782608695652" y="13.518518518518524" fill="rgba(127, 127, 127, .8)">52</text>
-                                <text transform="translate(10,6)" x="323.04347826086956" y="17.037037037037038" fill="rgba(127, 127, 127, .8)">50</text>
-                                <text transform="translate(10,6)" x="342.60869565217394" y="24.074074074074076" fill="rgba(127, 127, 127, .8)">46</text>
-                                <text transform="translate(10,6)" x="362.17391304347825" y="43.425925925925924" fill="rgba(127, 127, 127, .8)">35</text>
-                                <text transform="translate(10,6)" x="381.7391304347826" y="20.55555555555556" fill="rgba(127, 127, 127, .8)">48</text>
-                                <text transform="translate(10,6)" x="401.30434782608694" y="48.7037037037037" fill="rgba(127, 127, 127, .8)">32</text>
-                                <text transform="translate(10,6)" x="420.8695652173913" y="43.425925925925924" fill="rgba(127, 127, 127, .8)">35</text>
-                                <text transform="translate(10,6)" x="440.4347826086956" y="71.57407407407408" fill="rgba(127, 127, 127, .8)">19</text>
-                                <text transform="translate(10,6)" x="460" y="59.25925925925927" fill="rgba(127, 127, 127, .8)">26</text>
-                            </g>
-                        </svg>
+                    <div class="chart-bars">
+                        <div class="entry">
+                            <span class="value">23</span>
+                            <div class="bar" style="height: 21.296296296296298px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                            00
+                        </div>
+                        <div class="entry">
+                            <span class="value">17</span>
+                            <div class="bar" style="height: 15.74074074074074px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                            01
+                        </div>
+                        <div class="entry">
+                            <span class="value">8</span>
+                            <div class="bar" style="height: 7.4074074074074066px; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
+                            02
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            03
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            04
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            05
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            06
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            07
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            08
+                        </div>
+                        <div class="entry">
+                            <span class="value"></span>
+                            <div class="bar" style="height: 0px; background-color: var(--color-calendar-graph-day-L0-bg)"></div>
+                            09
+                        </div>
+                        <div class="entry">
+                            <span class="value">2</span>
+                            <div class="bar" style="height: 1.8518518518518516px; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
+                            10
+                        </div>
+                        <div class="entry">
+                            <span class="value">23</span>
+                            <div class="bar" style="height: 21.296296296296298px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                            11
+                        </div>
+                        <div class="entry">
+                            <span class="value">22</span>
+                            <div class="bar" style="height: 20.37037037037037px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                            12
+                        </div>
+                        <div class="entry">
+                            <span class="value">34</span>
+                            <div class="bar" style="height: 31.48148148148148px; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
+                            13
+                        </div>
+                        <div class="entry">
+                            <span class="value">54</span>
+                            <div class="bar" style="height: 50px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                            14
+                        </div>
+                        <div class="entry">
+                            <span class="value">52</span>
+                            <div class="bar" style="height: 48.148148148148145px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                            15
+                        </div>
+                        <div class="entry">
+                            <span class="value">50</span>
+                            <div class="bar" style="height: 46.2962962962963px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                            16
+                        </div>
+                        <div class="entry">
+                            <span class="value">46</span>
+                            <div class="bar" style="height: 42.592592592592595px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                            17
+                        </div>
+                        <div class="entry">
+                            <span class="value">35</span>
+                            <div class="bar" style="height: 32.407407407407405px; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
+                            18
+                        </div>
+                        <div class="entry">
+                            <span class="value">50</span>
+                            <div class="bar" style="height: 46.2962962962963px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                            19
+                        </div>
+                        <div class="entry">
+                            <span class="value">32</span>
+                            <div class="bar" style="height: 29.629629629629626px; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
+                            20
+                        </div>
+                        <div class="entry">
+                            <span class="value">35</span>
+                            <div class="bar" style="height: 32.407407407407405px; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
+                            21
+                        </div>
+                        <div class="entry">
+                            <span class="value">19</span>
+                            <div class="bar" style="height: 17.59259259259259px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                            22
+                        </div>
+                        <div class="entry">
+                            <span class="value">26</span>
+                            <div class="bar" style="height: 24.074074074074073px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                            23
+                        </div>
                     </div>
                 </div>
                 <div class="row largeable">
                     <section class="column chart">
                         <h3>Commit activity per day of week</h3>
-                        <div class="margin-bottom">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="216" height="160">
-                                <g transform="translate(10,115)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
-                                    <path class="domain" stroke="rgba(127, 127, 127, .8)" d="M10.5,0.5H196.5"/>
-                                    <g class="tick" opacity="1" transform="translate(10.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Sun</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(41.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Mon</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(72.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Tue</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(103.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Wed</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(134.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Thu</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(165.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Fri</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(196.5,0)">
-                                        <line stroke="currentColor" y2="6" stroke-opacity="0.5"/>
-                                        <text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">Sat</text>
-                                    </g>
-                                </g>
-                                <g transform="translate(10,10)" fill="none" font-size="10" font-family="sans-serif" text-anchor="start">
-                                    <g class="tick" opacity="1" transform="translate(0,31.856589147286815)">
-                                        <line stroke="currentColor" x2="196" stroke-opacity="0.5" stroke-dasharray="2,2"/>
-                                        <text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">100</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(0,68.67829457364341)">
-                                        <line stroke="currentColor" x2="196" stroke-opacity="0.5" stroke-dasharray="2,2"/>
-                                        <text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">50</text>
-                                    </g>
-                                    <g class="tick" opacity="1" transform="translate(0,105.5)">
-                                        <line stroke="currentColor" x2="196" stroke-opacity="0.5" stroke-dasharray="2,2"/>
-                                        <text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">0</text>
-                                    </g>
-                                </g>
-                                <path transform="translate(10,10)" d="M10,76.279L41,50.504L72,26.202L103,10L134,62.287L165,62.287L196,60.078" fill="transparent" stroke="#87ceeb" stroke-width="2"/>
-                                <path transform="translate(10,10)" d="M10,105L41,105L72,105L103,105L134,105L165,105L196,105L196,60.078L165,62.287L134,62.287L103,10L72,26.202L41,50.504L10,76.279Z" fill="rgba(88, 166, 255, .1)"/>
-                                <g>
-                                    <circle transform="translate(10,10)" cx="10" cy="76.27906976744185" r="2" fill="#106cbc"/>
-                                    <circle transform="translate(10,10)" cx="41" cy="50.50387596899225" r="2" fill="#106cbc"/>
-                                    <circle transform="translate(10,10)" cx="72" cy="26.201550387596896" r="2" fill="#106cbc"/>
-                                    <circle transform="translate(10,10)" cx="103" cy="10" r="2" fill="#106cbc"/>
-                                    <circle transform="translate(10,10)" cx="134" cy="62.286821705426355" r="2" fill="#106cbc"/>
-                                    <circle transform="translate(10,10)" cx="165" cy="62.286821705426355" r="2" fill="#106cbc"/>
-                                    <circle transform="translate(10,10)" cx="196" cy="60.077519379844965" r="2" fill="#106cbc"/>
-                                </g>
-                                <g fill="currentColor" text-anchor="middle" font-family="sans-serif" font-size="10" stroke="rgba(88, 166, 255, .05)" stroke-linejoin="round" stroke-width="4" paint-order="stroke fill">
-                                    <text transform="translate(10,6)" x="10" y="76.27906976744185" fill="rgba(127, 127, 127, .8)">39</text>
-                                    <text transform="translate(10,6)" x="41" y="50.50387596899225" fill="rgba(127, 127, 127, .8)">74</text>
-                                    <text transform="translate(10,6)" x="72" y="26.201550387596896" fill="rgba(127, 127, 127, .8)">107</text>
-                                    <text transform="translate(10,6)" x="103" y="10" fill="rgba(127, 127, 127, .8)">129</text>
-                                    <text transform="translate(10,6)" x="134" y="62.286821705426355" fill="rgba(127, 127, 127, .8)">58</text>
-                                    <text transform="translate(10,6)" x="165" y="62.286821705426355" fill="rgba(127, 127, 127, .8)">58</text>
-                                    <text transform="translate(10,6)" x="196" y="60.077519379844965" fill="rgba(127, 127, 127, .8)">61</text>
-                                </g>
-                            </svg>
+                        <div class="chart-bars">
+                            <div class="entry">
+                                <span class="value">39</span>
+                                <div class="bar" style="height: 15.11627906976744px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                                Sun
+                            </div>
+                            <div class="entry">
+                                <span class="value">74</span>
+                                <div class="bar" style="height: 28.68217054263566px; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
+                                Mon
+                            </div>
+                            <div class="entry">
+                                <span class="value">109</span>
+                                <div class="bar" style="height: 42.248062015503876px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                                Tue
+                            </div>
+                            <div class="entry">
+                                <span class="value">129</span>
+                                <div class="bar" style="height: 50px; background-color: var(--color-calendar-graph-day-L4-bg)"></div>
+                                Wed
+                            </div>
+                            <div class="entry">
+                                <span class="value">58</span>
+                                <div class="bar" style="height: 22.48062015503876px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                                Thu
+                            </div>
+                            <div class="entry">
+                                <span class="value">58</span>
+                                <div class="bar" style="height: 22.48062015503876px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                                Fri
+                            </div>
+                            <div class="entry">
+                                <span class="value">61</span>
+                                <div class="bar" style="height: 23.643410852713178px; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                                Sat
+                            </div>
                         </div>
                     </section>
                     <section class="column chart">
                         <h3>Language activity</h3>
-                        <div class="margin-bottom">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="216" height="160">
-                                <g transform="translate(108,80)" stroke="white" stroke-width="1" stroke-linejoin="round"/>
-                                <g transform="translate(108,80)" font-family="sans-serif" font-size="12" text-anchor="middle" fill="white" stroke="rbga(0,0,0,.9)" paint-order="stroke fill"/>
-                            </svg>
+                        <div class="chart-bars horizontal">
                         </div>
                     </section>
                 </div>
