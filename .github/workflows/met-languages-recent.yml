@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Languages Recent
-        uses: oseconds/metrics@5b76a6c5718d1b89918b3c8082a6f788ab742d7e
+        uses: oseconds/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -24,7 +24,7 @@ jobs:
           base: ""
 
           plugin_languages: yes
-          plugin_languages_indepth: yes
+          plugin_languages_indepth: no
           plugin_languages_sections: recently-used
 
           plugin_languages_limit: 6
