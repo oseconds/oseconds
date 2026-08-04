@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #000000; rx: 12px; }
+    
+    /* 뒤쪽 어두운 다크 그린/딥 라이트 획 */
+    .capsule-dark {
+      fill: none;
+      stroke: #14380b;
+      stroke-width: 4.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    
+    /* 앞쪽 발광하는 밝은 형광 연두(Neon Lime) 획 */
+    .capsule-bright {
+      fill: none;
+      stroke: #ccff00;
+      stroke-width: 4.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #0b0f17; }
+    }
+  </style>
+
+  <!-- 검은색 바탕 배경 -->
+  <rect class="bg" width="48" height="48" rx="12" />
+
+  <g transform="translate(0, 0)">
+    <!-- ==================== [ H 영역 ] ==================== -->
+    <!-- H 왼쪽 기둥 (어두운 획) -->
+    <path class="capsule-dark" d="M 12 14 L 12 34" />
+    
+    <!-- H 왼쪽 기둥 (형광 연두 액센트 overlap) -->
+    <path class="capsule-bright" d="M 12 18 L 12 28" />
+
+    <!-- H 가로 브릿지 (어두운 획) -->
+    <path class="capsule-dark" d="M 12 24 L 22 24" />
+
+    <!-- H 오른쪽 기둥 (형광 연두 액센트) -->
+    <path class="capsule-bright" d="M 22 14 L 22 34" />
+
+
+    <!-- ==================== [ 3 영역 ] ==================== -->
+    <!-- 3 상단 곡선 캡슐 (어두운 획) -->
+    <path class="capsule-dark" d="M 28 15 C 31 13, 36 14, 36 18 C 36 22, 32 23, 29 23" />
+
+    <!-- 3 중앙-하단 곡선 캡슐 (형광 연두 액센트) -->
+    <path class="capsule-bright" d="M 29 23 C 33 23, 36 25, 36 29 C 36 33, 31 35, 28 33" />
+
+    <!-- 3 주변 자유로운 캡슐 파티클들 -->
+    <path class="capsule-dark" d="M 27 10 L 32 8" />
+    <path class="capsule-bright" d="M 37 36 L 39 40" />
+  </g>
+</svg>
