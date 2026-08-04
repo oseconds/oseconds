@@ -9,6 +9,9 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
 
+    env:
+      METRICS_USE_PREBUILT_IMAGE: no
+
     permissions:
       contents: write
 
