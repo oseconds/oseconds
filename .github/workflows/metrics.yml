@@ -30,6 +30,7 @@ jobs:
       - name: Topics
         uses: oseconds/metrics@master
         with:
+          use_prebuilt_image: no
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
     
