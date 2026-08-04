@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .spiral { fill: none; stroke: #ffffff; stroke-width: 2; stroke-linecap: round; }
+    .prompt { fill: none; stroke: #ffffff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .spiral, .prompt { stroke: #1f2328; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- Strudel 로고 (나선/소용돌이 패턴) -->
+  <g transform="translate(14, 14)">
+    <path class="spiral" d="M 10 10 
+             a 2 2 0 0 1 2 2 
+             a 4 4 0 0 1 -4 4 
+             a 7 7 0 0 1 -7 -7 
+             a 10 10 0 0 1 10 -10 
+             a 13 13 0 0 1 13 13" />
+  </g>
+
+  <!-- 라이브 코딩 프롬프트 (우측 하단 포인트) -->
+  <path class="prompt" d="M 28 32 L 31 34 L 28 36 M 33 36 H 36" />
+</svg>
