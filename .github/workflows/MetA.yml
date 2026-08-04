@@ -16,7 +16,9 @@ jobs:
     - name: Metrics
       uses: oseconds/metrics@master
       with:
-        use_prebuilt_image: no
+        use_prebuilt_image: false
+        debug: yes
+        debug_print: yes
         token: ${{ secrets.METRICS_TOKEN }}
         user: oseconds
     
