@@ -1,0 +1,35 @@
+name: Metrics Habits
+
+on:
+  schedule:
+    - cron: "0 0 * * 3"
+  workflow_dispatch:
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Habits
+        uses: oseconds/metrics@master
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: oseconds
+
+          use_prebuilt_image: yes
+
+          template: classic
+          base: ""
+          filename: profile/habits.svg
+
+          plugin_habits: yes
+          plugin_habits_from: 1000
+          plugin_habits_days: 28
+          plugin_habits_facts: no
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+
+          config_footer: no
