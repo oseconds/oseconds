@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .ae-box { fill: #00005b; stroke: #9999ff; stroke-width: 1.5; rx: 6px; }
+    .ae-text { fill: #9999ff; font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .ae-box { fill: #121244; stroke: #8080ff; }
+      .ae-text { fill: #8080ff; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- Adobe Ae 로고 박스 -->
+  <rect class="ae-box" x="10" y="10" width="28" height="28" rx="6" />
+
+  <!-- Ae 텍스트 -->
+  <text class="ae-text" x="24" y="24">Ae</text>
+</svg>
