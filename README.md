@@ -10,9 +10,9 @@
 <a href="https://github.com/oseconds">
   <img height="195" src="./profile/top-langs.svg" />
 </a>
-
+<!--
 <a href="https://wakatime.com/@oseconds">
   <img height="200" src="./profile/wakatime.svg" />
 </a>
-
+-->
 <img src="./metrics-languages-indepth.svg" />
