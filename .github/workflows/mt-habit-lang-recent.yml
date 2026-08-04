@@ -22,7 +22,7 @@ jobs:
 
           template: classic
           base: ""
-          filename: profile/habits.svg
+          filename: profile/habits-lang.svg
 
           plugin_habits: yes
           plugin_habits_from: 1000
