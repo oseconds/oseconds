@@ -58,7 +58,7 @@ jobs:
 
           plugin_code_visibility: all
 
-          plugin_code_languages: javascript,typescript,python
+          plugin_code_languages: javascript,typescript,python,thrift
     
     
       - name: WakaTime
