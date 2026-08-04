@@ -20,14 +20,14 @@ jobs:
           user: oseconds
     
           template: classic
-          base: header, activity, metadata
+          base: header,activity,metadata
           filename: profile/activity.svg
     
           config_timezone: Asia/Seoul
     
     
       - name: Topics
-        uses: lowlighter/metrics@v3.34
+        uses: oseconds/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
@@ -42,7 +42,7 @@ jobs:
     
     
       - name: Code
-        uses: lowlighter/metrics@v3.34
+        uses: oseconds/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
@@ -53,10 +53,12 @@ jobs:
     
           plugin_code: yes
           plugin_code_days: 30
+          plugin_code_load: 300
+          plugin_code_languages: yes
     
     
       - name: WakaTime
-        uses: lowlighter/metrics@v3.34
+        uses: oseconds/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
