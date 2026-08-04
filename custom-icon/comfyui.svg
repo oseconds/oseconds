@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    /* ComfyUI 브랜드 다크 배경 (#211927 Comfy Ink) */
+    .bg { fill: #1f1929; rx: 10px; }
+    
+    /* 픽셀 'C' 메인 네온 연두/노랑 */
+    .pixel-primary { fill: #f2ff59; }
+    .pixel-secondary { fill: #a3e635; }
+    .pixel-accent { fill: #ccff00; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #211927; } /* 브랜드 인덴티티 유지를 위한 보존 */
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- ComfyUI 공식 Pixel 'C' Logomark (픽셀 그리드 조합) -->
+  <g transform="translate(11, 11)">
+    <!-- Top Bar -->
+    <rect class="pixel-primary" x="5" y="0" width="16" height="5" />
+    <rect class="pixel-secondary" x="0" y="0" width="5" height="5" />
+
+    <!-- Left Vertical Bar -->
+    <rect class="pixel-primary" x="0" y="5" width="5" height="16" />
+
+    <!-- Bottom Bar -->
+    <rect class="pixel-secondary" x="0" y="21" width="5" height="5" />
+    <rect class="pixel-primary" x="5" y="21" width="16" height="5" />
+
+    <!-- Inner Pixel Accents (픽셀 입체감 및 노드 디테일) -->
+    <rect class="pixel-accent" x="16" y="5" width="5" height="5" opacity="0.9" />
+    <rect class="pixel-accent" x="16" y="16" width="5" height="5" opacity="0.9" />
+  </g>
+</svg>
