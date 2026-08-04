@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .box { fill: #161b22; stroke: #ffffff; stroke-width: 1.5; }
+    .text { fill: #ffffff; font-family: monospace; font-size: 13px; font-weight: bold; text-anchor: middle; dominant-baseline: middle; }
+    @media (prefers-color-scheme: light) {
+      .box { fill: #f6f8fa; stroke: #1f2328; }
+      .text { fill: #1f2328; }
+    }
+  </style>
+
+  <rect class="box" x="6" y="14" width="36" height="20" rx="3" />
+  <text class="text" x="24" y="24">max</text>
+</svg>
