@@ -8,3 +8,15 @@ function metricsTest() {
 
 metricsTest();
 
+class SignalRack {
+  constructor() {
+    this.signal = [];
+  }
+
+  process(input) {
+    return input.map(value => value * 0.5);
+  }
+}
+
+const rack = new SignalRack();
+console.log(rack.process([1,2,3]));
