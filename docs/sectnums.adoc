@@ -1,0 +1,134 @@
+= Creative Ecosystem
+:sectnums:
+:toc:
+
+== Overview
+
+이 문서는 작업 도구 목록이 아니라, 아이디어가 생성·변환·출력되는 관계 구조를 보여주는 README용 요약 그래프다.
+
+중앙 허브는 TouchDesigner이고, 주변에 AI, Audio, Code, Hardware, Output이 연결된다.
+
+== Core Graph
+
+[source,text]
+
+                         IDEA / TEXT / CONCEPT
+                                   |
+                                   v
+
+              +--------------------+--------------------+
+              |                    |                    |
+              v                    v                    v
+
+             AI                 AUDIO                 CODE
+
+              |                    |                    |
+              |                    |                    |
+              v                    v                    v
+
+         FLUX / SD            ABLETON                P5.JS
+              |                    |                    |
+              |                    |                    |
+              v                    v                    v
+
+          COMFYUI             MAX/MSP             STRUDEL
+              |                    |                    |
+              |                    |                    |
+              v                    v                    v
+
+      KLING / SEEDANCE            OSC             JAVASCRIPT
+              |                    |                    |
+              |                    |                    |
+              +---------+----------+----------+---------+
+                        |                     |
+                        v                     v
+
+                  TOUCHDESIGNER ----------- P5.JS
+                        |
+            +-----------+-----------+
+            |           |           |
+            v           v           v
+
+        RESOLUME     PROJECTION   INSTALLATION
+
+                        |
+                        v
+
+                    LIVE OUTPUT
+
+
+                        ^
+                        |
+                    ARDUINO
+                        |
+                        |
+                   OSC / SENSOR
+                        |
+                        v
+
+                  HARDWARE INPUT
+
+---
+
+== Relationship Map
+
+[source,text]
+
+AI
+
+FLUX / SD
+|
+COMFYUI
+|
+KLING / SEEDANCE
+|
+TOUCHDESIGNER
+
+Audio
+
+ABLETON
+|
+MAX/MSP
+|
+OSC
+|
+TOUCHDESIGNER
+
+Code
+
+STRUDEL
+|
+JAVASCRIPT
+|
+P5.JS
+|
+TOUCHDESIGNER
+
+Hardware
+
+ARDUINO
+|
+OSC / SENSOR
+|
+INSTALLATION
+
+Output
+
+TOUCHDESIGNER
+|
+RESOLUME / PROJECTION / INSTALLATION
+
+== Read This As
+
+* AI is for image and video generation.
+* Audio is for timing, cueing, and signal control.
+* Code is for procedural logic and generative visuals.
+* Hardware is for physical interaction and installation control.
+* TouchDesigner is the central hub where everything can converge.
+
+== Notes
+
+* Strudel and p5.js share JavaScript roots.
+* Ableton, Max/MSP, and OSC form the control layer.
+* AI output can branch into TouchDesigner, After Effects, or export pipelines.
+* The same system can end in projection, VJ playback, installation, or archived video.
