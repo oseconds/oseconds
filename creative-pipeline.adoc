@@ -1,0 +1,376 @@
+= Creative Pipeline Graph
+:toc:
+:sectnums:
+
+== Concept
+
+Creative Pipeline Graph는 단순한 기술 스택 목록이 아니라,
+창작 과정에서 데이터와 신호가 어떻게 이동하는지를 보여주는 패치 기반 워크플로우 시각화이다.
+
+Max/MSP 패치와 TouchDesigner 네트워크 구조에서 영감을 받아,
+각 도구를 노드(Node)로 표현하고 연결(Connection)을 통해 작업 흐름을 표현한다.
+
+목표:
+
+* 사용하는 툴 목록을 보여주는 것이 아니라 작업 과정 자체를 보여준다.
+* Audio / Visual / AI / Hardware / Live 시스템의 관계를 표현한다.
+* 하나의 결과물이 만들어지는 여러 경로를 시각화한다.
+
+
+== Core Pipeline
+
+[source,text]
+----
+                         IDEA / TEXT
+
+                              |
+              +---------------+---------------+
+              |                               |
+              v                               v
+
+        IMAGE GENERATION              AUDIO GENERATION
+
+        FLUX                          Ableton
+        Stable Diffusion              Strudel
+        ComfyUI                       Max/MSP
+
+
+              |
+              v
+
+          IMAGE / STYLE
+
+              |
+       +------+------+
+       |             |
+       v             v
+
+ VIDEO GENERATION       REALTIME VISUAL
+
+ Kling                  TouchDesigner
+ Seedance               p5.js
+ MiniMax H3
+
+
+              |
+              v
+
+        VIDEO / VISUAL OUTPUT
+
+              |
+       +------+------+
+       |             |
+       v             v
+
+    MEDIA              LIVE PERFORMANCE
+
+ After Effects         Resolume
+ Photoshop             MIDI
+ Topaz                 OSC
+----
+
+
+== Signal Flow Concept
+
+Creative Pipeline은 Max/MSP와 같은 Signal Flow 구조를 가진다.
+
+각 노드는:
+
+* Input Port
+* Processing
+* Output Port
+
+를 가진다.
+
+
+[source,text]
+----
+[Ableton]
+
+    audio out
+       |
+       |
+       v
+
+     [Max]
+
+       |
+       |
+      OSC
+
+       |
+       v
+
+[TouchDesigner]
+----
+
+
+== Node System
+
+각 툴은 하나의 노드로 표현된다.
+
+
+[source,text]
+----
++----------------+
+|                |
+|    Ableton     |
+|                |
+|  ●        ●    |
++----------------+
+
+Input       Output
+Port        Port
+----
+
+
+노드 구성 요소:
+
+* Icon
+* Name
+* Category
+* Input Port
+* Output Port
+
+
+== Connection Types
+
+
+=== Audio Signal
+
+오디오 데이터 흐름.
+
+Example:
+
+[source,text]
+----
+Ableton -> Max/MSP
+----
+
+
+=== Visual Data
+
+이미지와 영상 데이터 흐름.
+
+Example:
+
+[source,text]
+----
+FLUX -> ComfyUI -> Kling -> TouchDesigner
+----
+
+
+=== Control Signal
+
+실시간 제어 데이터 흐름.
+
+Example:
+
+[source,text]
+----
+Max -> OSC -> TouchDesigner
+----
+
+
+=== Hardware Signal
+
+물리 인터랙션 흐름.
+
+Example:
+
+[source,text]
+----
+Arduino -> Installation
+----
+
+
+== Workflow Examples
+
+
+=== AI Video Workflow
+
+[source,text]
+----
+TEXT
+
+  |
+  v
+
+FLUX / Stable Diffusion
+
+  |
+  v
+
+ComfyUI
+
+  |
+  +------+
+  |      |
+  v      v
+
+Kling  Seedance
+
+  |
+  v
+
+TouchDesigner
+
+  |
+  v
+
+Video / Projection
+----
+
+
+=== Audio Reactive Workflow
+
+[source,text]
+----
+Ableton
+
+  |
+  v
+
+Max/MSP
+
+  |
+  v
+
+OSC
+
+  |
+  v
+
+TouchDesigner
+
+  |
+  v
+
+Realtime Visual
+----
+
+
+=== Live Performance Workflow
+
+[source,text]
+----
+Ableton
+
+  |
+  |
+ MIDI / OSC
+
+  |
+  v
+
+TouchDesigner
+
+  |
+  +-------------+
+  |             |
+  v             v
+
+Resolume     Projection
+----
+
+
+== SVG Implementation
+
+
+Creative Pipeline Graph는 하나의 SVG 기반 그래프로 구현한다.
+
+
+[source,text]
+----
+creative-pipeline.svg
+----
+
+
+구성:
+
+* Background Layer
+* Node Layer
+* Connection Layer
+* Port Layer
+
+
+SVG 구조:
+
+[source,xml]
+----
+<svg>
+
+  Background
+
+  Nodes
+    icon
+    label
+    input port
+    output port
+
+  Connections
+    path
+
+</svg>
+----
+
+
+== Future Expansion
+
+
+=== SVG Version
+
+README에서 사용할 정적 버전.
+
+Features:
+
+* Node graph
+* Custom icons
+* Signal lines
+* Port visualization
+
+
+=== Interactive Version
+
+Web 기반 확장.
+
+Technology:
+
+* Svelte
+* SVG
+* D3.js
+
+
+Possible Features:
+
+* Node dragging
+* Connection editing
+* Workflow saving
+* Patch editor interface
+
+
+== Relation With Signal Rack
+
+Creative Pipeline Graph는 Signal Rack의 철학과 연결된다.
+
+
+[source,text]
+----
+Automation
+
+    |
+
+Signal
+
+    |
+
+Mapping
+
+    |
+
+Output
+----
+
+
+툴 목록이 아니라,
+창작 과정에서 신호가 어떻게 생성되고 변환되는지를 표현하는 시스템이다.
