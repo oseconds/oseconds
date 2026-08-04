@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .logo { fill: #ffffff; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .logo { fill: #1f2328; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- 에이블톤 로고 심볼 (중앙 정렬) -->
+  <g class="logo">
+    <!-- 왼쪽 4개 세로 바 -->
+    <rect x="11" y="18" width="2" height="12" rx="0.5" />
+    <rect x="14.33" y="18" width="2" height="12" rx="0.5" />
+    <rect x="17.66" y="18" width="2" height="12" rx="0.5" />
+    <rect x="21" y="18" width="2" height="12" rx="0.5" />
+
+    <!-- 오른쪽 4개 가로 바 -->
+    <rect x="25" y="18" width="12" height="2" rx="0.5" />
+    <rect x="25" y="21.33" width="12" height="2" rx="0.5" />
+    <rect x="25" y="24.66" width="12" height="2" rx="0.5" />
+    <rect x="25" y="28" width="12" height="2" rx="0.5" />
+  </g>
+</svg>
