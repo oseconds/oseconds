@@ -20,7 +20,7 @@ jobs:
           user: oseconds
     
           template: classic
-          base: header,activity,metadata
+          base: header,activity
           filename: profile/activity.svg
     
           config_timezone: Asia/Seoul
