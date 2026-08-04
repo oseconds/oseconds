@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .wave { fill: none; stroke: #ffffff; stroke-width: 2.5; stroke-linecap: round; }
+    .node-box { fill: none; stroke: #ffffff; stroke-width: 1.5; stroke-dasharray: 2 2; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .wave { stroke: #1f2328; }
+      .node-box { stroke: #1f2328; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- 사이클/패턴 외곽 점선 틀 -->
+  <rect class="node-box" x="11" y="11" width="26" height="26" rx="4" />
+
+  <!-- Tidal 파동 심볼 (중앙 연속 곡선) -->
+  <path class="wave" d="M 15 26 C 18 18, 21 18, 24 24 C 27 30, 30 30, 33 22" />
+</svg>
