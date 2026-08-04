@@ -1,0 +1,219 @@
+= Creative Pipeline - Patch View
+
+
+[source,text]
+----
+                         [ IDEA ]
+
+                            |
+                            |
+                            v
+
+                    [ TEXT / PROMPT ]
+
+                            |
+              +-------------+-------------+
+              |                           |
+              v                           v
+
+
+       [ IMAGE PIPELINE ]          [ AUDIO PIPELINE ]
+
+              |                           |
+              |                           |
+              v                           v
+
+       [ FLUX / SD ]              [ ABLETON LIVE ]
+
+              |                           |
+              |                           |
+              v                           v
+
+          [ COMFYUI ]                [ MAX/MSP ]
+
+              |                           |
+              |                           |
+              +-------------+-------------+
+                            |
+                            |
+                            v
+
+
+                  [ CREATIVE PROCESSING ]
+
+
+                            |
+             +--------------+--------------+
+             |                             |
+             v                             v
+
+
+      [ VIDEO GENERATION ]          [ REALTIME VISUAL ]
+
+
+             |                             |
+             |                             |
+             v                             v
+
+
+     +---------------+             [ TOUCHDESIGNER ]
+     |               |
+     v               v
+ [ KLING ]      [ SEEDANCE ]
+     |
+     |
+     v
+
+ [ MINIMAX H3 ]
+
+
+             |
+             |
+             +--------------+
+                            |
+                            v
+
+
+                    [ MEDIA PIPELINE ]
+
+                            |
+             +--------------+--------------+
+             |                             |
+             v                             v
+
+       [ AFTER EFFECTS ]              [ TOPAZ ]
+
+             |                             |
+             +--------------+--------------+
+
+                            |
+                            v
+
+
+                    [ FINAL VISUAL SOURCE ]
+
+
+                            |
+              +-------------+-------------+
+              |                           |
+              v                           v
+
+
+       [ TOUCHDESIGNER ]             [ RESOLUME ]
+
+              |
+              |
+              v
+
+
+          [ LIVE OUTPUT ]
+
+              |
+      +-------+-------+
+      |               |
+      v               v
+
+ [ PROJECTION ]   [ INSTALLATION ]
+
+
+
+================================================
+
+
+              AUDIO REACTIVE ROUTE
+
+
+                    [ ABLETON ]
+
+                        |
+                        |
+                  audio / midi
+
+                        |
+                        v
+
+
+                     [ MAX ]
+
+                        |
+                        |
+                       OSC
+
+                        |
+                        v
+
+
+                [ TOUCHDESIGNER ]
+
+                        |
+                        |
+                visual parameter
+
+                        |
+                        v
+
+
+                  [ OUTPUT ]
+
+
+
+================================================
+
+
+              HARDWARE ROUTE
+
+
+                [ TOUCHDESIGNER ]
+
+                        |
+                        |
+                      OSC
+
+                        |
+                        v
+
+
+                    [ ARDUINO ]
+
+                        |
+                        |
+                    sensor / motor
+
+                        |
+                        v
+
+
+                [ INSTALLATION ]
+
+
+
+================================================
+
+
+              JAVASCRIPT ECOSYSTEM
+
+
+                 [ JAVASCRIPT ]
+
+                       |
+          +------------+------------+
+          |                         |
+          v                         v
+
+      [ p5.js ]               [ STRUDEL ]
+
+          |                         |
+          |                         |
+          +------------+------------+
+
+                       |
+                       v
+
+                [ WEB / AUDIO VISUAL ]
+
+                       |
+                       v
+
+              [ OSC / TOUCHDESIGNER ]
+
+----
