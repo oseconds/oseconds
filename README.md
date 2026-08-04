@@ -22,7 +22,8 @@
 
 ## Stack
 
-### Audio  
+### Audio
+
 <div>
 <img src="./custom-icon/ableton.svg" height="32" title="Ableton"/>
 <img src="./custom-icon/max.svg" height="32" title="Max/MSP"/>
@@ -30,18 +31,29 @@
 <img src="./custom-icon/tidalcycles.svg" height="32" title="TidalCycles"/>
 </div>
 
-### Visual  
+### Visual
+
 <div>
 <img src="./custom-icon/touchdesigner.svg" height="32" title="TouchDesigner"/>
 <img src="./custom-icon/aftereffect.svg" height="32" title="After Effects"/>
 <img src="./custom-icon/blender.svg" height="32" title="Blender"/>
+<img src="./custom-icon/p5js.svg" height="32" title="p5.js"/>
 </div>
 
-### AI  
+### AI
+
 <div>
 <img src="./custom-icon/comfyui.svg" height="32" title="ComfyUI"/>
 <img src="./custom-icon/kling.svg" height="32" title="Kling"/>
 <img src="./custom-icon/seedance.svg" height="32" title="Seedance"/>
+<img src="./custom-icon/minimaxH3.svg" height="32" title="MiniMax H3"/>
+</div>
+
+### Connect
+
+<div>
+<img src="./custom-icon/osc.svg" height="32" title="OSC"/>
+<img src="./custom-icon/javascript.svg" height="32" title="JavaScript"/>
 </div>
 
 
