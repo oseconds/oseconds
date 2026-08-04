@@ -1,41 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <!-- 씨앗 껍질을 위한 고급스러운 모던 웜 브라운 그라데이션 -->
+    <linearGradient id="brown-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a373; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8d5b4c; stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 생명력 넘치는 테크-스프라우트 네온 에메랄드 그라데이션 -->
+    <linearGradient id="sprout-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669; stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 은은한 글로우 섀도우 효과 -->
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
   <style>
-    .bg { fill: #0b0f19; rx: 10px; }
+    .bg { fill: #0b0f17; rx: 12px; }
     
-    /* 갈색 씨앗 껍질 (정갈한 단선 처리) */
-    .seed-shell { fill: none; stroke: #a3704c; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+    /* 모던 원형 테두리 (Glow & Gradient) */
+    .circle-shell {
+      fill: none;
+      stroke: url(#brown-grad);
+      stroke-width: 3.2;
+      stroke-linecap: round;
+    }
     
-    /* 초록색 통합 S-새싹 (하나의 매끄러운 패스) */
-    .sprout-path { fill: #22c55e; fill-rule: evenodd; }
+    /* 입체감 있는 초록색 S-Sprout 패스 */
+    .modern-s {
+      fill: none;
+      stroke: url(#sprout-grad);
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: url(#soft-glow);
+    }
+    
+    /* S 상단의 정교한 모던 잎사귀 */
+    .modern-leaf {
+      fill: url(#sprout-grad);
+      filter: url(#soft-glow);
+    }
 
     @media (prefers-color-scheme: light) {
       .bg { fill: #f8fafc; }
-      .seed-shell { stroke: #85522c; }
-      .sprout-path { fill: #16a34a; }
     }
   </style>
 
-  <!-- 배경 카드 -->
-  <rect class="bg" width="48" height="48" rx="10" />
+  <!-- 카드 배경 -->
+  <rect class="bg" width="48" height="48" rx="12" />
 
   <g transform="translate(0, 1)">
-    <!-- 1. 단단한 갈색 씨앗 껍질 -->
-    <path class="seed-shell" d="M 24 10 
-             C 14 10, 10 20, 10 26 
-             C 10 34, 16 40, 24 40 
-             C 32 40, 38 34, 38 26 
-             C 38 20, 34 10, 24 10 Z" />
+    <!-- 1. 그라데이션 원형 테두리 (Gradient Shell) -->
+    <circle class="circle-shell" cx="24" cy="23.5" r="14" />
 
-    <!-- 2. 매끈하게 일체화된 초록색 S-새싹 심볼 -->
-    <path class="sprout-path" d="
-      M 28 15 
-      C 30.5 12, 33.5 13, 33 15.5 
-      C 32.5 17.5, 30 18, 27.5 18 
-      C 22 18, 18.5 22, 22.5 25.5 
-      C 26.5 29, 23 35, 17.5 35 
-      C 15.5 35, 15 33.5, 16.5 33.5 
-      C 19.5 33.5, 22.5 29, 19.5 26.5 
-      C 16.5 24, 19.5 15.5, 26 15.5 
-      C 27 15.5, 27.5 15, 28 15 Z" />
+    <!-- 2. S 상단의 입체적인 모던 잎사귀 -->
+    <path class="modern-leaf" d="M 27.5 15 C 31.5 13, 33 16, 30 18 C 28 19.2, 26.5 18, 27.5 15 Z" />
+
+    <!-- 3. 테크 에메랄드 그라데이션 S-줄기 -->
+    <path class="modern-s" d="M 27.5 17.5 
+             C 21.5 17.5, 18 21.5, 23.5 25 
+             C 29 28.5, 25 32.5, 18.5 32.5" />
   </g>
 </svg>
