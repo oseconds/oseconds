@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <!-- 형광 연두 메인 그라데이션 -->
+    <linearGradient id="blender-lime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAFF00" />
+      <stop offset="100%" stop-color="#76E000" />
+    </linearGradient>
+
+    <!-- 중앙 코어 포인트 그라데이션 -->
+    <linearGradient id="core-lime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#103808" />
+      <stop offset="100%" stop-color="#071A03" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .bg { fill: #000000; rx: 12px; }
+    
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #0b0f17; }
+    }
+  </style>
+
+  <!-- 검은색 바탕 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="12" />
+
+  <g transform="translate(0, 0)">
+    <!-- 1. 블렌더 공식 로고 메인 바디 (형광 연두) -->
+    <path fill="url(#blender-lime)" fill-rule="evenodd" d="
+      M 28.5 7.5
+      C 27.5 6.5 25.8 6.5 24.8 7.5
+      L 15.2 17.1
+      H 11.5
+      C 10.1 17.1 9 18.2 9 19.6
+      C 9 21 10.1 22.1 11.5 22.1
+      H 18.8
+      L 6.5 34.4
+      C 5.5 35.4 5.5 37.1 6.5 38.1
+      C 7.5 39.1 9.2 39.1 10.2 38.1
+      L 18.8 29.5
+      C 20.9 36.8 27.6 42 35.5 42
+      C 42.4 42 48 36.4 48 29.5
+      C 48 22.6 42.4 17 35.5 17
+      C 32.8 17 30.4 17.8 28.4 19.3
+      L 28.5 7.5 Z
+    " transform="scale(0.85) translate(3, 3)"/>
+
+    <!-- 2. 중앙 흰색 원 구역 (라이트 링) -->
+    <circle cx="31.8" cy="28" r="7.2" fill="#00000" />
+
+    <!-- 3. 중앙 눈동자/코어 (다크 딥 그린) -->
+    <circle cx="31.8" cy="28" r="4.5" fill="#252525" />
+  </g>
+</svg>
