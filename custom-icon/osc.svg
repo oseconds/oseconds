@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    /* OSC 네트워크 패킷 라인 */
+    .net-path { fill: none; stroke: #38bdf8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    /* 사운드 패킷 노드 */
+    .node { fill: #38bdf8; }
+    .node-pulse { fill: none; stroke: #38bdf8; stroke-width: 1.5; opacity: 0.4; }
+    /* OSC 타이포그래피 */
+    .text-osc { fill: #ffffff; font-family: monospace, system-ui, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-anchor: middle; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .text-osc { fill: #1f2328; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- 상단: OSC 데이터 신호 & 노드 네트워크 -->
+  <g transform="translate(0, -2)">
+    <!-- 신호 연결선 -->
+    <path class="net-path" d="M 12 20 L 20 14 L 28 22 L 36 15" />
+    
+    <!-- 노드 펄스 원 및 점 -->
+    <circle class="node-pulse" cx="20" cy="14" r="3.5" />
+    <circle class="node-pulse" cx="28" cy="22" r="3.5" />
+    
+    <circle class="node" cx="12" cy="20" r="2" />
+    <circle class="node" cx="20" cy="14" r="2" />
+    <circle class="node" cx="28" cy="22" r="2" />
+    <circle class="node" cx="36" cy="15" r="2" />
+  </g>
+
+  <!-- 하단: OSC 텍스트 -->
+  <text class="text-osc" x="24" y="36">OSC</text>
+</svg>
