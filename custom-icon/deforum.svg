@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    /* 차갑고 어두운 인더스트리얼 플레이트 배경 */
+    .bg { fill: #161b22; rx: 10px; }
+    
+    /* 볼드하고 각진 플레이트 브래킷 */
+    .ind-bracket { fill: none; stroke: #e6edf3; stroke-width: 3; stroke-linecap: square; stroke-linejoin: miter; }
+    
+    /* 중앙 Heavy 'd' */
+    .ind-text { fill: #e6edf3; font-family: monospace, system-ui, sans-serif; font-weight: 900; font-size: 16px; text-anchor: middle; dominant-baseline: middle; }
+    
+    /* 플레이트 모서리 리벳/볼트 (Industrial Rivets) */
+    .rivet { fill: #30363d; stroke: #8b949e; stroke-width: 0.8; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .ind-bracket { stroke: #1f2328; }
+      .ind-text { fill: #1f2328; }
+      .rivet { fill: #d0d7de; stroke: #6e7681; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- 모서리 인더스트리얼 리벳(Rivet / Bolt) 디테일 -->
+  <circle class="rivet" cx="7" cy="7" r="1.5" />
+  <circle class="rivet" cx="41" cy="7" r="1.5" />
+  <circle class="rivet" cx="7" cy="41" r="1.5" />
+  <circle class="rivet" cx="41" cy="41" r="1.5" />
+
+  <!-- 각진 구조의 인더스트리얼 중괄호 { -->
+  <path class="ind-bracket" d="M 16 12 H 12 V 21 L 9 24 L 12 27 V 36 H 16" />
+
+  <!-- 각진 구조의 인더스트리얼 중괄호 } -->
+  <path class="ind-bracket" d="M 32 12 H 36 V 21 L 39 24 L 36 27 V 36 H 32" />
+
+  <!-- 중앙 굵고 묵직한 알파벳 d -->
+  <text class="ind-text" x="24" y="24.5">d</text>
+</svg>
