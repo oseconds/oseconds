@@ -14,6 +14,10 @@
 </a>
 -->
 
-<img src="./profile/habits.svg" />
+<!-- <img src="./profile/habits.svg" /> -->
+![alt text](profile/habits.svg)
 <img src="./profile/topics.svg" />
-<img src="./profile/code.svg" />
+
+
+
+<!-- <img src="./profile/code.svg" /> -->
