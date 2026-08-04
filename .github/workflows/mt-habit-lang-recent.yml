@@ -39,7 +39,6 @@ jobs:
 
           plugin_languages_recent_load: 500
           plugin_languages_recent_days: 30
-          plugin_languages_recent_categories: programming,markup,data
-
+          plugin_languages_recent_categories: programming,markup,data,prose,config
           plugin_languages_analysis_timeout: 2400
           plugin_languages_analysis_timeout_repositories: 600
