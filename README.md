@@ -40,6 +40,9 @@
 **AI**  
 <div>
 <img src="./custom-icon/comfyui.svg" height="36" title="ComfyUI"/>
+<!--<img src="./custom-icon/flux.svg"
+  height="36" title="Flux"/>-->
+<img src="./custom-icon/deforum.svg" height="36" title="Deforum"/>
 <img src="./custom-icon/kling.svg" height="36" title="Kling"/>
 <img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
