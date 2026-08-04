@@ -58,7 +58,6 @@ jobs:
           plugin_code_languages: javascript,typescript,python
 
           plugin_code_visibility: all
-          repositories: oseconds/oseconds
     
     
       - name: WakaTime
