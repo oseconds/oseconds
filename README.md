@@ -30,28 +30,50 @@
 **Visual**  
 <div>
 <img src="./custom-icon/touchdesigner.svg" height="36" title="TouchDesigner"/>
-<img src="./custom-icon/aftereffect.svg" height="36" title="After Effects"/>
 <img src="./custom-icon/blender.svg" height="36" title="Blender"/>
 <img src="./custom-icon/p5js.svg" height="36" title="p5.js"/>
+<code>GLSL</code>
 </div>
 
 **AI**  
 <div>
 <img src="./custom-icon/comfyui.svg" height="36" title="ComfyUI"/>
-<!--<img src="./custom-icon/flux.svg"
-  height="36" title="Flux"/>-->
+
 <img src="./custom-icon/deforum.svg" height="36" title="Deforum"/>
 <img src="./custom-icon/kling.svg" height="36" title="Kling"/>
 <img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
+<code>FLUX</code>
+<code>Stable Diffusion</code>
 </div>
 
-**Connect**  
+**Media**  
+<div>
+<img src="./custom-icon/aftereffect.svg" height="36" title="After Effects"/>
+<code>Photoshop</code>
+<code>Topaz Video AI</code>
+</div>
+
+**Code**  
+<div>
+<img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
+<code>TypeScript</code>
+<code>Python</code>
+</div>
+
+**Hardware**  
 <div>
 <img src="./custom-icon/osc.svg" height="36" title="OSC"/>
-<img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
+<code>Arduino</code>
+<code>Firmata</code>
+<code>MIDI</code>
 </div>
 
+**Live**  
+<div>
+<code>Resolume</code>
+<code>rekordbox</code>
+</div>
 
 
 
