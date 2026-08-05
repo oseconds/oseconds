@@ -1,4 +1,4 @@
-name: Waka Readme
+9name: Waka Readme
 
 on:
   schedule:
@@ -50,6 +50,6 @@ jobs:
           
 
           SYMBOL_VERSION: "3"
-          BADGE_STYLE: "for-the-badge"
+          BADGE_STYLE: "social"
           DEBUG_LOGGING: "False"
   
