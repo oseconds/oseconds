@@ -40,7 +40,7 @@ jobs:
 
 
           plugin_languages_categories: programming,markup,data,prose
-          plugin_languages_threshold: 0.3
+          plugin_languages_threshold: 0.3%
           
           
           plugin_languages_analysis_timeout: 60
