@@ -50,6 +50,6 @@ jobs:
           
 
           SYMBOL_VERSION: "3"
-          BADGE_STYLE: "social"
+          BADGE_STYLE: "flat"
           DEBUG_LOGGING: "False"
   
