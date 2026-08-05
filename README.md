@@ -19,6 +19,7 @@
 ![alt text](profile/habits.svg)
 -->
 
+
 **Audio**  
 <div>
 <img src="./custom-icon/ableton.svg" height="36" title="Ableton"/>
@@ -31,51 +32,48 @@
 <div>
 <img src="./custom-icon/touchdesigner.svg" height="36" title="TouchDesigner"/>
 <img src="./custom-icon/blender.svg" height="36" title="Blender"/>
-<img src="./custom-icon/p5js.svg" height="36" title="p5.js"/>
-<code>GLSL</code>
+<img src="./custom-icon/p5js.svg" height="36" title="p5.js"/><br/>
+<sub><code>GLSL</code></sub>
 </div>
 
 **AI**  
 <div>
 <img src="./custom-icon/comfyui.svg" height="36" title="ComfyUI"/>
-
 <img src="./custom-icon/deforum.svg" height="36" title="Deforum"/>
 <img src="./custom-icon/kling.svg" height="36" title="Kling"/>
 <img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
-<code>FLUX</code>
-<code>Stable Diffusion</code>
+<sub><code>FLUX</code></sub>
+<sub><code>Stable Diffusion</code></sub>
 </div>
 
 **Media**  
 <div>
 <img src="./custom-icon/aftereffect.svg" height="36" title="After Effects"/>
-<code>Photoshop</code>
-<code>Topaz Video AI</code>
+<sub><code>Photoshop</code></sub>
+<sub><code>Topaz</code></sub>
 </div>
 
 **Code**  
 <div>
 <img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
-<code>TypeScript</code>
-<code>Python</code>
+<sub><code>TypeScript</code></sub>
+<sub><code>Python</code></sub>
 </div>
 
 **Hardware**  
 <div>
 <img src="./custom-icon/osc.svg" height="36" title="OSC"/>
-<code>Arduino</code>
-<code>Firmata</code>
-<code>MIDI</code>
+<sub><code>Arduino</code></sub>
+<sub><code>Firmata</code></sub>
+<sub><code>MIDI</code></sub>
 </div>
 
 **Live**  
 <div>
-<code>Resolume</code>
-<code>rekordbox</code>
+<sub><code>Resolume</code></sub>
+<sub><code>rekordbox</code></sub>
 </div>
-
-
 
 
 
