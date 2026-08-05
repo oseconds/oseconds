@@ -27,6 +27,7 @@
 <img src="./custom-icon/strudel.svg" height="36" title="Strudel"/>
 <img src="./custom-icon/tidalcycles.svg" height="36" title="TidalCycles"/>
 </div>
+<br>
 
 **Visual**  
 <div>
@@ -35,6 +36,8 @@
 <img src="./custom-icon/p5js.svg" height="36" title="p5.js"/><br/>
 <sub><code>GLSL</code></sub>
 </div>
+<br>
+
 
 **AI**  
 <div>
@@ -46,6 +49,8 @@
 <sub><code>FLUX</code></sub>
 <sub><code>Stable Diffusion</code></sub>
 </div>
+<br>
+
 
 **Media**  
 <div>
@@ -53,6 +58,9 @@
 <sub><code>Photoshop</code></sub>
 <sub><code>Topaz</code></sub>
 </div>
+<br>
+
+
 
 **Code**  
 <div>
@@ -60,6 +68,9 @@
 <sub><code>TypeScript</code></sub>
 <sub><code>Python</code></sub>
 </div>
+<br>
+
+
 
 **Hardware**  
 <div>
@@ -68,6 +79,8 @@
 <sub><code>Firmata</code></sub>
 <sub><code>MIDI</code></sub>
 </div>
+<br>
+
 
 **Live**  
 <div>
