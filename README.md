@@ -1,4 +1,23 @@
-##  
+##
+<p align="center">
+  Artist & Developer exploring the intersection of
+  <br>
+  Audio, Visuals, AI, and Interactive Systems.
+</p>
+
+
+<p align="center">
+  <sub>
+  Ableton Certified Training <br>
+  DALL·E 2 ·
+  Midjourney ·
+  Runway Gen-1·2 Beta Tester <br>
+  Ableton Live 12 Beta Tester ·
+  Extensions SDK Developer Program
+  </sub>
+</p>
+
+##
 
 <!--START_SECTION:activity-->
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.38%20million%20lines%20of%20code-blue?style=flat)
