@@ -19,8 +19,6 @@
 ![alt text](profile/habits.svg)
 -->
 
-### Stack
-
 **Audio**  
 <div>
 <img src="./custom-icon/ableton.svg" height="36" title="Ableton"/>
