@@ -11,7 +11,7 @@
   Ableton Certified Training <br>
   DALL-E 2 ·
   Midjourney ·
-  Runway Gen-1·2 Beta Tester <br>
+  Runway Gen-1,2 Beta Tester <br>
   Ableton Live 12 Beta Tester ·
   Extensions SDK Developer Program
   </sub>
