@@ -94,7 +94,7 @@
 <div>
 <img src="./custom-icon/osc.svg" height="36" title="OSC"/>
 <!-- Arduino Badge: Square style, Teal color, 36px height -->
-<img src="https://img.shields.io/badge/-00979D?style=square&logo=arduino&logoColor=white" height="36" title="Arduino"/>
+<img src="./custom-icon/arduino.svg" height="36" title="Arduino"/>
 <!-- Firmata Badge: Square style, Teal color, 36px height -->
 <img src="https://img.shields.io/badge/Firmata-00979D?style=square" title="Firmata"/>
 <!-- MIDI Badge: Square style, Teal color, 36px height -->

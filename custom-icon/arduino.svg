@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    
+    /* 아두이노 공식 틸(Teal) 브랜드 컬러 */
+    .ard-teal { stroke: #00979c; fill: none; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .ard-teal { stroke: #008184; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- 아두이노 심볼 (내부 32x32 Safe Zone) -->
+  <g transform="translate(8, 8)">
+    <!-- 1. 무한대(Infinity) 루프 -->
+    <path class="ard-teal" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+          d="M 16,16 C 19.5,10.2 26,10.2 26,16 C 26,21.8 19.5,21.8 16,16 C 12.5,10.2 6,10.2 6,16 C 6,21.8 12.5,21.8 16,16 Z" />
+
+    <!-- 2. 축소된 플러스(+) 기호 (좌측 루프) -->
+    <path class="ard-teal" stroke-width="1.8" stroke-linecap="round"
+          d="M 9.5,16 L 12.5,16 M 11,14.5 L 11,17.5" />
+
+    <!-- 3. 축소된 마이너스(-) 기호 (우측 루프) -->
+    <path class="ard-teal" stroke-width="1.8" stroke-linecap="round"
+          d="M 19.5,16 L 22.5,16" />
+  </g>
+</svg>
