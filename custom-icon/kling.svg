@@ -1,16 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="12" fill="#0b0f17"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .kling-box { fill: #7c3aed; rx: 6px; }
+    .kling-text { fill: #ffffff; font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; text-anchor: end; letter-spacing: -0.5px; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .kling-box { fill: #6d28d9; }
+      .kling-text { fill: #ffffff; }
+    }
+  </style>
 
-  <rect x="12" y="13" width="4.5" height="22" rx="2.25" fill="#00F2FE"/>
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
 
-  <path d="M18.5 22.5L25 16.5C26 15.5 27 16 27 17.5V20L18.5 23.5Z"
-    fill="#E100FF"/>
+  <!-- Kling 로고 박스 (#7C3AED) -->
+  <rect class="kling-box" x="10" y="10" width="28" height="28" rx="6" />
 
-  <path d="M18.5 22.5L27 25V27.5C27 29 26 29.5 25 28.5L18.5 22.5Z"
-    fill="#4FACFE"/>
-
-  <circle cx="30" cy="15" r="2" fill="#E100FF"/>
-  <circle cx="33" cy="13" r="1" fill="#E100FF"/>
-  <circle cx="31" cy="22" r="2" fill="#00F2FE"/>
-  <circle cx="34" cy="28" r="1.5" fill="#4FACFE"/>
+  <!-- KL 텍스트 (우측 하단 배치) -->
+  <text class="kling-text" x="35" y="34">KL</text>
 </svg>
