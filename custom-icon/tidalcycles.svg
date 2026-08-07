@@ -3,15 +3,15 @@
     .bg { fill: #161b22; rx: 10px; }
     
     /* 대각선 대칭 브랜드 컬러 */
-    .tc-diag-1 { stroke: #00e5ff; fill: none; stroke-linecap: round; }
-    .tc-diag-2 { stroke: #ff007f; fill: none; stroke-linecap: round; }
-    .tc-center { fill: #ffd43b; }
+    .tc-cyan { stroke: #00e5ff; fill: none; stroke-width: 2; stroke-linecap: round; }
+    .tc-pink { stroke: #ff007f; fill: none; stroke-width: 2; stroke-linecap: round; }
+    .tc-yellow { fill: #ffd43b; }
 
     @media (prefers-color-scheme: light) {
       .bg { fill: #f6f8fa; }
-      .tc-diag-1 { stroke: #0095a8; }
-      .tc-diag-2 { stroke: #d8006f; }
-      .tc-center { fill: #e5a000; }
+      .tc-cyan { stroke: #0095a8; }
+      .tc-pink { stroke: #d8006f; }
+      .tc-yellow { fill: #e5a000; }
     }
   </style>
 
@@ -20,13 +20,17 @@
 
   <!-- TidalCycles 4등분 원반 심볼 (내부 32x32 Safe Zone) -->
   <g transform="translate(8, 8)">
-    <!-- 1. 대각선 대칭 세트 A (우상단 & 좌하단 - Cyan) -->
-    <circle class="tc-diag-1" cx="16" cy="16" r="10" stroke-width="5" stroke-dasharray="8.5 22.9" transform="rotate(-83 16 16)" />
+    <!-- 1. 시안(Cyan) 2줄 영역 (우상단 & 좌하단 대각선) -->
+    <circle class="tc-cyan" cx="16" cy="16" r="7.2" stroke-dasharray="6.8 15.8" transform="rotate(-85 16 16)" />
+    <circle class="tc-cyan" cx="16" cy="16" r="12.2" stroke-dasharray="12.8 25.5" transform="rotate(-85 16 16)" />
 
-    <!-- 2. 대각선 대칭 세트 B (좌상단 & 우하단 - Pink) -->
-    <circle class="tc-diag-2" cx="16" cy="16" r="10" stroke-width="5" stroke-dasharray="8.5 22.9" transform="rotate(7 16 16)" />
+    <!-- 2. 핑크(Pink) 4줄 영역 (좌상단 & 우하단 대각선) -->
+    <circle class="tc-pink" cx="16" cy="16" r="5.5" stroke-dasharray="4.8 12.5" transform="rotate(5 16 16)" />
+    <circle class="tc-pink" cx="16" cy="16" r="8.0" stroke-dasharray="8.0 17.1" transform="rotate(5 16 16)" />
+    <circle class="tc-pink" cx="16" cy="16" r="10.5" stroke-dasharray="11.0 22.0" transform="rotate(5 16 16)" />
+    <circle class="tc-pink" cx="16" cy="16" r="13.0" stroke-dasharray="14.0 26.9" transform="rotate(5 16 16)" />
 
-    <!-- 3. 원반 중심 노드 (Bright Yellow) -->
-    <circle class="tc-center" cx="16" cy="16" r="2.8" />
+    <!-- 3. 원반 중심 노드 (Yellow) -->
+    <circle class="tc-yellow" cx="16" cy="16" r="2.5" />
   </g>
 </svg>
