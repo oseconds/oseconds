@@ -2,7 +2,6 @@
   <style>
     .bg { fill: #161b22; rx: 10px; }
     .topaz-box { fill: #ffffff; }
-
     @media (prefers-color-scheme: light) {
       .bg { fill: #f6f8fa; }
       .topaz-box { fill: #24292f; }
@@ -12,15 +11,8 @@
   <!-- 배경 카드 -->
   <rect class="bg" width="48" height="48" rx="10" />
 
-  <!-- Topaz 심볼 그룹 (내부 32x32 규격) -->
-  <g transform="translate(8, 8)">
-    <!-- 1층 (우상단) -->
-    <rect class="topaz-box" x="22" y="0" width="10" height="10" />
-    
-    <!-- 2층 (중앙) -->
-    <rect class="topaz-box" x="12" y="10" width="10" height="10" />
-    
-    <!-- 3층 (좌하단) -->
-    <rect class="topaz-box" x="2" y="20" width="10" height="10" />
-  </g>
+  <!-- Topaz 2D 정사각형 3개 (모서리가 맞닿는 대각선 계단 구조) -->
+  <rect class="topaz-box" x="29" y="9" width="10" height="10" />
+  <rect class="topaz-box" x="19" y="19" width="10" height="10" />
+  <rect class="topaz-box" x="9" y="29" width="10" height="10" />
 </svg>
