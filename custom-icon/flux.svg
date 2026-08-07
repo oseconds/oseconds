@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    
+    /* FLUX 인공지능 네온 프로그레시브 그라디언트 */
+    .flux-main { stroke: url(#flux-grad); stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    .flux-flow { stroke: url(#flux-grad); stroke-linecap: round; fill: none; opacity: 0.45; }
+    .flux-spark { fill: url(#flux-grad); }
+    .flux-text { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: 7.5px; letter-spacing: 1.2px; text-anchor: middle; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .flux-text { fill: #1f2328; }
+    }
+  </style>
+
+  <defs>
+    <!-- 생성형 AI 라텐트 스페이스 그라디언트 (Cyan -> Electric Violet -> Magenta) -->
+    <linearGradient id="flux-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="55%" stop-color="#7000ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- FLUX AI 심볼 (내부 32x32 Safe Zone) -->
+  <g transform="translate(8, 8)">
+    <!-- 1. 플로우 매칭(Flow Matching) 트랜스포머 벡터 스트림 -->
+    <path class="flux-flow" stroke-width="1.5" d="M 2 20 C 8 20 12 9 25 9" />
+    <path class="flux-flow" stroke-width="1.5" d="M 3 25 C 9 25 14 16 22 16" />
+
+    <!-- 2. 메인 'F' 패스 (생성 수렴 메인 축) -->
+    <!-- 스파인 및 상단 바 -->
+    <path class="flux-main" stroke-width="3.2" d="M 6 25 L 6 4 L 25 4" />
+    <!-- 중앙 바 -->
+    <path class="flux-main" stroke-width="3.2" d="M 6 13.5 L 20 13.5" />
+
+    <!-- 3. AI 이미지 생성 스파크 노드 (Sparkle) -->
+    <path class="flux-spark" d="M 25 2 C 25 4 27 4 27 4 C 27 4 25 4 25 6 C 25 4 23 4 23 4 C 23 4 25 4 25 2 Z" />
+
+    <!-- 4. 하단 브랜드 로고 텍스트 -->
+    <text class="flux-text" x="16" y="31">FLUX</text>
+  </g>
+</svg>

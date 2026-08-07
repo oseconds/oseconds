@@ -50,10 +50,9 @@
 <div>
 <img src="./custom-icon/touchdesigner.svg" height="36" title="TouchDesigner"/>
 <img src="./custom-icon/blender.svg" height="36" title="Blender"/>
-<img src="./custom-icon/p5js.svg" title="p5.js"/>
+<img src="./custom-icon/p5js.svg" height="36" title="p5.js" />
 <!-- GLSL Badge: Square style, Teal color, 36px height -->
-<img src="https://img.shields.io/badge/GLSL-007ACC?style=square" title="GLSL"/>
-</div>
+<img src="./custom-icon/glsl.svg" height="36" title="GLSL"/>
 <br>
 
 **AI**  
