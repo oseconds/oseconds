@@ -107,7 +107,7 @@
 <!-- Resolume Badge: Square style, Red color, 36px height -->
 <img src="https://img.shields.io/badge/Resolume-DD1A21?style=square" height="36" title="Resolume"/>
 <!-- rekordbox Badge: Square style, Red color, 36px height -->
-<img src="https://img.shields.io/badge/RB-DD1A21?style=square&logo=rekordbox&logoColor=white" height="36" title="rekordbox"/>
+<img src="https://img.shields.io/badge/rekordbox-DD1A21?style=square&logo=rekordbox&logoColor=white" height="36" title="rekordbox"/>
 </div>
 
 
