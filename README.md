@@ -37,17 +37,18 @@
 </div>
 <br>
 
-**AI**  
+**GenAI**  
 <div>
 <img src="./custom-icon/comfyui.svg" height="48" title="ComfyUI"/>
 <img src="./custom-icon/deforum.svg" height="48" title="Deforum"/>
+
+<img src="./custom-icon/flux.svg" height="48" title="FLUX"/>
+<img src="./custom-icon/stable-diffusion.svg" height="48" title="Stable Diffusion"/>
+
 <img src="./custom-icon/kling.svg" height="48" title="Kling"/>
 <img src="./custom-icon/seedance.svg" height="48" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="48" title="MiniMax H3"/>
-<img src="./custom-icon/flux.svg" height="48" title="FLUX"/>
-<img src="./custom-icon/stable-diffusion.svg" height="48" title="Stable Diffusion"/>
 </div>
-<br>
 
 **Media**  
 <div>
