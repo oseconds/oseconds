@@ -1,34 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <defs>
-    <!-- 포토샵 클래식 다크 네이비 배경 그라데이션 -->
-    <linearGradient id="ps-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#001E36" />
-      <stop offset="100%" stop-color="#000C14" />
-    </linearGradient>
-
-    <!-- 포토샵 시그니처 시안블루 텍스트 그라데이션 -->
-    <linearGradient id="ps-text" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#31A8FF" />
-      <stop offset="100%" stop-color="#0072FF" />
-    </linearGradient>
-  </defs>
-
   <style>
-    .bg { rx: 12px; }
+    .bg { fill: #161b22; rx: 10px; }
+    .ps-box { fill: #001e36; stroke: #31a8ff; stroke-width: 1.5; rx: 6px; }
+    .ps-text { fill: #31a8ff; font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 14px; text-anchor: middle; dominant-baseline: middle; letter-spacing: -0.5px; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .ps-box { fill: #00101d; stroke: #2b95ef; }
+      .ps-text { fill: #2b95ef; }
+    }
   </style>
 
   <!-- 배경 카드 -->
-  <rect class="bg" width="48" height="48" fill="url(#ps-bg)" />
+  <rect class="bg" width="48" height="48" rx="10" />
 
-  <!-- 미세 테두리 라인 -->
-  <rect x="0.5" y="0.5" width="47" height="47" rx="11.5" fill="none" stroke="#31A8FF" stroke-width="1" stroke-opacity="0.2" />
+  <!-- Adobe Ps 로고 박스 (포토샵 클래식 네이비 & 시안 블루) -->
+  <rect class="ps-box" x="10" y="10" width="28" height="28" rx="6" />
 
-  <!-- 'Ps' 모노그램 텍스트 -->
-  <text x="24" y="32.5" 
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-        font-size="22" 
-        font-weight="800" 
-        fill="url(#ps-text)" 
-        text-anchor="middle"
-        letter-spacing="-0.5">Ps</text>
+  <!-- Ps 텍스트 -->
+  <text class="ps-text" x="24" y="24.5">Ps</text>
 </svg>
