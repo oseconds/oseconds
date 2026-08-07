@@ -17,102 +17,65 @@
   </sub>
 </p>
 
-##
-
-<!--START_SECTION:activity-->
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.38%20million%20lines%20of%20code-blue?style=flat)
-
-
-<!--END_SECTION:activity-->
-<img src="./metrics-languages-indepth.svg" />
-<!--
-<a href="https://wakatime.com/@oseconds">
-  <img height="200" src="./profile/wakatime.svg" />
-</a>
--->
-<!-- <img src="./profile/habits.svg" /> -->
-<!--
-![alt text](profile/habits.svg)
--->
-
 ## 
 
 **Audio**  
 <div>
-<img src="./custom-icon/ableton.svg" height="36" title="Ableton"/>
-<img src="./custom-icon/max.svg" height="36" title="Max/MSP"/>
-<img src="./custom-icon/strudel.svg" height="36" title="Strudel"/>
-<img src="./custom-icon/tidalcycles.svg" height="36" title="TidalCycles"/>
+<img src="./custom-icon/ableton.svg" height="48" title="Ableton"/>
+<img src="./custom-icon/max.svg" height="48" title="Max/MSP"/>
+<img src="./custom-icon/strudel.svg" height="48" title="Strudel"/>
+<img src="./custom-icon/tidalcycles.svg" height="48" title="TidalCycles"/>
 </div>
 <br>
 
 **Visual**  
 <div>
-<img src="./custom-icon/touchdesigner.svg" height="36" title="TouchDesigner"/>
-<img src="./custom-icon/blender.svg" height="36" title="Blender"/>
-<img src="./custom-icon/p5js.svg" height="36" title="p5.js" />
-<!-- GLSL Badge: Square style, Teal color, 36px height -->
-<img src="./custom-icon/glsl.svg" height="36" title="GLSL"/>
+<img src="./custom-icon/touchdesigner.svg" height="48" title="TouchDesigner"/>
+<img src="./custom-icon/blender.svg" height="48" title="Blender"/>
+<img src="./custom-icon/p5js.svg" height="48" title="p5.js"/>
+<img src="./custom-icon/glsl.svg" height="48" title="GLSL"/>
+</div>
 <br>
 
 **AI**  
 <div>
-<img src="./custom-icon/comfyui.svg" height="36" title="ComfyUI"/>
-<img src="./custom-icon/deforum.svg" height="36" title="Deforum"/>
-<img src="./custom-icon/kling.svg" height="36" title="Kling"/>
-<img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
-<img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
-<!-- FLUX Badge: Square style, Purple color, 36px height -->
-<img src="./custom-icon/flux.svg" height="36" title="FLUX"/>
-<!-- Stable Diffusion Badge: Square style, Purple color, 36px height -->
-<img src="./custom-icon/stable-diffusion.svg" height="36" title="Stable Diffusion"/>
+<img src="./custom-icon/comfyui.svg" height="48" title="ComfyUI"/>
+<img src="./custom-icon/deforum.svg" height="48" title="Deforum"/>
+<img src="./custom-icon/kling.svg" height="48" title="Kling"/>
+<img src="./custom-icon/seedance.svg" height="48" title="Seedance"/>
+<img src="./custom-icon/minimaxH3.svg" height="48" title="MiniMax H3"/>
+<img src="./custom-icon/flux.svg" height="48" title="FLUX"/>
+<img src="./custom-icon/stable-diffusion.svg" height="48" title="Stable Diffusion"/>
 </div>
 <br>
 
 **Media**  
 <div>
-<img src="./custom-icon/aftereffect.svg" height="36" title="After Effects"/>
-<!-- Photoshop Badge: Square style, Pink color, 36px height -->
-<img src="./custom-icon/photoshop.svg" height="36" title="Photoshop"/>
-<!-- Topaz Badge: Square style, Pink color, 36px height -->
-<img src="./custom-icon/topaz.svg" height="36" title="Topaz"/>
+<img src="./custom-icon/aftereffect.svg" height="48" title="After Effects"/>
+<img src="./custom-icon/photoshop.svg" height="48" title="Photoshop"/>
+<img src="./custom-icon/topaz.svg" height="48" title="Topaz"/>
 </div>
 <br>
 
 **Code**  
 <div>
-<img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
-<!-- TypeScript Badge: Square style, #3178C6, 36px height -->
-<img src="./custom-icon/typescript.svg" height="36" title="TypeScript"/>
-<!-- Python Badge: Square style, #FFD43B, 36px height -->
-<img src="./custom-icon/python.svg" height="36" title="Python"/>
+<img src="./custom-icon/javascript.svg" height="48" title="JavaScript"/>
+<img src="./custom-icon/typescript.svg" height="48" title="TypeScript"/>
+<img src="./custom-icon/python.svg" height="48" title="Python"/>
 </div>
 <br>
 
 **Hardware**  
 <div>
-<img src="./custom-icon/osc.svg" height="36" title="OSC"/>
-<!-- Arduino Badge: Square style, Teal color, 36px height -->
-<img src="./custom-icon/arduino.svg" height="36" title="Arduino"/>
-<!-- Firmata Badge: Square style, Teal color, 36px height -->
-<img src="./custom-icon/firmata.svg" height="36" title="Firmata"/>
-<!-- MIDI Badge: Square style, Teal color, 36px height -->
-<img src="./custom-icon/midi.svg" height="36" title="MIDI"/>
+<img src="./custom-icon/osc.svg" height="48" title="OSC"/>
+<img src="./custom-icon/arduino.svg" height="48" title="Arduino"/>
+<img src="./custom-icon/firmata.svg" height="48" title="Firmata"/>
+<img src="./custom-icon/midi.svg" height="48" title="MIDI"/>
 </div>
 <br>
 
 **Live**  
 <div>
-<!-- Resolume Badge: Square style, Red color, 36px height -->
-<img src="./custom-icon/resolume.svg" height="36" title="Resolume"/>
-<!-- rekordbox Badge: Square style, Red color, 36px height -->
-<img src="./custom-icon/rekordbox.svg" height="36" title="rekordbox"/>
+<img src="./custom-icon/resolume.svg" height="48" title="Resolume"/>
+<img src="./custom-icon/rekordbox.svg" height="48" title="rekordbox"/>
 </div>
-
-
-
-<!--<img src="./profile/topics.svg" />-->
-
-
-
-<!-- <img src="./profile/code.svg" /> -->
