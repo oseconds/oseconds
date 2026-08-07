@@ -50,9 +50,9 @@
 <div>
 <img src="./custom-icon/touchdesigner.svg" height="36" title="TouchDesigner"/>
 <img src="./custom-icon/blender.svg" height="36" title="Blender"/>
-<img src="./custom-icon/p5js.svg" height="36" title="p5.js"/>
+<img src="./custom-icon/p5js.svg" title="p5.js"/>
 <!-- GLSL Badge: Square style, Teal color, 36px height -->
-<img src="https://img.shields.io/badge/GLSL-007ACC?style=square" height="36" title="GLSL"/>
+<img src="https://img.shields.io/badge/GLSL-007ACC?style=square" title="GLSL"/>
 </div>
 <br>
 
@@ -64,9 +64,9 @@
 <img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
 <!-- FLUX Badge: Square style, Purple color, 36px height -->
-<img src="https://img.shields.io/badge/FLUX-7F00FF?style=square" height="36" title="FLUX"/>
+<img src="https://img.shields.io/badge/FLUX-7F00FF?style=square" title="FLUX"/>
 <!-- Stable Diffusion Badge: Square style, Purple color, 36px height -->
-<img src="https://img.shields.io/badge/Stable%20Diff-7F00FF?style=square&logo=stablediffusion&logoColor=white" height="36" title="Stable Diffusion"/>
+<img src="https://img.shields.io/badge/Stable%20Diff-7F00FF?style=square&logo=stablediffusion&logoColor=white" title="Stable Diffusion"/>
 </div>
 <br>
 
@@ -74,7 +74,7 @@
 <div>
 <img src="./custom-icon/aftereffect.svg" height="36" title="After Effects"/>
 <!-- Photoshop Badge: Square style, Pink color, 36px height -->
-<img src="https://img.shields.io/badge/PS-E10098?style=square&logo=adobephotoshop&logoColor=white" height="36" title="Photoshop"/>
+<img src="https://img.shields.io/badge/Ps-31A8FF?style=square&logo=adobephotoshop&logoColor=white" height="36" title="Photoshop"/>
 <!-- Topaz Badge: Square style, Pink color, 36px height -->
 <img src="https://img.shields.io/badge/Topaz-E10098?style=square" height="36" title="Topaz"/>
 </div>
@@ -83,10 +83,10 @@
 **Code**  
 <div>
 <img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
-<!-- TypeScript Badge: Square style, Orange color, 36px height -->
-<img src="https://img.shields.io/badge/TS-F16529?style=square&logo=typescript&logoColor=white" height="36" title="TypeScript"/>
-<!-- Python Badge: Square style, Orange color, 36px height -->
-<img src="https://img.shields.io/badge/PY-F16529?style=square&logo=python&logoColor=white" height="36" title="Python"/>
+<!-- TypeScript Badge: Square style, #3178C6, 36px height -->
+<img src="https://img.shields.io/badge/-3178C6?style=square&logo=typescript&logoColor=white" height="36" title="TypeScript"/>
+<!-- Python Badge: Square style, #FFD43B, 36px height -->
+<img src="https://img.shields.io/badge/-FFD43B?style=square&logo=python&logoColor=3776AB" height="36" title="Python"/>
 </div>
 <br>
 
@@ -94,7 +94,7 @@
 <div>
 <img src="./custom-icon/osc.svg" height="36" title="OSC"/>
 <!-- Arduino Badge: Square style, Teal color, 36px height -->
-<img src="https://img.shields.io/badge/Arduino-00979D?style=square&logo=arduino&logoColor=white" height="36" title="Arduino"/>
+<img src="https://img.shields.io/badge/-00979D?style=square&logo=arduino&logoColor=white" height="36" title="Arduino"/>
 <!-- Firmata Badge: Square style, Teal color, 36px height -->
 <img src="https://img.shields.io/badge/Firmata-00979D?style=square" title="Firmata"/>
 <!-- MIDI Badge: Square style, Teal color, 36px height -->
@@ -105,9 +105,9 @@
 **Live**  
 <div>
 <!-- Resolume Badge: Square style, Red color, 36px height -->
-<img src="https://img.shields.io/badge/Resolume-DD1A21?style=square" height="36" title="Resolume"/>
+<img src="https://img.shields.io/badge/Resolume-DD1A21?style=square"  title="Resolume"/>
 <!-- rekordbox Badge: Square style, Red color, 36px height -->
-<img src="https://img.shields.io/badge/rekordbox-DD1A21?style=square&logo=rekordbox&logoColor=white" height="36" title="rekordbox"/>
+<img src="https://img.shields.io/badge/rekordbox-DD1A21?style=square&logo=rekordbox&logoColor=white"  title="rekordbox"/>
 </div>
 
 
