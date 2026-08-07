@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- 배경 카드 -->
+  <rect x="0" y="0" width="48" height="48" rx="10" fill="#161b22" />
+
+  <!-- MIDI 심볼 (내부 32x32 Safe Zone) -->
+  <g transform="translate(8, 8)">
+    <!-- 1. MIDI 5-Pin 포트 외곽 아웃라인 (위로 2.5px 이동) -->
+    <path d="M 5 15.5 C 5 9.4 9.9 4.5 16 4.5 C 22.1 4.5 27 9.4 27 15.5 C 27 18.5 25.5 21 23 22.5 L 9 22.5 C 6.5 21 5 18.5 5 15.5 Z" 
+          fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- 2. MIDI 시그니처 5핀 노드 (Cyan Accent) -->
+    <circle cx="8.5" cy="15.5" r="1.3" fill="#00e5ff" />
+    <circle cx="11.2" cy="9.5" r="1.3" fill="#00e5ff" />
+    <circle cx="16" cy="7.5" r="1.3" fill="#00e5ff" />
+    <circle cx="20.8" cy="9.5" r="1.3" fill="#00e5ff" />
+    <circle cx="23.5" cy="15.5" r="1.3" fill="#00e5ff" />
+
+    <!-- 3. MIDI 텍스트 (충분한 간격 확보) -->
+    <text x="16" y="30" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="6" letter-spacing="1" text-anchor="middle">MIDI</text>
+  </g>
+</svg>

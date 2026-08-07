@@ -63,9 +63,9 @@
 <img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
 <!-- FLUX Badge: Square style, Purple color, 36px height -->
-<img src="https://img.shields.io/badge/FLUX-7F00FF?style=square" title="FLUX"/>
+<img src="./custom-icon/flux.svg" height="36" title="FLUX"/>
 <!-- Stable Diffusion Badge: Square style, Purple color, 36px height -->
-<img src="https://img.shields.io/badge/Stable%20Diff-7F00FF?style=square&logo=stablediffusion&logoColor=white" title="Stable Diffusion"/>
+<img src="./custom-icon/stable-diffusion.svg" height="36" title="Stable Diffusion"/>
 </div>
 <br>
 
@@ -95,18 +95,18 @@
 <!-- Arduino Badge: Square style, Teal color, 36px height -->
 <img src="./custom-icon/arduino.svg" height="36" title="Arduino"/>
 <!-- Firmata Badge: Square style, Teal color, 36px height -->
-<img src="https://img.shields.io/badge/Firmata-00979D?style=square" title="Firmata"/>
+<img src="./custom-icon/firmata.svg" height="36" title="Firmata"/>
 <!-- MIDI Badge: Square style, Teal color, 36px height -->
-<img src="https://img.shields.io/badge/MIDI-00979D?style=square" title="MIDI"/>
+<img src="./custom-icon/midi.svg" height="36" title="MIDI"/>
 </div>
 <br>
 
 **Live**  
 <div>
 <!-- Resolume Badge: Square style, Red color, 36px height -->
-<img src="https://img.shields.io/badge/Resolume-DD1A21?style=square"  title="Resolume"/>
+<img src="./custom-icon/resolume.svg" height="36" title="Resolume"/>
 <!-- rekordbox Badge: Square style, Red color, 36px height -->
-<img src="https://img.shields.io/badge/rekordbox-DD1A21?style=square&logo=rekordbox&logoColor=white"  title="rekordbox"/>
+<img src="./custom-icon/rekordbox.svg" height="36" title="rekordbox"/>
 </div>
 
 

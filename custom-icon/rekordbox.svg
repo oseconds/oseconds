@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <!-- rekordbox 시그니처 웜 레드/오렌지 그라디언트 -->
+    <linearGradient id="rb-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4b1f" />
+      <stop offset="100%" stop-color="#ff9068" />
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 카드 -->
+  <rect x="0" y="0" width="48" height="48" rx="10" fill="#161b22" />
+
+  <!-- rekordbox 심볼 (내부 32x32 Safe Zone) -->
+  <g transform="translate(8, 8)">
+    <!-- 1. DJ 웨이브폼 및 플레이어 바디 모티프 패스 -->
+    <path d="M 6 5 H 26 C 27.1 5 28 5.9 28 7 V 17 C 28 18.1 27.1 19 26 19 H 6 C 4.9 19 4 18.1 4 17 V 7 C 4 5.9 4.9 5 6 5 Z" 
+          fill="none" stroke="url(#rb-grad)" stroke-width="2.2" stroke-linejoin="round" />
+
+    <!-- 내부 웨이브폼 바 (Audio Deck Bars) -->
+    <rect x="8" y="9" width="2" height="6" rx="1" fill="url(#rb-grad)" />
+    <rect x="12" y="7" width="2" height="10" rx="1" fill="url(#rb-grad)" />
+    <rect x="16" y="10" width="2" height="4" rx="1" fill="url(#rb-grad)" />
+    <rect x="20" y="8" width="2" height="8" rx="1" fill="url(#rb-grad)" />
+    <circle cx="24" cy="12" r="1.5" fill="url(#rb-grad)" />
+
+    <!-- 2. REKORDBOX 텍스트 -->
+    <text x="16" y="28.5" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="3.8" letter-spacing="0.8" text-anchor="middle">rekordbox</text>
+  </g>
+</svg>
