@@ -74,7 +74,7 @@
 <div>
 <img src="./custom-icon/aftereffect.svg" height="36" title="After Effects"/>
 <!-- Photoshop Badge: Square style, Pink color, 36px height -->
-<img src="https://img.shields.io/badge/Ps-31A8FF?style=square&logo=adobephotoshop&logoColor=white" height="36" title="Photoshop"/>
+<img src="./custom-icon/photoshop.svg" height="36" title="Photoshop"/>
 <!-- Topaz Badge: Square style, Pink color, 36px height -->
 <img src="https://img.shields.io/badge/Topaz-E10098?style=square" height="36" title="Topaz"/>
 </div>
