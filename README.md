@@ -51,7 +51,7 @@
 <img src="./custom-icon/touchdesigner.svg" height="36" title="TouchDesigner"/>
 <img src="./custom-icon/blender.svg" height="36" title="Blender"/>
 <img src="./custom-icon/p5js.svg" height="36" title="p5.js"/>
-<img src="https://img.shields.io/badge/GLSL-007ACC?style=square" height="36" title="GLSL"/>
+<img src="https://img.shields.io/badge/GLSL-007ACC?style=square" title="GLSL"/>
 </div>
 <br>
 
@@ -63,8 +63,8 @@
 <img src="./custom-icon/kling.svg" height="36" title="Kling"/>
 <img src="./custom-icon/seedance.svg" height="36" title="Seedance"/>
 <img src="./custom-icon/minimaxH3.svg" height="36" title="MiniMax H3"/>
-<img src="https://img.shields.io/badge/FLUX-purple?style=square" height="36" title="FLUX"/>
-<img src="https://img.shields.io/badge/Stable%20Diffusion-purple?style=square" height="36" title="Stable Diffusion"/>
+<img src="https://img.shields.io/badge/FLUX-purple?style=square" title="FLUX"/>
+<img src="https://img.shields.io/badge/Stable%20Diffusion-purple?style=square"" title="Stable Diffusion"/>
 </div>
 <br>
 
