@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .react-symbol { color: #00d8ff; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .react-symbol { color: #00c9e6; }
+    }
+  </style>
+
+  <!-- 배경 카드 (Ae, Ps와 동일한 규격) -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- ReactJS 심볼 (아톰) -->
+  <g class="react-symbol" transform="translate(24, 24)">
+    <!-- 중앙 원 -->
+    <circle cx="0" cy="0" r="2.5" fill="currentColor" />
+    <!-- 세 개의 타원 궤도 -->
+    <ellipse cx="0" cy="0" rx="14" ry="5.5" transform="rotate(0)" fill="none" stroke="currentColor" stroke-width="1.5" />
+    <ellipse cx="0" cy="0" rx="14" ry="5.5" transform="rotate(60)" fill="none" stroke="currentColor" stroke-width="1.5" />
+    <ellipse cx="0" cy="0" rx="14" ry="5.5" transform="rotate(120)" fill="none" stroke="currentColor" stroke-width="1.5" />
+  </g>
+</svg>

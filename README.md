@@ -84,9 +84,9 @@
 <div>
 <img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
 <!-- TypeScript Badge: Square style, #3178C6, 36px height -->
-<img src="https://img.shields.io/badge/-3178C6?style=square&logo=typescript&logoColor=white" height="36" title="TypeScript"/>
+<img src="./custom-icon/typescript.svg" height="36" title="TypeScript"/>
 <!-- Python Badge: Square style, #FFD43B, 36px height -->
-<img src="https://img.shields.io/badge/-FFD43B?style=square&logo=python&logoColor=3776AB" height="36" title="Python"/>
+<img src="./custom-icon/python.svg" height="36" title="Python"/>
 </div>
 <br>
 

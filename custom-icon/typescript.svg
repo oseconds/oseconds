@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    .ts-box { fill: #3178C6; rx: 6px; }
+    .ts-text { fill: #ffffff; font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 14px; text-anchor: end; letter-spacing: -0.5px; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+      .ts-box { fill: #3178C6; }
+      .ts-text { fill: #ffffff; }
+    }
+  </style>
+
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
+
+  <!-- TypeScript 로고 박스 (#3178C6) -->
+  <rect class="ts-box" x="10" y="10" width="28" height="28" rx="6" />
+
+  <!-- TS 텍스트 (공식 로고 규격: 우측 하단 배치) -->
+  <text class="ts-text" x="35" y="34">TS</text>
+</svg>
