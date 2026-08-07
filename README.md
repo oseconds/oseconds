@@ -76,7 +76,7 @@
 <!-- Photoshop Badge: Square style, Pink color, 36px height -->
 <img src="./custom-icon/photoshop.svg" height="36" title="Photoshop"/>
 <!-- Topaz Badge: Square style, Pink color, 36px height -->
-<img src="https://img.shields.io/badge/Topaz-E10098?style=square" height="36" title="Topaz"/>
+<img src="./custom-icon/topaz.svg" height="36" title="Topaz"/>
 </div>
 <br>
 
