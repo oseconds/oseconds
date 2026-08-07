@@ -1,33 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="12" fill="#0b0f17"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .bg { fill: #161b22; rx: 10px; }
+    /* 블렌더 공식 브랜드 컬러 */
+    .bl-orange { fill: #ea7600; }
+    .bl-blue { fill: #225789; }
+    .bl-white { fill: #ffffff; }
 
-  <!-- Blender orange body -->
-  <path
-    d="M28.5 8
-    C27.5 7 26 7 25 8
-    L15.5 17.5
-    H11.5
-    C10 17.5 9 18.5 9 20
-    C9 21.5 10 22.5 11.5 22.5
-    H19
-    L7 34.5
-    C6 35.5 6 37 7 38
-    C8 39 9.5 39 10.5 38
-    L19 29.5
-    C20.5 36.5 26.5 41 33.5 41
-    C41 41 47 35.5 47 28
-    C47 21.5 41.5 16 34.5 16
-    C31.5 16 29 17 27 18.5
-    Z"
-    fill="#F57900"
-  />
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f6f8fa; }
+    }
+  </style>
 
-  <!-- Blue inner ring -->
-  <circle cx="33.5" cy="28" r="8" fill="#0096FF"/>
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
 
-  <!-- White center -->
-  <circle cx="33.5" cy="28" r="4.2" fill="#FFFFFF"/>
+  <!-- 블렌더 로고 심볼 (내부 32x32 Safe Zone) -->
+  <g transform="translate(8, 8)">
+    <!-- 3방향 뻗은 오렌지 암 (120도 균등 대칭 배치) -->
+    <rect x="13.1" y="4.5" width="5.8" height="14" rx="2.9" class="bl-orange" />
+    <rect x="13.1" y="4.5" width="5.8" height="14" rx="2.9" class="bl-orange" transform="rotate(120, 16, 18.5)" />
+    <rect x="13.1" y="4.5" width="5.8" height="14" rx="2.9" class="bl-orange" transform="rotate(-120, 16, 18.5)" />
 
-  <!-- Small highlight -->
-  <circle cx="32.3" cy="26.8" r="1.2" fill="#E8F7FF"/>
+    <!-- 중앙 오렌지 바디 -->
+    <circle class="bl-orange" cx="16" cy="18.5" r="9" />
+
+    <!-- 중앙 흰색 링 -->
+    <circle class="bl-white" cx="16" cy="18.5" r="5.2" />
+
+    <!-- 중앙 파란색 동공 -->
+    <circle class="bl-blue" cx="16" cy="18.5" r="2.8" />
+  </g>
 </svg>
