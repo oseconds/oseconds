@@ -42,6 +42,8 @@
 <img src="./custom-icon/comfyui.svg" height="48" title="ComfyUI"/>
 <img src="./custom-icon/deforum.svg" height="48" title="Deforum"/>
 
+<div>
+
 <img src="./custom-icon/flux.svg" height="48" title="FLUX"/>
 <img src="./custom-icon/stable-diffusion.svg" height="48" title="Stable Diffusion"/>
 
