@@ -81,7 +81,7 @@
 
 **Code**  
 <div>
-<img src="./custom-icon/javascript.svg" height="30" title="JavaScript"/>
+<img src="./custom-icon/javascript.svg" height="36" title="JavaScript"/>
 <!-- TypeScript Badge: Square style, #3178C6, 36px height -->
 <img src="./custom-icon/typescript.svg" height="36" title="TypeScript"/>
 <!-- Python Badge: Square style, #FFD43B, 36px height -->
