@@ -16,7 +16,7 @@
             </section>
             <section class="column">
                 <h3 class="field">Most used languages</h3>
-                <small>estimation from 49.8mb of code in 3700 edited files across 919 commits</small>
+                <small>estimation from 49.9mb of code in 3769 edited files across 979 commits</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
@@ -48,7 +48,6 @@
                             </div>
                             <small>
                                 <div>4.41k lines</div>
-                                <div>23.28%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -60,7 +59,6 @@
                             </div>
                             <small>
                                 <div>2.74k lines</div>
-                                <div>14.44%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -72,7 +70,6 @@
                             </div>
                             <small>
                                 <div>1.48k lines</div>
-                                <div>7.81%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -84,7 +81,6 @@
                             </div>
                             <small>
                                 <div>791 lines</div>
-                                <div>4.17%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -96,7 +92,6 @@
                             </div>
                             <small>
                                 <div>610 lines</div>
-                                <div>3.22%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -108,7 +103,6 @@
                             </div>
                             <small>
                                 <div>296 lines</div>
-                                <div>1.56%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -120,7 +114,6 @@
                             </div>
                             <small>
                                 <div>62 lines</div>
-                                <div>0.33%</div>
                             </small>
                         </div>
                     </section>
@@ -134,7 +127,6 @@
                             </div>
                             <small>
                                 <div>4.03k lines</div>
-                                <div>21.25%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -146,7 +138,6 @@
                             </div>
                             <small>
                                 <div>2.10k lines</div>
-                                <div>11.11%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -158,7 +149,6 @@
                             </div>
                             <small>
                                 <div>953 lines</div>
-                                <div>5.03%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -170,7 +160,6 @@
                             </div>
                             <small>
                                 <div>731 lines</div>
-                                <div>3.86%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -182,7 +171,6 @@
                             </div>
                             <small>
                                 <div>445 lines</div>
-                                <div>2.35%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -194,7 +182,6 @@
                             </div>
                             <small>
                                 <div>251 lines</div>
-                                <div>1.32%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -206,7 +193,6 @@
                             </div>
                             <small>
                                 <div>51 lines</div>
-                                <div>0.27%</div>
                             </small>
                         </div>
                     </section>
