@@ -13,18 +13,6 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Load language config
-        shell: bash
-        run: |
-          aliases=$(yq -r '.aliases | to_entries | map("\(.key):\(.value)") | join(",")' .github/metrics-languages.yml)
-          colors=$(yq -r '.colors | to_entries | map("\(.key):\(.value)") | join(",")' .github/metrics-languages.yml)
-
-          echo "METRICS_LANGUAGE_ALIASES=$aliases" >> "$GITHUB_ENV"
-          echo "METRICS_LANGUAGE_COLORS=$colors" >> "$GITHUB_ENV"
-
       - name: Languages Indepth
         uses: oseconds/metrics@master
         with:
@@ -50,8 +38,8 @@ jobs:
           plugin_languages_other: no
           plugin_languages_ignored: svg
 
-          plugin_languages_aliases: ${{ env.METRICS_LANGUAGE_ALIASES }}
-          plugin_languages_colors: ${{ env.METRICS_LANGUAGE_COLORS }}
+          plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling,Gherkin:GPTImage2
+          plugin_languages_colors: markdown:#1e293b,minimaxh3:#84cc16,seedance:#ef4444,kling:#f59e0b,gptimage2:#a855f7
 
           plugin_languages_categories: programming,markup,data,prose
           plugin_languages_threshold: 0
