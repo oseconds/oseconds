@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Local patched version
-          use_prebuilt_image: false
+          # use_prebuilt_image: false
 
           # Debug
           debug: yes
