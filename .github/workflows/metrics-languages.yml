@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  github-metrics:
+  metrics-indepth:
     runs-on: ubuntu-latest
 
     permissions:
