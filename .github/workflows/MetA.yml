@@ -52,7 +52,7 @@ jobs:
         
         
         plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling
-        plugin_languages_colors: markdown:#1e293b,minimaxh3:#84cc16,seedance:#ef4444,kling:#f59e0b,text:#f97314
+        plugin_languages_colors: markdown:#1e293b,minimaxh3:#84cc16,seedance:#ef4444,kling:#f59e0b,gptimage2:#a855f7,text:#f97314
         plugin_languages_details: lines,percentage
     
         ####################################################
