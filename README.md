@@ -28,7 +28,9 @@
 
 ##
 
-&nbsp;&nbsp;&nbsp;**Audio**
+<div align="center">
+  
+**Audio**
 
 <div>
   <img src="./custom-icon/ableton.svg" height="48" title="Ableton"/>
@@ -39,7 +41,7 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;**Visual**
+**Visual**
 
 <div>
   <img src="./custom-icon/touchdesigner.svg" height="48" title="TouchDesigner"/>
@@ -50,13 +52,14 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;**GenAI**
+**GenAI**
 
 <div>
   <img src="./custom-icon/comfyui.svg" height="48" title="ComfyUI"/>
   <img src="./custom-icon/deforum.svg" height="48" title="Deforum"/>
   <img src="./custom-icon/flux.svg" height="48" title="FLUX"/>
   <img src="./custom-icon/stable-diffusion.svg" height="48" title="Stable Diffusion"/>
+  <br>
   <img src="./custom-icon/kling.svg" height="48" title="Kling"/>
   <img src="./custom-icon/seedance.svg" height="48" title="Seedance"/>
   <img src="./custom-icon/minimaxH3.svg" height="48" title="MiniMax H3"/>
@@ -64,7 +67,7 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;**Media**
+**Media**
 
 <div>
   <img src="./custom-icon/aftereffect.svg" height="48" title="After Effects"/>
@@ -74,7 +77,7 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;**Code**
+**Code**
 
 <div>
   <img src="./custom-icon/javascript.svg" height="48" title="JavaScript"/>
@@ -84,7 +87,7 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;**Hardware**
+**Hardware**
 
 <div>
   <img src="./custom-icon/osc.svg" height="48" title="OSC"/>
@@ -94,8 +97,7 @@
 </div>
 
 <br>
-
-&nbsp;&nbsp;&nbsp;**Live**
+;**Live**
 
 <div>
   <img src="./custom-icon/resolume.svg" height="48" title="Resolume"/>
