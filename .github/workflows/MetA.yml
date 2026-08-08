@@ -16,7 +16,7 @@ jobs:
     - name: Metrics
       uses: oseconds/metrics@master
       with:
-        plugin_languages_ignored: metrics
+        plugin_languages_skipped: metrics
         use_prebuilt_image: false
         debug: yes
         debug_print: yes

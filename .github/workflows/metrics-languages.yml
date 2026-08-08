@@ -17,10 +17,13 @@ jobs:
         uses: oseconds/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-
           user: oseconds
 
-          use_prebuilt_image: yes
+          plugin_languages_skipped: metrics
+          use_prebuilt_image: false
+
+          debug: yes
+          debug_print: yes
 
           filename: metrics-languages-indepth.svg
 
@@ -30,19 +33,20 @@ jobs:
           plugin_languages_indepth: yes
           plugin_languages_sections: most-used
 
-          plugin_languages_colors: markdown:#1e293b
-
           plugin_languages_details: lines
           plugin_languages_limit: 0
           plugin_languages_other: no
           plugin_languages_ignored: svg
-          plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance 
 
+          plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance
+
+          plugin_languages_colors: >-
+            markdown:#1e293b,
+            minmaxh3:#84cc16,
+            seedance:#ef4444
 
           plugin_languages_categories: programming,markup,data,prose
           plugin_languages_threshold: 0.2
-          
-          
+
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 15
-
