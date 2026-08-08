@@ -16,6 +16,7 @@ jobs:
     - name: Metrics
       uses: oseconds/metrics@master
       with:
+        plugin_languages_ignored: metrics
         use_prebuilt_image: false
         debug: yes
         debug_print: yes
@@ -48,7 +49,7 @@ jobs:
         plugin_languages_recent_load: 1000
         plugin_languages_recent_categories: programming,data,markup,prose
         plugin_languages_categories: programming,data,markup,prose
-        plugin_languages_colors: github
+        plugin_languages_colors: markdown:red
         plugin_languages_details: lines,percentage
     
         ####################################################
