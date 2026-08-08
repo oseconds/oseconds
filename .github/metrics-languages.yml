@@ -1,0 +1,12 @@
+aliases:
+  Thrift: MiniMaxH3
+  INI: Seedance
+  Kotlin: Kling
+  Gherkin: Image2
+
+colors:
+  markdown: "#1e293b"
+  minimaxh3: "#84cc16"
+  seedance: "#ef4444"
+  kling: "#f59e0b"
+  image2: "#a855f7"
