@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  github-metrics:
+  metrics-habits:
     runs-on: ubuntu-latest
 
     permissions:
@@ -31,9 +31,9 @@ jobs:
           plugin_habits_facts: no
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
-          plugin_habits_trim: yes
+          plugin_habits_trim: no
 
-          plugin_habits_languages_limit: 8
+          plugin_habits_languages_limit: 0
           plugin_habits_languages_threshold: 0%
 
           config_timezone: Asia/Seoul
