@@ -1,6 +1,6 @@
 <table>
 <tr>
-<td width="70%" valign="top">
+<td width="60%" valign="top">
 
 ##
 <p align="center">
