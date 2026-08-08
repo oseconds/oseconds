@@ -19,6 +19,8 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: oseconds
 
+          use_prebuilt_image: no
+
           template: classic
           base: ""
           filename: profile/habits.svg

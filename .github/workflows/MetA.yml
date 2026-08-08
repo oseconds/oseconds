@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  github-metrics:
+  metrics-full:
     runs-on: ubuntu-latest
 
     permissions:
@@ -16,8 +16,7 @@ jobs:
     - name: Metrics
       uses: oseconds/metrics@master
       with:
-        plugin_languages_skipped: metrics
-        use_prebuilt_image: false
+        use_prebuilt_image: no
         debug: yes
         debug_print: yes
         token: ${{ secrets.METRICS_TOKEN }}
@@ -40,16 +39,17 @@ jobs:
         ## Languages
         ####################################################
         plugin_languages: yes
-        plugin_languages_limit: 8
+        plugin_languages_skipped: metrics
+        plugin_languages_limit: 0
         plugin_languages_sections: most-used,recently-used
         plugin_languages_indepth: yes
         plugin_languages_analysis_timeout: 600
         plugin_languages_analysis_timeout_repositories: 180
         plugin_languages_recent_days: 30
         plugin_languages_recent_load: 1000
-        plugin_languages_recent_categories: programming,data,markup,prose
+        plugin_languages_recent_categories: programming,data,markup
         plugin_languages_categories: programming,data,markup,prose
-        plugin_languages_colors: markdown:red
+        plugin_languages_colors: markdown:#1e293b,minimaxh3:#84cc16,seedance:#ef4444
         plugin_languages_details: lines,percentage
     
         ####################################################
@@ -81,15 +81,15 @@ jobs:
         ####################################################
         ## Isocalendar
         ####################################################
-        plugin_isocalendar: no
+        # plugin_isocalendar: no
     
-        ####################################################
-        ## Achievements
-        ####################################################
-        plugin_achievements: yes
-        plugin_achievements_threshold: C
-        plugin_achievements_secrets: yes
-        plugin_achievements_display: compact
+        # ####################################################
+        # ## Achievements
+        # ####################################################
+        # plugin_achievements: yes
+        # plugin_achievements_threshold: C
+        # plugin_achievements_secrets: yes
+        # plugin_achievements_display: compact
     
 
         ####################################################
