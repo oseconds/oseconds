@@ -20,7 +20,7 @@ jobs:
           user: oseconds
 
           plugin_languages_skipped: metrics
-          use_prebuilt_image: false
+          use_prebuilt_image: no
 
           debug: yes
           debug_print: yes
