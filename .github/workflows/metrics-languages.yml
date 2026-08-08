@@ -38,9 +38,8 @@ jobs:
           plugin_languages_other: no
           plugin_languages_ignored: svg
 
-          plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance
-
-          plugin_languages_colors: markdown:#1e293b,minimaxh3:#84cc16,seedance:#ef4444
+          plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling
+          plugin_languages_colors: markdown:#1e293b,minimaxh3:#84cc16,seedance:#ef4444,kling:#f59e0b
 
           plugin_languages_categories: programming,markup,data,prose
           plugin_languages_threshold: 0
