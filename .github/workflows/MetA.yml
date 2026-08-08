@@ -49,6 +49,8 @@ jobs:
         plugin_languages_recent_load: 1000
         plugin_languages_recent_categories: programming,data,markup
         plugin_languages_categories: programming,data,markup,prose
+        plugin_languages_ignored: svg,yml
+        plugin_languages_other: no
         
         
         plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling
