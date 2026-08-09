@@ -36,7 +36,7 @@ jobs:
           plugin_languages_details: lines
           plugin_languages_limit: 0
           plugin_languages_other: no
-          plugin_languages_ignored: svg,html,css,json,xml,yaml,yml
+          plugin_languages_ignored: svg,html,css,json,xml,yaml,yml,bat
 
           plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling,Gherkin:GPTImage2
           plugin_languages_colors: markdown:#000671,minimaxh3:#84cc16,seedance:#ef233c,kling:#700bf5,gptimage2:#a855f7,asciidoc:#0c1119,text:#007e82
