@@ -1,9 +1,3 @@
-<div align="center">
-
-<table>
-<tr>
-<td width="60%" valign="top">
-
 ##
 <p align="center">
   <strong>Artist & Developer exploring the intersection of</strong><br>
@@ -24,13 +18,9 @@
   <img src="./metrics-languages-indepth.svg">
 </p>
 
-</td>
-
-<td width="40%" valign="top">
 
 ##
 
-<div align="center">
   
 **Audio**
 
@@ -106,6 +96,4 @@
   <img src="./custom-icon/rekordbox.svg" height="48" title="rekordbox"/>
 </div>
 
-</td>
-</tr>
-</table>
+
