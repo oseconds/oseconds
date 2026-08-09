@@ -97,4 +97,8 @@
   <img src="./custom-icon/rekordbox.svg" height="48" title="rekordbox"/>
 </div>
 
+##
 
+![eBird Card](https://raw.githubusercontent.com/oseconds/eBird-card/main/assets/ebird-card.svg)
+
+![eBird Card](https://raw.githubusercontent.com/oseconds/eBird-card/main/assets/new-lifer.svg)
