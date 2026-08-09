@@ -89,7 +89,7 @@
 </div>
 
 <br>
-;**Live**
+**Live**
 
 <div>
   <img src="./custom-icon/resolume.svg" height="48" title="Resolume"/>
