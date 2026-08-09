@@ -99,6 +99,6 @@
 
 ##
 
-![eBird Card](https://raw.githubusercontent.com/oseconds/eBird-card/main/assets/ebird-card.svg)
+<p align="center">
 
 ![eBird Card](https://raw.githubusercontent.com/oseconds/eBird-card/main/assets/new-lifer.svg)
