@@ -16,7 +16,7 @@
             </section>
             <section class="column">
                 <h3 class="field">Most used languages</h3>
-                <small>estimation from 49.9mb of code in 3807 edited files across 1014 commits</small>
+                <small>estimation from 49.9mb of code in 3813 edited files across 1020 commits</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
@@ -24,12 +24,12 @@
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="119.44571932921448" height="8" fill="#1e293b"/>
                     <rect mask="url(#languages-bar)" x="119.44571932921448" y="0" width="109.02500735510444" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="228.47072668431892" y="0" width="74.08178876140042" height="8" fill="#ededed"/>
+                    <rect mask="url(#languages-bar)" x="228.47072668431892" y="0" width="74.08178876140042" height="8" fill="#f59e0b"/>
                     <rect mask="url(#languages-bar)" x="302.55251544571934" y="0" width="56.975581053250956" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="359.5280964989702" y="0" width="38.51603412768461" height="8" fill="#ededed"/>
+                    <rect mask="url(#languages-bar)" x="359.5280964989702" y="0" width="38.51603412768461" height="8" fill="#334155"/>
                     <rect mask="url(#languages-bar)" x="398.04413062665486" y="0" width="19.785819358634892" height="8" fill="#3178c6"/>
                     <rect mask="url(#languages-bar)" x="417.8299499852898" y="0" width="16.510738452486024" height="8" fill="#DA5B0B"/>
-                    <rect mask="url(#languages-bar)" x="434.34068843777584" y="0" width="12.044719035010298" height="8" fill="#ef4444"/>
+                    <rect mask="url(#languages-bar)" x="434.34068843777584" y="0" width="12.044719035010298" height="8" fill="#ef233c"/>
                     <rect mask="url(#languages-bar)" x="446.38540747278614" y="0" width="6.820829655781113" height="8" fill="#84cc16"/>
                     <rect mask="url(#languages-bar)" x="453.20623712856724" y="0" width="6.793762871432774" height="8" fill="#ff3e00"/>
                 </svg>
@@ -49,7 +49,7 @@
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#ededed" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#f59e0b" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 Text
                             </div>
@@ -60,7 +60,7 @@
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#ededed" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#334155" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 AsciiDoc
                             </div>
@@ -128,7 +128,7 @@
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#ef4444" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#ef233c" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 Seedance
                             </div>
