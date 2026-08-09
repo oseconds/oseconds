@@ -27,8 +27,8 @@
 <div>
   <img src="./custom-icon/ableton.svg" height="48" title="Ableton"/>
   <img src="./custom-icon/max.svg" height="48" title="Max/MSP"/>
-  <img src="./custom-icon/strudel.svg" height="48" title="Strudel"/>
   <img src="./custom-icon/tidalcycles.svg" height="48" title="TidalCycles"/>
+  <img src="./custom-icon/strudel.svg" height="48" title="Strudel"/>
 </div>
 
 <br>
@@ -52,8 +52,8 @@
   <img src="./custom-icon/flux.svg" height="48" title="FLUX"/>
   <img src="./custom-icon/stable-diffusion.svg" height="48" title="Stable Diffusion"/>
   <br>
-  <img src="./custom-icon/kling.svg" height="48" title="Kling"/>
   <img src="./custom-icon/seedance.svg" height="48" title="Seedance"/>
+  <img src="./custom-icon/kling.svg" height="48" title="Kling"/>
   <img src="./custom-icon/minimaxH3.svg" height="48" title="MiniMax H3"/>
 </div>
 

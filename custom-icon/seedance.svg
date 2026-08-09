@@ -1,39 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <defs>
-    <linearGradient id="brown-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d4a373" />
-      <stop offset="100%" stop-color="#8d5b4c" />
-    </linearGradient>
-    <linearGradient id="sprout-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" />
-      <stop offset="100%" stop-color="#059669" />
-    </linearGradient>
-  </defs>
-
   <style>
-    .bg { fill: #0b0f17; rx: 12px; }
-    .circle-shell { fill: none; stroke: url(#brown-grad); stroke-width: 3.2; stroke-linecap: round; }
-    .sprout-stem { fill: none; stroke: url(#sprout-grad); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
-    .sprout-leaf { fill: url(#sprout-grad); }
-    .leaf-line { fill: none; stroke: #0b0f17; stroke-width: 1.2; stroke-linecap: round; }
+    /* 다크 모드 (기본) - 무거운 딥 레드 테마 */
+    .bg { fill: #161b22; rx: 10px; }
+    .seed-box { fill: none; stroke: #7f1d1d; stroke-width: 2; rx: 4px; }
+    .seed-wave { fill: none; stroke: #dc2626; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .seed-dot { fill: #dc2626; }
+    .seed-text {
+      fill: #f87171;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 4.5px;
+      letter-spacing: 0.5px;
+      text-anchor: middle;
+    }
 
+    /* 라이트 모드 */
     @media (prefers-color-scheme: light) {
-      .bg { fill: #f8fafc; }
-      .leaf-line { stroke: #f8fafc; }
+      .bg { fill: #f6f8fa; }
+      .seed-box { stroke: #991b1b; }
+      .seed-wave { stroke: #b91c1c; }
+      .seed-dot { fill: #b91c1c; }
+      .seed-text { fill: #7f1d1d; }
     }
   </style>
 
-  <rect class="bg" width="48" height="48" rx="12" />
+  <!-- 배경 카드 -->
+  <rect class="bg" width="48" height="48" rx="10" />
 
-  <g transform="translate(0, 1)">
-    <circle class="circle-shell" cx="24" cy="23.5" r="14" />
+  <!-- Seedance 심볼 (내부 32x32 Safe Zone) -->
+  <g transform="translate(8, 8)">
+    <!-- 1. 백그라운드 노드 박스 (기술적 뼈대) -->
+    <rect class="seed-box" x="3" y="3" width="26" height="20" rx="4" />
+    
+    <!-- 2. 역동적인 웨이브 (Dance) & 3. 시드(Seed) 포인트 -->
+    <path class="seed-wave" d="M 7 13 C 12 5, 20 21, 25 13" />
+    <circle class="seed-dot" cx="16" cy="13" r="3" />
 
-    <!-- 잎사귀 + 내부에 빠진 잎맥 선 -->
-    <path class="sprout-leaf" d="M 27.5 13 C 32 11.5, 33.5 15, 29 17.5 C 27 18.6, 25.8 17.5, 27.5 13 Z" />
-    <path class="leaf-line" d="M 27.5 16 C 29 15, 30 14" />
-
-    <path class="sprout-stem" d="M 28 17 
-             C 20.5 17, 17 21.5, 23.5 25.5 
-             C 29.5 29.5, 25.5 34, 17 34" />
+    <!-- Seedance 하단 텍스트 (SD 배제, 겹침 방지 완벽 여백) -->
+    <text class="seed-text" x="16" y="30">SEEDANCE</text>
   </g>
 </svg>
