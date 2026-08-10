@@ -74,7 +74,7 @@ state "04. OUTPUTS" as OUTPUTS {
     %% CODE → CORE
 
     PY --> TD
-    MAX --> TD
+    MAX --> ABLETON
     STRUDEL --> WEB_NULL
     STRUDEL --> ABLETON
 
