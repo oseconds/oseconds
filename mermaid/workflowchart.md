@@ -1,3 +1,5 @@
+```mermaid
+
 flowchart LR
     IDEA["IDEA"]
 
@@ -107,3 +109,4 @@ flowchart LR
     class COMFY,SD,FLUX,SEEDANCE,KLING,H3 ai;
     class AE,TOPAZ media;
     class SCREEN,SPEAKER,WEB,LIVE output;
+```
