@@ -2,177 +2,208 @@
 
 flowchart LR
 
-    IDEA["IDEA"]
+    %% =========================
+    %% CREATION
+    %% =========================
 
-    subgraph SOURCE["SOURCE"]
-        KINECT["Kinect"]
-        CAMERA["Camera"]
-        TEXT["Text / Prompt"]
-        AUDIO_SRC["Audio / Sound"]
-        REFERENCE["Reference"]
+    subgraph CREATION["CREATION"]
+
+        subgraph AUDIO["AUDIO"]
+            ABLETON["Ableton Live"]
+            MAX["Max / Max for Live"]
+        end
+
+        subgraph VISUAL["VISUAL"]
+            BLENDER["Blender"]
+            GLSL["GLSL"]
+            MOTION["2D / Motion"]
+        end
+
+        subgraph GENERATIVE["GENERATIVE"]
+
+            subgraph IMAGE["IMAGE"]
+                COMFY["ComfyUI"]
+                SD["Stable Diffusion"]
+                FLUX["FLUX"]
+            end
+
+            subgraph VIDEO["VIDEO"]
+                SEEDANCE["Seedance"]
+                KLING["Kling"]
+                H3["MiniMax H3"]
+            end
+
+        end
+
+        subgraph INTERACTION["INTERACTION"]
+            KINECT["Kinect"]
+            CAMERA["Camera"]
+            GAZE["Gaze"]
+            SENSORS["Sensors"]
+        end
+
     end
 
-    subgraph AUDIO["AUDIO"]
-        ABLETON["Ableton"]
-        MAX["Max / Max for Live"]
+
+    %% =========================
+    %% COMPOSITION
+    %% =========================
+
+    subgraph COMPOSITION["COMPOSITION"]
+
+        subgraph REALTIME["REALTIME"]
+            TD["TouchDesigner"]
+        end
+
+        subgraph POST["POST"]
+            AE["After Effects"]
+            TOPAZ["Topaz"]
+        end
+
     end
 
-    subgraph REALTIME["REALTIME / VISUAL"]
-        TD["TouchDesigner"]
-    end
 
-    subgraph GENAI["GENERATIVE AI"]
-        COMFY["ComfyUI"]
-        SD["Stable Diffusion"]
-        FLUX["FLUX"]
-
-        SEEDANCE["Seedance"]
-        KLING["Kling"]
-        H3["MiniMax H3"]
-    end
-
-    subgraph THREE_D["3D / SPACE"]
-        BLENDER["Blender"]
-    end
-
-    subgraph POST["POST / FINISH"]
-        AE["After Effects"]
-        TOPAZ["Topaz"]
-    end
-
-    subgraph COMM["COMMUNICATION"]
-        OSC["OSC"]
-        MIDI["MIDI"]
-        FIRMATA["Firmata / Serial"]
-    end
-
-    subgraph PHYSICAL["PHYSICAL"]
-        ARDUINO["Arduino"]
-        SERVO["Servo"]
-        SPEAKER["Directional Speaker"]
-        SCREEN["Screen / Projection"]
-    end
+    %% =========================
+    %% OUTPUT
+    %% =========================
 
     subgraph OUTPUT["OUTPUT"]
-        WEB["Web / Archive"]
-        LIVE["Live / Installation"]
-        VIDEO["Final Video"]
+
+        MEDIA["MEDIA"]
+        INTERACTIVE_OUT["INTERACTIVE"]
+        INSTALLATION["INSTALLATION"]
+        LIVE["LIVE"]
+        SYSTEM["SYSTEM"]
+
     end
 
 
-    %% IDEA / SOURCE
-    IDEA --> TEXT
-    IDEA --> REFERENCE
-    IDEA --> ABLETON
-    IDEA --> TD
-    IDEA --> COMFY
-    IDEA --> BLENDER
+    %% =========================
+    %% CREATION → COMPOSITION
+    %% =========================
 
-    KINECT --> TD
-    CAMERA --> TD
-    AUDIO_SRC --> MAX
-
-
-    %% AUDIO
     ABLETON <--> MAX
-    MAX <--> OSC
-    ABLETON <--> OSC
 
-    OSC <--> TD
+    ABLETON --> TD
+    MAX --> TD
+    TD --> ABLETON
+    TD --> MAX
 
-    ABLETON --> AUDIO_SRC
-    MAX --> AUDIO_SRC
+    BLENDER --> TD
+    GLSL --> TD
+    MOTION --> TD
 
-
-    %% REALTIME
-    KINECT --> TD
-    TD --> SCREEN
-
-
-    %% IMAGE GENERATION
-    TEXT --> COMFY
-    REFERENCE --> COMFY
-
-    COMFY --> SD
-    COMFY --> FLUX
-
+    COMFY --> TD
     SD --> COMFY
     FLUX --> COMFY
 
-    COMFY <--> TD
-
-
-    %% IMAGE → 3D
-    COMFY -->|"depth / image / reference"| BLENDER
-
-    BLENDER -->|"camera / render / reference"| COMFY
-    BLENDER <--> TD
-
-
-    %% VIDEO GENERATION
-    TEXT --> SEEDANCE
-    TEXT --> KLING
-    TEXT --> H3
-
-    COMFY -->|"image / reference"| SEEDANCE
-    COMFY -->|"image / reference"| KLING
-    COMFY -->|"image / reference"| H3
-
-    BLENDER -->|"camera / 3D reference"| SEEDANCE
-    BLENDER -->|"camera / 3D reference"| KLING
-    BLENDER -->|"camera / 3D reference"| H3
-
-    AUDIO_SRC -->|"audio / sync"| H3
+    COMFY --> BLENDER
+    BLENDER --> COMFY
 
     SEEDANCE --> TD
     KLING --> TD
     H3 --> TD
 
-    SEEDANCE --> AE
-    KLING --> AE
-    H3 --> AE
+    BLENDER --> SEEDANCE
+    BLENDER --> KLING
+    BLENDER --> H3
+
+    AUDIO_SIGNAL["Audio / Signal"] --> H3
+
+    KINECT --> TD
+    CAMERA --> TD
+    GAZE --> TD
+    SENSORS --> TD
 
 
-    %% POST
+    %% =========================
+    %% REALTIME ↔ POST
+    %% =========================
+
     TD --> AE
-    BLENDER --> AE
+    AE --> TD
+
+    TD --> TOPAZ
+    TOPAZ --> TD
 
     AE <--> TOPAZ
 
-    AE --> TD
-    TOPAZ --> TD
 
+    %% =========================
+    %% COMPOSITION → OUTPUT
+    %% =========================
 
-    %% SIGNAL / HARDWARE
-    TD --> OSC
-    TD --> MIDI
-    TD --> FIRMATA
+    TD --> MEDIA
+    AE --> MEDIA
+    TOPAZ --> MEDIA
 
-    FIRMATA --> ARDUINO
-    ARDUINO --> SERVO
-    SERVO --> SPEAKER
-
-    ABLETON --> SPEAKER
-    MAX --> SPEAKER
-
-    TD --> SCREEN
-
-
-    %% OUTPUT
-    TD --> VIDEO
-    AE --> VIDEO
-    TOPAZ --> VIDEO
-
-    TD --> WEB
-    BLENDER --> WEB
-    AE --> WEB
-    VIDEO --> WEB
-
+    TD --> INTERACTIVE_OUT
+    TD --> INSTALLATION
     TD --> LIVE
+
     ABLETON --> LIVE
     MAX --> LIVE
-    ARDUINO --> LIVE
 
-    WEB --> IDEA
+    ABLETON --> INSTALLATION
+    MAX --> INSTALLATION
+
+    TD --> SYSTEM
+    MAX --> SYSTEM
+    ABLETON --> SYSTEM
+
+
+    %% =========================
+    %% OUTPUT FEEDBACK
+    %% =========================
+
+    MEDIA -.-> SYSTEM
+    SYSTEM -.-> CREATION
+
+
+    %% =========================
+    %% COMMUNICATION
+    %% =========================
+
+    OSC["OSC"]
+    MIDI["MIDI"]
+    FIRMATA["Firmata / Serial"]
+
+    TD -. OSC .-> MAX
+    MAX -. OSC .-> TD
+
+    TD -. MIDI .-> ABLETON
+    ABLETON -. MIDI .-> TD
+
+    TD -. Firmata .-> FIRMATA
+    FIRMATA -.-> SENSORS
+
+
+    %% =========================
+    %% STYLES
+    %% =========================
+
+    classDef creation fill:#111,stroke:#888,color:#fff;
+    classDef audio fill:#111,stroke:#ff9d00,color:#ff9d00;
+    classDef visual fill:#111,stroke:#00d9ff,color:#00d9ff;
+    classDef ai fill:#111,stroke:#b56cff,color:#b56cff;
+    classDef interaction fill:#111,stroke:#00ff88,color:#00ff88;
+
+    classDef realtime fill:#111,stroke:#00d9ff,stroke-width:3px,color:#00d9ff;
+    classDef post fill:#111,stroke:#ff4d8d,stroke-width:2px,color:#ff4d8d;
+
+    classDef output fill:#111,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef communication fill:#111,stroke:#777,color:#aaa;
+
+    class ABLETON,MAX audio;
+    class BLENDER,GLSL,MOTION visual;
+    class COMFY,SD,FLUX,SEEDANCE,KLING,H3 ai;
+    class KINECT,CAMERA,GAZE,SENSORS interaction;
+
+    class TD realtime;
+    class AE,TOPAZ post;
+
+    class MEDIA,INTERACTIVE_OUT,INSTALLATION,LIVE,SYSTEM output;
+
+    class OSC,MIDI,FIRMATA communication;
 
 ```
