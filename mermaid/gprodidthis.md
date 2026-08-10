@@ -5,88 +5,95 @@ config:
   state:
     titleTopMargin: 10
     dividerMargin: 8
-    padding: 10
+    padding: 12
     nodeSpacing: 15
-    rankSpacing: 20
+    rankSpacing: 25
 ---
-
 stateDiagram-v2
     direction TB
 
     %% =========================================================
-    %% [TOP LAYER] 소스 생성 및 로직 (위에서 아래로 데이터 공급)
+    %% [TOP LAYER] SOURCE & LOGIC (최상단)
     %% =========================================================
     state "01. CODE & LIVE SCRIPTING" as TOP_SCRIPT {
+        PY : Python (Data / Logic)
         JS_TS : JavaScript / TypeScript
-        PY : Python
         STRUDEL : Strudel (JS Live Coding)
         TIDAL : TidalCycles
+        
+        JS_TS --> STRUDEL : Engine Base
     }
 
-    state "02. VISUAL & AI ASSETS (통합 에셋)" as TOP_VISUAL {
-        BLENDER : Blender (3D / Camera Data)
+    state "02. VISUAL & AI ASSETS" as TOP_VISUAL {
         CAVALRY : Cavalry (2D Motion)
+        BLENDER : Blender (3D / Camera)
         AI_MODELS : GenAI (FLUX / SD / Kling)
         COMFY : ComfyUI Workflows
 
-        %% 3D Data to AI flow
-        BLENDER --> AI_MODELS : Depth / Structure / Camera
-        AI_MODELS --> COMFY
+        BLENDER --> AI_MODELS : Depth / Structure
+        AI_MODELS --> COMFY : AI Generate
     }
 
     %% =========================================================
-    %% [MIDDLE LAYER] 컨트롤 및 메인 허브 (나란히 배치)
+    %% [MIDDLE LAYER] CORE CONTROL & HUB (중앙 허리)
     %% =========================================================
     state "03. TIMELINE & AUDIO (제어부)" as MID_AUDIO {
-        ABLETON : Ableton Live (Timeline / Live Control)
-        MAX : Max / MSP
         BITWIG : Bitwig Studio
+        ABLETON : Ableton Live (Timeline / Sync)
+        MAX : Max / MSP
 
-        ABLETON --> MAX
+        ABLETON --> MAX : M4L Control
     }
 
     state "04. MAIN CORE HUB (통합부)" as MID_CORE {
-        TD : TouchDesigner (Central Hub / Media Server)
+        TD : TouchDesigner\n(Central Hub / Media Server)
         P5_GLSL : p5.js / GLSL
     }
 
     %% =========================================================
-    %% [BOTTOM LAYER] 최종 아웃풋 (가장 아래에 위치)
+    %% [BOTTOM LAYER] TARGET OUTPUTS (하단 중앙 각잡기)
     %% =========================================================
     state "05. CREATIVE OUTPUTS (종착지)" as BOT_OUT {
-        POST : After Effects / PS
-        MEDIA_OUT : Final Media
-        LIVE_OUT : Live Performance (Ableton / TD / Resolume)
-        INSTALL_OUT : Physical Installation
-        WEB_OUT : Web Systems & Archive
-
-        POST --> MEDIA_OUT
+        
+        state "Pre-Rendered Media Pipeline" as BOT_MEDIA {
+            POST : After Effects / PS
+            MEDIA_OUT : Final Media
+            POST --> MEDIA_OUT : Final Render
+        }
+        
+        state "Realtime & Spatial Outputs" as BOT_REALTIME {
+            LIVE_OUT : Live (Ableton / TD / Resolume)
+            INSTALL_OUT : Physical Installation
+            WEB_OUT : Web Systems & Archive
+        }
     }
 
     %% =========================================================
-    %% FLOW ROUTING (위 -> 중간 -> 아래 흐름 고정)
+    %% ROUTING 1 : TOP -> MIDDLE (데이터/제어 하강)
     %% =========================================================
-
-    %% 1. Top -> Middle (데이터 및 스크립트 전송)
+    PY --> TD : System Logic 
     JS_TS --> P5_GLSL : Web App Logic
-    PY --> TD : System Logic & Data Processing
-    MAX <--> JS_TS : node.script Bridge
+    JS_TS --> MAX : node.script Bridge
     STRUDEL --> ABLETON : Algorithmic MIDI
     TIDAL --> ABLETON : Algorithmic OSC
-
-    %% 2. Top -> Middle & Bottom (에셋 및 미디어 흐름)
+    
     CAVALRY --> TD : Motion Assets
-    BLENDER --> POST : 3D Render to Post
-    COMFY --> TD : Realtime Textures (GenAI)
-    COMFY --> POST : Generated Media to Post
+    COMFY --> TD : Realtime GenAI Textures
 
-    %% 3. Middle <-> Middle (에이블톤 -> 터치디자이너 핵심 연동)
-    ABLETON --> TD : TDAbleton / OSC / MIDI (Timeline & Parameter Sync)
+    %% =========================================================
+    %% ROUTING 2 : MIDDLE -> MIDDLE (수평 코어 뼈대 연동)
+    %% =========================================================
+    ABLETON --> TD : TDAbleton / OSC / MIDI (Parameter Sync)
     BITWIG --> TD : Audio & Sync
     MAX --> TD : Control Data
 
-    %% 4. Middle -> Bottom (허브에서 최종 아웃풋으로 분배)
-    P5_GLSL --> WEB_OUT
-    TD --> LIVE_OUT : VJ / Media Server Output
-    TD --> INSTALL_OUT : Projection Mapping / Interactive Space
-    ABLETON --> LIVE_OUT : Live Audio Output
+    %% =========================================================
+    %% ROUTING 3 : TOP & MIDDLE -> BOTTOM (최종 출력 분배)
+    %% =========================================================
+    BLENDER --> POST : 3D Render
+    COMFY --> POST : Generated Media
+    
+    P5_GLSL --> WEB_OUT : Web Canvas Out
+    TD --> LIVE_OUT : VJ / Media Server Out
+    TD --> INSTALL_OUT : Projection / Interactive Space
+    ABLETON --> LIVE_OUT : Master Audio Out
