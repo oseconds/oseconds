@@ -1,0 +1,41 @@
+sequenceDiagram
+    autonumber
+    
+    actor Performer as 사용자 / 센서
+    participant Web as Web (Svelte / p5.js / WebAudio)
+    participant Visual as Visual (GenAI / 3D / AE)
+    participant Audio as Audio (Max / Bitwig)
+    
+    box rgb(16, 34, 38) CORE SYSTEM
+        participant TD as TouchDesigner
+        participant MID as OSC / MIDI Bridge
+        participant Ableton as Ableton Live
+    end
+    
+    participant Out as Outputs (Media / Live / Installation)
+
+    %% 1. Trigger Phase
+    Note over Performer, Web: 1. Input Trigger Phase
+    Performer->>TD: 1. Tracking / Sensor Data Stream
+    Performer->>Ableton: 2. Hardware / Controller MIDI Signals
+    Web->>TD: 3. WebSocket / Web OSC Data
+
+    %% 2. Generation & Core Sync
+    Note over Visual, Audio: 2. Core Processing & Sync
+    Visual->>TD: Frame Texture / 3D Data
+    Audio->>Ableton: Multi-channel Audio Stream
+
+    rect rgb(20, 28, 35)
+        Note over TD, Ableton: Real-time Sync Loop (OSC / MIDI)
+        TD->>MID: Send Visual Sync & Motion Data (OSC)
+        MID->>Ableton: Route Parameter Control
+        Ableton->>MID: Send Audio Beat / Envelope (MIDI/OSC)
+        MID->>TD: Route Reactive Modulation
+    end
+
+    %% 3. Output Phase
+    Note over TD, Out: 3. Final Signal Render
+    par Parallel Output Generation
+        TD->>Out: Real-time Visuals (Installation / Media)
+        Ableton->>Out: Live Multi-channel Audio Output
+    end
