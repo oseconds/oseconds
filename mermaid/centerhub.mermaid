@@ -1,0 +1,144 @@
+---
+config:
+  layout: elk
+  elk:
+    nodePlacementStrategy: BRANDES_KOEPF
+  theme: base
+  themeVariables:
+    background: "#0d0f12"
+    primaryColor: "#15181d"
+    primaryTextColor: "#d7dbe0"
+    primaryBorderColor: "#303640"
+    lineColor: "#59616b"
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "13px"
+  flowchart:
+    curve: basis
+    nodeSpacing: 25
+    rankSpacing: 50
+---
+
+flowchart LR
+
+    %% =========================================================
+    %% [LEFT WING] VISUAL & AUDIO INPUTS
+    %% =========================================================
+    subgraph LEFT_WING["  LEFT INPUTS  "]
+        direction TB
+
+        subgraph TRACK_VISUAL[" VISUAL TRACK "]
+            direction TB
+            GENAI["GENAI"] & CAVALRY["CAVALRY"] & AE["AFTER EFFECTS"] & BLENDER["BLENDER"] --> V_METHODS
+            subgraph V_METHODS[" "]
+                direction TB
+                V_GEN["GENERATIVE"] ~~~ V_3D["3D"] ~~~ V_2D["2D"]
+            end
+            V_METHODS --> VISUAL["VISUAL"]
+        end
+
+        subgraph TRACK_AUDIO[" AUDIO TRACK "]
+            direction TB
+            MAX["MAX"] & BITWIG["BITWIG"] --> A_METHODS
+            subgraph A_METHODS[" "]
+                direction TB
+                A_SYN["SYNTHESIS"] ~~~ A_GEN["GENERATIVE"]
+            end
+            A_METHODS --> AUDIO["AUDIO"]
+        end
+    end
+
+
+    %% =========================================================
+    %% [CENTER HUB] CORE SYSTEM & OUTPUTS (중앙 핵심 구역)
+    %% =========================================================
+    subgraph CENTER_HUB["  CENTER HUB  "]
+        direction TB
+
+        subgraph CORE[" CORE SYSTEM "]
+            direction LR
+            TD["TOUCHDESIGNER"] <--> MID["OSC / MIDI"] <--> ABLETON["ABLETON LIVE"]
+        end
+
+        subgraph OUTPUT[" OUTPUTS "]
+            direction LR
+            MEDIA["MEDIA"] ~~~ INTERACTIVE_OUT["INTERACTIVE"] ~~~ INSTALLATION["INSTALLATION"] ~~~ LIVE["LIVE"]
+        end
+
+        CORE --> OUTPUT
+    end
+
+
+    %% =========================================================
+    %% [RIGHT WING] INTERACTIVE & WEB INPUTS
+    %% =========================================================
+    subgraph RIGHT_WING["  RIGHT INPUTS  "]
+        direction TB
+
+        subgraph TRACK_INTERACTIVE[" INTERACTIVE TRACK "]
+            direction TB
+            HARDWARE["HARDWARE"] & SENSORS["SENSORS"] & TRACKING["TRACKING"] --> INTERACTIVE["INTERACTIVE"]
+        end
+
+        subgraph TRACK_WEB[" WEB TRACK "]
+            direction TB
+            SVELTE["SVELTE"] & VITE["VITE"] & WEB_AUDIO["WEB AUDIO"] & P5["p5.js"] --> WEB["WEB"]
+        end
+    end
+
+
+    %% =========================================================
+    %% CONNECTIONS: 좌/우에서 중앙 허브로 연결
+    %% =========================================================
+
+    %% 좌측 -> 중앙
+    VISUAL --> TD
+    AUDIO --> ABLETON
+
+    %% 우측 -> 중앙
+    INTERACTIVE --> TD
+    INTERACTIVE --> ABLETON
+    WEB --> CORE
+
+
+    %% =========================================================
+    %% STYLES
+    %% =========================================================
+    style V_METHODS fill:none,stroke:none
+    style A_METHODS fill:none,stroke:none
+
+    style LEFT_WING fill:#12151a,stroke:#2a3038,color:#8e96a0
+    style RIGHT_WING fill:#12151a,stroke:#2a3038,color:#8e96a0
+    style CENTER_HUB fill:#0c191d,stroke:#356d78,color:#55c3d2,stroke-width:2px
+
+    style TRACK_VISUAL fill:#171a20,stroke:#2d333b
+    style TRACK_AUDIO fill:#191713,stroke:#3b3323
+    style TRACK_INTERACTIVE fill:#171a20,stroke:#2d333b
+    style TRACK_WEB fill:#171a20,stroke:#2d333b
+
+    style CORE fill:#102226,stroke:#55c3d2,stroke-width:2px,color:#eefbfc
+    style OUTPUT fill:#181b20,stroke:#aeb5bd,stroke-width:2px,color:#f1f3f5
+
+    classDef domain fill:#111419,stroke:#737b84,color:#f0f2f4,stroke-width:2px,font-size:13px;
+    classDef visualTool fill:#17191d,stroke:#69747e,color:#e6eaed,stroke-width:2px,font-size:11px;
+    classDef visualMethod fill:#17191d,stroke:#69747e,color:#e6eaed,stroke-width:2px,font-size:11px;
+    classDef audioTool fill:#191813,stroke:#9c8245,color:#fff7df,stroke-width:2px,font-size:11px;
+    classDef audioMethod fill:#191813,stroke:#9c8245,color:#fff7df,stroke-width:2px,font-size:11px;
+    classDef webTool fill:#15181d,stroke:#69747e,color:#e6eaed,stroke-width:2px,font-size:11px;
+
+    classDef coreTD fill:#102226,stroke:#55c3d2,color:#ffffff,stroke-width:3px,font-size:15px;
+    classDef coreAudio fill:#262215,stroke:#c19a45,color:#ffffff,stroke-width:3px,font-size:15px;
+    classDef communication fill:#1b1824,stroke:#9b7bd3,color:#eee8ff,stroke-width:2px,font-size:11px;
+    classDef output fill:#20242b,stroke:#aeb5bd,color:#ffffff,stroke-width:2px,font-size:13px;
+
+    class VISUAL,AUDIO,INTERACTIVE,WEB domain;
+    class GENAI,CAVALRY,AE,BLENDER visualTool;
+    class V_GEN,V_3D,V_2D visualMethod;
+    class MAX,BITWIG audioTool;
+    class A_SYN,A_GEN audioMethod;
+    class HARDWARE,SENSORS,TRACKING domain;
+    class SVELTE,VITE,WEB_AUDIO,P5 webTool;
+
+    class TD coreTD;
+    class ABLETON coreAudio;
+    class MID communication;
+    class MEDIA,INTERACTIVE_OUT,INSTALLATION,LIVE output;
