@@ -15,12 +15,14 @@ stateDiagram-v2
     state "01. CODE & CREATIVE CODING" as TOP_CODE {
         P5 : p5.js
         JS : JavaScript
-        PY : Python
         STRUDEL : Strudel
         MAX : Max / MSP
+        RNBO : RNBO
+        PY : Python
 
         JS --> P5
-        JS --> MAX
+        JS --> STRUDEL
+        MAX --> RNBO
     }
 
 
@@ -67,18 +69,21 @@ stateDiagram-v2
 
     PY --> TD
     MAX --> TD
+    STRUDEL --> WEB_NULL
     STRUDEL --> ABLETON
 
 
     %% VISUAL → CORE
 
     CAVALRY --> TD
+    CAVALRY --> MEDIA_NULL
     BLENDER --> TD
 
 
     %% OUTPUT ROUTING
 
     P5 --> WEB_NULL
+    RNBO --> WEB_NULL
     COMFY --> MEDIA_NULL
 
     WEB_NULL --> WEB
