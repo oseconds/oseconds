@@ -1,0 +1,95 @@
+---
+config:
+  state:
+    titleTopMargin: 10
+    dividerMargin: 8
+    padding: 12
+    nodeSpacing: 15
+    rankSpacing: 25
+---
+stateDiagram-v2
+    direction TB
+
+    state "01. CODE & CREATIVE CODING" as TOP_CODE {
+        P5 : p5.js
+        JS : JavaScript
+        STRUDEL : Strudel
+        MAX : Max / MSP
+        RNBO : RNBO
+        PY : Python
+
+        JS --> P5
+        JS --> STRUDEL
+        MAX --> RNBO
+    }
+
+
+    state "02. VISUAL & AI ASSETS" as TOP_VISUAL {
+
+        BLENDER : Blender
+        AI_MODELS : GenAI
+        COMFY : ComfyUI
+        CAVALRY : Cavalry
+
+        AI_MODELS --> COMFY
+        BLENDER --> TD
+        BLENDER --> COMFY
+    }
+
+
+    state "03. MEDIA & AUDIO HUB" as CORE_HUB {
+
+        state "TOUCHDESIGNER & ABLETON" as ROUTING {
+            TD : TouchDesigner
+            ABLETON : Ableton Live
+        }
+
+        WEB_NULL : Web Output
+        MEDIA_NULL : AE / Photoshop
+    }
+
+
+    state "04. OUTPUTS" as OUTPUTS {
+
+        state "WEB SYSTEMS" as WEB {
+            WEB_OUT : Interactive Web
+        }
+
+        state "LIVE PERFORMANCE" as LIVE {
+            LIVE_OUT : Audio Visual
+        }
+
+        state "INTERACTIVE" as INTERACTIVE {
+            INSTALL_OUT : Installation
+        }
+
+        state "MEDIA POST-PRODUCTION" as MEDIA {
+            MEDIA_OUT : Final Media
+        }
+    }
+
+
+    %% CODE → CORE
+
+    PY --> TD : DATA
+    MAX --> TD : CONTROL
+    STRUDEL --> WEB_NULL : WEB
+    STRUDEL --> ABLETON : MIDI
+    RNBO --> WEB_NULL : AUDIO
+    P5 --> WEB_NULL : WEB
+
+
+    %% VISUAL → CORE
+
+    CAVALRY --> TD : VISUAL
+    CAVALRY --> MEDIA_NULL : MEDIA
+    COMFY --> MEDIA_NULL : MEDIA
+
+
+    %% OUTPUT ROUTING
+
+    WEB_NULL --> WEB
+    MEDIA_NULL --> MEDIA
+
+    ROUTING --> LIVE
+    ROUTING --> INTERACTIVE
