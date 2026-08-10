@@ -1,3 +1,5 @@
+```mermaid
+
 flowchart TD
     ROOT["0seconds / Creative Practice"]
 
@@ -164,3 +166,5 @@ flowchart TD
     class OSC,MIDI,ARDUINO,FIRMATA,RESOLUME,REKORDBOX live;
 
     class RENDER,CANDY,SIGNAL,ARCHIVE output;
+
+```
