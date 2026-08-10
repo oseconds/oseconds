@@ -1,0 +1,184 @@
+---
+config:
+  theme: base
+  themeVariables:
+    background: "#0d0f12"
+    primaryColor: "#15181d"
+    primaryTextColor: "#d7dbe0"
+    primaryBorderColor: "#303640"
+    lineColor: "#59616b"
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "12px"
+---
+
+stateDiagram-v2
+    direction TB
+
+
+    %% =========================================================
+    %% VISUAL STATE MACHINE
+    %% =========================================================
+
+    state "VISUAL" as VISUAL {
+
+        [*] --> VISUAL_SOURCE
+
+        state "SOURCE" as VISUAL_SOURCE
+        state "GENERATE" as VISUAL_GENERATE
+        state "EDIT / COMPOSE" as VISUAL_EDIT
+        state "REALTIME VISUAL" as VISUAL_REALTIME
+
+        VISUAL_SOURCE --> VISUAL_GENERATE
+        VISUAL_GENERATE --> VISUAL_EDIT
+
+        VISUAL_EDIT --> VISUAL_REALTIME
+
+        VISUAL_REALTIME --> VISUAL_EDIT : revise
+        VISUAL_REALTIME --> [*]
+    }
+
+
+    %% =========================================================
+    %% AUDIO STATE MACHINE
+    %% =========================================================
+
+    state "AUDIO" as AUDIO {
+
+        [*] --> AUDIO_SOURCE
+
+        state "SOURCE" as AUDIO_SOURCE
+        state "SYNTHESIS" as AUDIO_SYNTHESIS
+        state "GENERATIVE" as AUDIO_GENERATIVE
+        state "PROCESS" as AUDIO_PROCESS
+        state "SEQUENCE / ARRANGE" as AUDIO_SEQUENCE
+        state "CONTROL" as AUDIO_CONTROL
+
+        AUDIO_SOURCE --> AUDIO_SYNTHESIS
+        AUDIO_SOURCE --> AUDIO_GENERATIVE
+
+        AUDIO_SYNTHESIS --> AUDIO_PROCESS
+        AUDIO_GENERATIVE --> AUDIO_PROCESS
+
+        AUDIO_PROCESS --> AUDIO_SEQUENCE
+        AUDIO_SEQUENCE --> AUDIO_CONTROL
+
+        AUDIO_CONTROL --> AUDIO_PROCESS : modify
+        AUDIO_CONTROL --> [*]
+    }
+
+
+    %% =========================================================
+    %% INTERACTIVE STATE MACHINE
+    %% =========================================================
+
+    state "INTERACTIVE" as INTERACTIVE {
+
+        [*] --> IDLE
+
+        state "IDLE" as IDLE
+        state "SENSE" as SENSE
+        state "TRACK" as TRACK
+        state "MAP" as MAP
+        state "RESPOND" as RESPOND
+        state "FEEDBACK" as FEEDBACK
+
+        IDLE --> SENSE : input
+
+        SENSE --> TRACK
+        TRACK --> MAP
+        MAP --> RESPOND
+
+        RESPOND --> FEEDBACK
+        FEEDBACK --> SENSE : continuous input
+        FEEDBACK --> IDLE : reset
+    }
+
+
+    %% =========================================================
+    %% WEB STATE MACHINE
+    %% =========================================================
+
+    state "WEB" as WEB {
+
+        [*] --> WEB_LOAD
+
+        state "LOAD" as WEB_LOAD
+        state "RENDER" as WEB_RENDER
+        state "AUDIO / VISUAL" as WEB_MEDIA
+        state "INPUT" as WEB_INPUT
+        state "UPDATE" as WEB_UPDATE
+
+        WEB_LOAD --> WEB_RENDER
+        WEB_RENDER --> WEB_MEDIA
+
+        WEB_MEDIA --> WEB_INPUT
+        WEB_INPUT --> WEB_UPDATE
+
+        WEB_UPDATE --> WEB_RENDER : realtime update
+        WEB_UPDATE --> [*]
+    }
+
+
+    %% =========================================================
+    %% CORE SYSTEM
+    %% =========================================================
+
+    state "CORE" as CORE {
+
+        [*] --> TD
+
+        state "TOUCHDESIGNER" as TD
+        state "OSC / MIDI" as OSC_MIDI
+        state "ABLETON LIVE" as ABLETON
+        state "CONTROL SIGNAL" as CONTROL_SIGNAL
+
+        TD --> OSC_MIDI
+        OSC_MIDI --> ABLETON
+
+        ABLETON --> OSC_MIDI
+        OSC_MIDI --> TD
+
+        TD --> CONTROL_SIGNAL
+        ABLETON --> CONTROL_SIGNAL
+
+        CONTROL_SIGNAL --> [*]
+    }
+
+
+    %% =========================================================
+    %% OUTPUT STATES
+    %% =========================================================
+
+    state "OUTPUT" as OUTPUT {
+
+        [*] --> MEDIA
+
+        state "MEDIA" as MEDIA
+        state "INTERACTIVE OUTPUT" as INTERACTIVE_OUTPUT
+        state "INSTALLATION" as INSTALLATION
+        state "LIVE" as LIVE
+
+        MEDIA --> [*]
+        INTERACTIVE_OUTPUT --> [*]
+        INSTALLATION --> [*]
+        LIVE --> [*]
+    }
+
+
+    %% =========================================================
+    %% CROSS-SYSTEM TRANSITIONS
+    %% =========================================================
+
+    VISUAL_REALTIME --> TD : visual data
+    AUDIO_CONTROL --> ABLETON : audio data
+
+    RESPOND --> TD : interaction
+    RESPOND --> ABLETON : control
+
+    WEB_UPDATE --> TD : web control
+    WEB_UPDATE --> ABLETON : web audio
+
+    TD --> VISUAL_EDIT : visual feedback
+    ABLETON --> AUDIO_PROCESS : audio feedback
+
+    CONTROL_SIGNAL --> OUTPUT
