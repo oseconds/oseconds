@@ -1,49 +1,59 @@
 ```mermaid
 
 swimlane-beta TB
-    subgraph lane1 [01. Code & Creative]
-        JS[JavaScript] --> P5[p5.js]
-        JS --> STRUDEL[Strudel]
-        MAX[Max / MSP] --> RNBO[RNBO]
-        PY[Python]
-    end
+  subgraph lane1 ["01. Code & Creative"]
+    JS[JavaScript]
+    P5[p5.js]
+    STRUDEL[Strudel]
+    MAX[Max / MSP]
+    RNBO[RNBO]
+    PY[Python]
 
-    subgraph lane2 [02. Visual & AI]
-        CAVALRY[Cavalry]
-        BLENDER[Blender] --> COMFY[ComfyUI]
-        AI_MODELS[GenAI] --> COMFY
-    end
+    JS --> P5
+    JS --> STRUDEL
+    MAX --> RNBO
+  end
 
-    subgraph lane3 [03. Hub & Routing]
-        TD[TouchDesigner]
-        ABLETON[Ableton Live]
-        WEB_NULL[Web Buffer]
-        MEDIA_NULL[AE Buffer]
-    end
+  subgraph lane2 ["02. Visual & AI"]
+    CAVALRY[Cavalry]
+    BLENDER[Blender]
+    AI_MODELS[GenAI]
+    COMFY[ComfyUI]
 
-    subgraph lane4 [04. Outputs]
-        WEB_OUT[Interactive Web]
-        LIVE_OUT[Audio Visual]
-        INSTALL_OUT[Installation]
-        MEDIA_OUT[Final Media]
-    end
+    AI_MODELS --> COMFY
+    BLENDER --> COMFY
+  end
 
-    PY --> TD
-    MAX --> TD
-    STRUDEL --> ABLETON
-    STRUDEL --> WEB_NULL
+  subgraph lane3 ["03. Hub & Routing"]
+    TD[TouchDesigner]
+    ABLETON[Ableton Live]
+    WEB_NULL[Web Buffer]
+    MEDIA_NULL[AE Buffer]
+  end
 
-    BLENDER --> TD
-    CAVALRY --> TD
-    CAVALRY --> MEDIA_NULL
+  subgraph lane4 ["04. Outputs"]
+    WEB_OUT[Interactive Web]
+    LIVE_OUT[Audio Visual]
+    INSTALL_OUT[Installation]
+    MEDIA_OUT[Final Media]
+  end
 
-    P5 --> WEB_NULL
-    RNBO --> WEB_NULL
-    COMFY --> MEDIA_NULL
-    COMFY --> TD
+  PY --> TD
+  MAX --> TD
+  STRUDEL --> ABLETON
+  STRUDEL --> WEB_NULL
 
-    WEB_NULL --> WEB_OUT
-    MEDIA_NULL --> MEDIA_OUT
-    TD --> LIVE_OUT
-    TD --> INSTALL_OUT
-    ABLETON --> LIVE_OUT
+  BLENDER --> TD
+  CAVALRY --> TD
+  CAVALRY --> MEDIA_NULL
+
+  P5 --> WEB_NULL
+  RNBO --> WEB_NULL
+  COMFY --> MEDIA_NULL
+  COMFY --> TD
+
+  WEB_NULL --> WEB_OUT
+  MEDIA_NULL --> MEDIA_OUT
+  TD --> LIVE_OUT
+  TD --> INSTALL_OUT
+  ABLETON --> LIVE_OUT
