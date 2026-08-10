@@ -47,20 +47,20 @@ stateDiagram-v2
 
 
     state "WEB" as WEB {
-        WEB_OUT : Web / Archive
-    }
+    WEB_OUT : Interactive Web
+}
 
-    state "LIVE" as LIVE {
-        LIVE_OUT : Ableton / Resolume
-    }
+state "LIVE" as LIVE {
+    LIVE_OUT : Audio Visual
+}
 
-    state "INSTALLATION" as INSTALL {
-        INSTALL_OUT : Projection / Installation
-    }
+state "INTERACTIVE" as INTERACTIVE {
+    INSTALL_OUT : Installation
+}
 
-    state "MEDIA" as MEDIA {
-        MEDIA_OUT : Media
-    }
+state "MEDIA" as MEDIA {
+    MEDIA_OUT : Final Media
+}
 
 
     %% CODE → CORE
