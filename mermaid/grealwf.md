@@ -1,5 +1,6 @@
 ```mermaid
----
+
+    ---
 config:
   state:
     titleTopMargin: 12
@@ -11,33 +12,26 @@ stateDiagram-v2
     direction TB
 
     %% =========================================================
-    %% 01. CODE & BASE INFRASTRUCTURE
+    %% 01. CODE & FOUNDATION
     %% =========================================================
-    state "01. CODE (Base Infrastructure)" as CODE_SEC {
-        JS : JavaScript / TypeScript
+    state "01. CODE (Foundation)" as CODE_SEC {
+        JS_TS : JavaScript / TypeScript
         PY : Python
-        WEB_APP : Web Systems
-        AI_TOOLS : AI / Tools
-
-        JS --> WEB_APP
-        PY --> AI_TOOLS
     }
 
 
     %% =========================================================
-    %% 02. AUDIO PIPELINE (Medium & Control Signal)
+    %% 02. AUDIO PIPELINE (Medium & Control)
     %% =========================================================
     state "02. AUDIO PIPELINE" as AUDIO_SEC {
         ABLETON : Ableton Live
         MAX : Max / MSP
-        TIDAL : TidalCycles
-        STRUDEL : Strudel
-        AUDIO_BUS : Audio Signal
+        CODE_AUDIO : TidalCycles / Strudel
+        AUDIO_BUS : Audio Signal Bus
 
         ABLETON --> MAX
         MAX --> AUDIO_BUS
-        TIDAL --> AUDIO_BUS
-        STRUDEL --> AUDIO_BUS
+        CODE_AUDIO --> AUDIO_BUS
     }
 
 
@@ -46,8 +40,7 @@ stateDiagram-v2
     %% =========================================================
     state "03. VISUAL PIPELINE" as VISUAL_SEC {
         TD : TouchDesigner
-        P5 : p5.js
-        GLSL : GLSL
+        P5_GLSL : p5.js / GLSL
         BLENDER : Blender
 
         REALTIME : Realtime Visuals
@@ -55,105 +48,88 @@ stateDiagram-v2
         RENDER : 3D / Render
 
         TD --> REALTIME
-        P5 --> WEB_VIS
-        GLSL --> WEB_VIS
+        P5_GLSL --> WEB_VIS
         BLENDER --> RENDER
     }
 
 
     %% =========================================================
-    %% 04. GENAI WORKFLOW
+    %% 04. GENAI & MEDIA POST
     %% =========================================================
-    state "04. GENAI PIPELINE" as GENAI_SEC {
-        FLUX : FLUX
-        SD : Stable Diffusion
-        SEEDANCE : Seedance
-        KLING : Kling
-        H3 : MiniMax H3
+    state "04. GENAI & MEDIA PIPELINE" as GENAI_MEDIA_SEC {
+        IMG_MODELS : FLUX / Stable Diffusion
+        VID_MODELS : Seedance / Kling / MiniMax H3
+        COMFY : ComfyUI Workflows
+        POST : After Effects / PS / Topaz
 
-        IMG_GEN : Image Generation
-        VID_GEN : Video Generation
-        COMFY : ComfyUI / Workflows
-
-        FLUX --> IMG_GEN
-        SD --> IMG_GEN
-
-        SEEDANCE --> VID_GEN
-        KLING --> VID_GEN
-        H3 --> VID_GEN
-
-        IMG_GEN --> COMFY
-        VID_GEN --> COMFY
+        IMG_MODELS --> COMFY : Image Gen
+        VID_MODELS --> COMFY : Video Gen
+        COMFY --> POST : AI Generated Media
     }
 
 
     %% =========================================================
-    %% 05. INTERACTIVE & CONTROL SYSTEMS (Signal Rack / Void-a)
+    %% 05. INTERACTIVE SYSTEMS (Central Hub)
     %% =========================================================
-    state "05. INTERACTIVE SYSTEMS" as INTERACTION_SEC {
-        INPUT_HARDWARE : OSC / MIDI / Arduino / Firmata
+    state "05. INTERACTIVE SYSTEMS HUB" as HUB_SEC {
+        HARDWARE : OSC / MIDI / Arduino / Firmata
         USER_IN : User Interaction / Gaze
-        SYSTEM_HUB : Interactive Systems Hub<br/>(Signal Rack / Void-a)
+        SYSTEM_HUB : Signal Rack / Logic Engine
 
-        INPUT_HARDWARE --> SYSTEM_HUB
-        USER_IN --> SYSTEM_HUB
+        HARDWARE --> SYSTEM_HUB : Sensor / HW Control
+        USER_IN --> SYSTEM_HUB : Trigger / Input
     }
 
 
     %% =========================================================
-    %% 06. MEDIA POST-PRODUCTION
+    %% 06. CREATIVE EXPERIENCES (Target Outputs)
     %% =========================================================
-    state "06. MEDIA (Post / Delivery)" as MEDIA_SEC {
-        AE : After Effects
-        PS : Photoshop
-        TOPAZ : Topaz
-        FINAL_MEDIA : Final Media Output
-
-        AE --> FINAL_MEDIA
-        PS --> FINAL_MEDIA
-        TOPAZ --> FINAL_MEDIA
+    state "06. CREATIVE EXPERIENCES (Outputs)" as OUTPUT_SEC {
+        MEDIA_OUT : Media (Final Render)
+        LIVE_OUT : Live (Resolume / rekordbox)
+        INSTALLATION_OUT : Physical Installation
+        INTERACTIVE_OUT : Interactive Application
+        WEB_OUT : Web (Void-a / Candy)
     }
 
 
     %% =========================================================
-    %% 07. LIVE ENVIRONMENT
-    %% =========================================================
-    state "07. LIVE ENVIRONMENT" as LIVE_SEC {
-        LIVE_ENV : Live Environment
-        RESOLUME : Resolume
-        REKORDBOX : rekordbox
-
-        LIVE_ENV --> RESOLUME
-        LIVE_ENV --> REKORDBOX
-    }
-
-
-    %% =========================================================
-    %% CROSS-DOMAIN PIPELINE CONNECTIONS (실제 명세 관계)
+    %% CROSS-DOMAIN ROUTING
     %% =========================================================
 
     %% Code Integration
-    WEB_APP --> SYSTEM_HUB
-    AI_TOOLS --> GENAI_SEC
+    JS_TS --> WEB_VIS
+    JS_TS --> SYSTEM_HUB
+    PY --> COMFY
 
-    %% Audio Signals -> Systems
-    AUDIO_BUS --> VISUAL_SEC : Audio Control Signal
-    AUDIO_BUS --> SYSTEM_HUB : Interactive Signal
-
-    %% Visual Streams -> Interactive Systems
+    %% Audio & Visual to Hub
+    AUDIO_BUS --> SYSTEM_HUB : Control Update
     REALTIME --> SYSTEM_HUB
     WEB_VIS --> SYSTEM_HUB
-    RENDER --> SYSTEM_HUB
 
-    %% GenAI -> Media Processing
-    COMFY --> AE : AI Generated Media
-    COMFY --> PS : AI Generated Media
-    COMFY --> TOPAZ : AI Generated Media
+    %% Hub Feedback & Processing
+    SYSTEM_HUB --> AUDIO_BUS : Reactive Sync
+    SYSTEM_HUB --> REALTIME : Reactive Sync
+    RENDER --> POST : Rendered Sequence
 
-    %% Interactive Loop
-    SYSTEM_HUB --> AUDIO_BUS : Control Update
-    SYSTEM_HUB --> VISUAL_SEC : Control Update
 
-    %% Audio / Visual -> Live Output
-    AUDIO_BUS --> LIVE_ENV
-    REALTIME --> LIVE_ENV
+    %% =========================================================
+    %% OUTFLOW TO OUTPUTS (최종 도달점)
+    %% =========================================================
+
+    %% 1. Media
+    POST --> MEDIA_OUT
+
+    %% 2. Live Environment
+    AUDIO_BUS --> LIVE_OUT
+    REALTIME --> LIVE_OUT
+
+    %% 3. Physical Installation
+    SYSTEM_HUB --> INSTALLATION_OUT : Hardware Loop & Space
+
+    %% 4. Interactive Systems
+    SYSTEM_HUB --> INTERACTIVE_OUT : Digital Logic & State
+
+    %% 5. Web Systems
+    SYSTEM_HUB --> WEB_OUT : System Archive & Logic
+    WEB_VIS --> WEB_OUT : Canvas Render
