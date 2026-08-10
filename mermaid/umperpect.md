@@ -51,6 +51,8 @@ stateDiagram-v2
     }
 
 
+state "OUTPUTS" as OUTPUTS {
+
     state "WEB" as WEB {
         WEB_OUT : Interactive Web
     }
@@ -66,6 +68,7 @@ stateDiagram-v2
     state "MEDIA" as MEDIA {
         MEDIA_OUT : Final Media
     }
+}
 
 
     %% CODE → CORE
