@@ -7,113 +7,102 @@ config:
     dividerMargin: 8
     padding: 8
     nodeSpacing: 10
-    rankSpacing: 10
+    rankSpacing: 15
 ---
 
 stateDiagram-v2
     direction TB
 
     %% =========================================================
-    %% 01. CODE & SCRIPTING (Foundation Layer)
+    %% 01. LIVE CODING & SCRIPTING (Foundation Layer)
     %% =========================================================
-    state "01. CODE & SCRIPTING" as CODE_SEC {
+    state "01. LIVE CODING & SCRIPTING" as SCRIPT_SEC {
         JS_TS : JavaScript / TypeScript
         PY : Python
-        P5 : p5.js Canvas
+        STRUDEL : Strudel (JS Live Coding)
+        TIDAL : TidalCycles (Live System)
 
-        JS_TS --> P5 : Web Visuals / Logic
+        JS_TS --> STRUDEL : Engine Base
     }
 
     %% =========================================================
-    %% 02. AUDIO PIPELINE
+    %% 02. 3D & MOTION ASSETS
     %% =========================================================
-    state "02. AUDIO PIPELINE" as AUDIO_SEC {
-        ABLETON : Ableton Live
-        BITWIG : Bitwig Studio
-        MAX : Max / MSP
-        CODE_AUDIO : TidalCycles / Strudel
-        AUDIO_BUS : Audio Signal Bus
-
-        ABLETON --> MAX
-        BITWIG --> AUDIO_BUS
-        MAX --> AUDIO_BUS
-        CODE_AUDIO --> AUDIO_BUS
-    }
-
-    %% =========================================================
-    %% 03. VISUAL ASSETS (Sources)
-    %% =========================================================
-    state "03. VISUAL ASSETS" as VISUAL_SEC {
-        CAVALRY : Cavalry (2D Motion)
+    state "02. 3D & MOTION ASSETS" as ASSET_SEC {
         BLENDER : Blender
-        GLSL : GLSL / WebGL
-        RENDER : 3D / Render
-
-        BLENDER --> RENDER
+        CAVALRY : Cavalry
     }
 
     %% =========================================================
-    %% 04. GENAI & MEDIA PIPELINE
+    %% 03. GENAI PIPELINE
     %% =========================================================
-    state "04. GENAI & MEDIA PIPELINE" as GENAI_MEDIA_SEC {
-        AI_MODELS : FLUX / SD / Seedance / Kling / H3
+    state "03. GENAI PIPELINE" as GENAI_SEC {
+        AI_MODELS : FLUX / SD / Kling / H3
         COMFY : ComfyUI Workflows
-        POST : After Effects / PS / Topaz
 
         AI_MODELS --> COMFY
-        COMFY --> POST : AI Generated Media
     }
 
     %% =========================================================
-    %% 05. INTERACTIVE INPUTS
+    %% 04. AUDIO PIPELINE
     %% =========================================================
-    state "05. INTERACTIVE INPUTS" as INTERACTION_SEC {
-        HARDWARE : OSC / MIDI / Arduino / Firmata
-        USER_IN : User Interaction / Gaze
+    state "04. AUDIO PIPELINE" as AUDIO_SEC {
+        ABLETON : Ableton Live
+        MAX : Max / MSP
+        BITWIG : Bitwig Studio
+
+        ABLETON --> MAX
     }
 
     %% =========================================================
-    %% 00. TOUCHDESIGNER (Main Core Hub & Media Server)
+    %% 00. GENERATIVE ART & CORE HUB (Central Integration)
     %% =========================================================
-    state "00. TOUCHDESIGNER (Main Core Hub)" as CORE_SEC {
-        TD : TouchDesigner\n(Visual Engine / System Integration / Media Server / Live Tool)
+    state "00. GENERATIVE ART & CORE HUB" as CORE_SEC {
+        TD : TouchDesigner\n(Main Hub / Media Server / Visuals)
+        P5_GLSL : p5.js / GLSL
     }
 
     %% =========================================================
-    %% 06. CREATIVE EXPERIENCES (Target Outputs)
+    %% 05. POST PRODUCTION & TARGET OUTPUTS
     %% =========================================================
-    state "06. CREATIVE EXPERIENCES (Outputs)" as OUTPUT_SEC {
+    state "05. POST & CREATIVE OUTPUTS" as OUT_SEC {
+        POST : After Effects / PS / Topaz
         MEDIA_OUT : Final Media Render
-        LIVE_OUT : Live Performance (Ableton / Bitwig / TD / Resolume / rekordbox)
-        INSTALLATION_OUT : Physical Installation
-        INTERACTIVE_OUT : Interactive Application
+        LIVE_OUT : Live Performance\n(Ableton / TD / Resolume)
+        INSTALL_OUT : Physical Installation
         WEB_OUT : Web Systems & Archive
+
+        POST --> MEDIA_OUT
     }
 
     %% =========================================================
-    %% ROOT-LEVEL CROSS-DOMAIN CONNECTIONS (Funneling to TD)
+    %% SYSTEM CROSS-ROUTING (다이렉트 연결망)
     %% =========================================================
     
-    %% 1. All Roads Lead to TouchDesigner (Central Control & Media Server)
-    PY --> TD : Python Logic / Data Processing
-    HARDWARE --> TD : Central Interaction Control
-    USER_IN --> TD : Central Interaction Control
+    %% JS & Python Logic
+    JS_TS --> P5_GLSL : Web App Logic
+    PY --> TD : System Logic & Data processing
+    MAX <--> JS_TS : node.script / Bridge
+
+    %% Creative Coding to Audio Sequencing
+    STRUDEL --> ABLETON : Algorithmic MIDI
+    TIDAL --> ABLETON : Algorithmic OSC
+
+    %% 3D Data to AI & Core
+    BLENDER --> AI_MODELS : Camera / Depth / Structure Data
+    BLENDER --> POST : 3D Render
     CAVALRY --> TD : Motion Assets
-    GLSL --> TD : Shaders / Texture
-    COMFY --> TD : GenAI Realtime Textures
-    AUDIO_BUS --> TD : Audio-Reactive Sync
 
-    %% 2. Outward Routing from TouchDesigner
-    TD --> LIVE_OUT : VJing / Media Server Output
-    TD --> INSTALLATION_OUT : Space / Projection Mapping
-    TD --> INTERACTIVE_OUT : App / System Logic Target
+    %% GenAI to Core & Media
+    COMFY --> POST : Generated Media
+    COMFY --> TD : Realtime GenAI Textures
 
-    %% 3. Independent Bridges & Workflows
-    MAX <--> JS_TS : node.script / OSC Bridge
-    JS_TS --> WEB_OUT : Web Application Logic
-    P5 --> WEB_OUT : Canvas Preview
-    
-    %% Media Rendering Workflow
-    RENDER --> POST
-    POST --> MEDIA_OUT
-    AUDIO_BUS --> LIVE_OUT : Live Audio Output
+    %% Audio to Generative Core
+    MAX --> TD : Audio-Reactive Sync
+    BITWIG --> TD : Audio-Reactive Sync
+
+    %% Core to Final Outputs
+    P5_GLSL --> WEB_OUT
+    TD --> LIVE_OUT : VJ / Media Server Output
+    TD --> INSTALL_OUT : Projection Mapping / Space
+    ABLETON --> LIVE_OUT : Audio Output
