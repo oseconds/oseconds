@@ -47,20 +47,20 @@ stateDiagram-v2
 
 
     state "WEB" as WEB {
-    WEB_OUT : Interactive Web
-}
+        WEB_OUT : Interactive Web
+    }
 
-state "LIVE" as LIVE {
-    LIVE_OUT : Audio Visual
-}
+    state "LIVE" as LIVE {
+        LIVE_OUT : Audio Visual
+    }
 
-state "INTERACTIVE" as INTERACTIVE {
-    INSTALL_OUT : Installation
-}
+    state "INTERACTIVE" as INTERACTIVE {
+        INSTALL_OUT : Installation
+    }
 
-state "MEDIA" as MEDIA {
-    MEDIA_OUT : Final Media
-}
+    state "MEDIA" as MEDIA {
+        MEDIA_OUT : Final Media
+    }
 
 
     %% CODE → CORE
@@ -85,4 +85,4 @@ state "MEDIA" as MEDIA {
     MEDIA_NULL --> MEDIA
 
     ROUTING --> LIVE
-    ROUTING --> INSTALL
+    ROUTING --> INTERACTIVE
