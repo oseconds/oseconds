@@ -1,0 +1,48 @@
+stateDiagram-v2
+    direction TB
+
+    [*] --> IdleState : System Ready / Standby
+
+    state "1. Input Data Collection" as Inputs {
+        direction LR
+        VisualInputs : Visual (GenAI / 3D / AE)
+        AudioInputs : Audio (Max / Bitwig)
+        InteractiveInputs : Interactive (Sensors / Hardware)
+        WebInputs : Web (Svelte / p5 / Web Audio)
+    }
+
+    IdleState --> Inputs : Event / Frame Tick
+
+    state "2. Core System Processing" as Core {
+        direction LR
+
+        state "TouchDesigner" as TD_State {
+            [*] --> RealtimeGraphics
+            RealtimeGraphics --> FrameComposite
+        }
+
+        state "OSC / MIDI Bridge" as Sync_State {
+            [*] --> BidirectionalRoute
+        }
+
+        state "Ableton Live" as Audio_State {
+            [*] --> AudioSynthesis
+            AudioSynthesis --> ChannelRouting
+        }
+
+        TD_State <--> Sync_State : OSC Sync
+        Sync_State <--> Audio_State : MIDI / Clock
+    }
+
+    Inputs --> Core : Raw Signal Stream
+
+    state "3. Output State" as Outputs {
+        direction LR
+        MediaOut : Media
+        InteractiveOut : Interactive
+        InstallationOut : Installation
+        LiveOut : Live Performance
+    }
+
+    Core --> Outputs : Processed Signal Stream
+    Outputs --> IdleState : Loop Next Frame
