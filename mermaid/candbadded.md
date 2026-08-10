@@ -1,5 +1,4 @@
 ```mermaid
-
 ---
 config:
   state:
@@ -12,14 +11,14 @@ stateDiagram-v2
     direction TB
 
     %% =========================================================
-    %% 01. CODE & SCRIPTING
+    %% 01. CODE & SCRIPTING (Foundation Layer)
     %% =========================================================
     state "01. CODE & SCRIPTING" as CODE_SEC {
         JS_TS : JavaScript / TypeScript
         PY : Python
         P5 : p5.js Canvas
 
-        JS_TS --> P5 : JS Controller / Scripting
+        JS_TS --> P5 : Web Visuals / Logic
     }
 
 
@@ -38,8 +37,8 @@ stateDiagram-v2
         MAX --> AUDIO_BUS
         CODE_AUDIO --> AUDIO_BUS
         
-        %% Max <-> JavaScript Bridge
-        MAX <--> JS_TS : node.script / JS Bridge
+        %% Max <-> JavaScript Bridge (node.script)
+        MAX <--> JS_TS : node.script Bridge
     }
 
 
@@ -55,7 +54,7 @@ stateDiagram-v2
         REALTIME : Realtime Visuals
         RENDER : 3D / Render
 
-        CAVALRY --> TD : 2D Motion / Asset Flow
+        CAVALRY --> TD : Motion Assets
         BLENDER --> RENDER
         TD --> REALTIME
     }
@@ -69,6 +68,7 @@ stateDiagram-v2
         COMFY : ComfyUI Workflows
         POST : After Effects / PS / Topaz
 
+        PY --> AI_MODELS : Python Automation & Control
         AI_MODELS --> COMFY
         COMFY --> POST : AI Generated Media
         COMFY --> TD : GenAI Media as TD Texture Input
@@ -91,7 +91,7 @@ stateDiagram-v2
     %% 06. CREATIVE EXPERIENCES (Target Outputs)
     %% =========================================================
     state "06. CREATIVE EXPERIENCES (Outputs)" as OUTPUT_SEC {
-        MEDIA_OUT : Final Media
+        MEDIA_OUT : Final Media Render
         LIVE_OUT : Live Performance (Ableton / Bitwig / TD / Resolume / rekordbox)
         INSTALLATION_OUT : Physical Installation
         INTERACTIVE_OUT : Interactive Systems
@@ -100,11 +100,8 @@ stateDiagram-v2
 
 
     %% =========================================================
-    %% CROSS-DOMAIN CONNECTIONS & FEEDBACK
+    %% CROSS-DOMAIN CONNECTIONS & FLOWS
     %% =========================================================
-    PY --> AI_MODELS : AI Model Control / Automation
-    JS_TS --> WEB_OUT : Web App Logic
-
     RENDER --> POST
     AUDIO_BUS --> LIVE_OUT
     REALTIME --> LIVE_OUT
@@ -112,4 +109,6 @@ stateDiagram-v2
     POST --> MEDIA_OUT
     REALTIME --> INSTALLATION_OUT
     REALTIME --> INTERACTIVE_OUT
-    P5 --> WEB_OUT : Canvas Preview / Web Visuals
+    P5 --> WEB_OUT : Canvas Preview
+    JS_TS --> WEB_OUT : Web Application Logic
+
