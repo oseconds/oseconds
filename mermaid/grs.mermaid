@@ -1,0 +1,144 @@
+stateDiagram-v2
+    direction TB
+
+    %% =========================================================
+    %% STATE LABELS (각 노드 표시 명칭 정의)
+    %% =========================================================
+    state "GenAI Tool" as GENAI
+    state "Generative Method" as GENERATIVE
+    state "Cavalry (2D Motion)" as CAVALRY
+    state "After Effects (VFX)" as AFTER_EFFECTS
+    state "Blender (3D Space)" as BLENDER
+    state "VISUAL DOMAIN" as VISUAL
+
+    state "Max / MSP" as MAX
+    state "Bitwig Studio" as BITWIG
+    state "Audio Synthesis" as SYNTHESIS
+    state "Generative Audio" as GENERATIVE_AUDIO
+    state "AUDIO DOMAIN" as AUDIO
+
+    state "Hardware Interface" as HARDWARE
+    state "Sensors (Motion/Depth)" as SENSORS
+    state "Tracking Systems" as TRACKING
+    state "INTERACTIVE DOMAIN" as INTERACTIVE
+
+    state "Svelte / SvelteKit" as SVELTE
+    state "Vite Build Tool" as VITE
+    state "Web Audio API" as WEB_AUDIO
+    state "p5.js Canvas" as P5
+    state "WEB DOMAIN" as WEB
+
+    state "TouchDesigner (Core Visual)" as TOUCHDESIGNER
+    state "Ableton Live (Core Audio)" as ABLETON
+    state "OSC / MIDI Sync Bridge" as OSC_MIDI
+    state "Combined Signal Hub" as SIGNAL
+
+    state "Media Production" as MEDIA
+    state "Interactive Output" as INTERACTIVE_OUTPUT
+    state "Physical Installation" as INSTALLATION
+    state "Live Performance" as LIVE
+
+    state "Visual Processing Pass 1" as VISUAL_ANCHOR_1
+    state "Visual Processing Pass 2" as VISUAL_ANCHOR_2
+    state "Audio Signal Routing" as AUDIO_ANCHOR
+    state "Interactive Control Bus" as INTERACTIVE_ANCHOR
+    state "Web Data Stream" as WEB_ANCHOR
+
+
+    %% =========================================================
+    %% 1. VISUAL PIPELINE
+    %% =========================================================
+    [*] --> GENAI
+    GENAI --> GENERATIVE
+    GENERATIVE --> VISUAL
+
+    [*] --> CAVALRY
+    CAVALRY --> VISUAL
+
+    [*] --> AFTER_EFFECTS
+    AFTER_EFFECTS --> VISUAL
+
+    [*] --> BLENDER
+    BLENDER --> VISUAL
+
+    VISUAL --> VISUAL_ANCHOR_1
+    VISUAL_ANCHOR_1 --> VISUAL_ANCHOR_2
+    VISUAL_ANCHOR_2 --> TOUCHDESIGNER
+
+
+    %% =========================================================
+    %% 2. AUDIO PIPELINE
+    %% =========================================================
+    [*] --> MAX
+    MAX --> SYNTHESIS
+    SYNTHESIS --> AUDIO
+
+    [*] --> BITWIG
+    BITWIG --> GENERATIVE_AUDIO
+    GENERATIVE_AUDIO --> AUDIO
+
+    AUDIO --> AUDIO_ANCHOR
+    AUDIO_ANCHOR --> ABLETON
+
+
+    %% =========================================================
+    %% 3. INTERACTIVE PIPELINE
+    %% =========================================================
+    [*] --> HARDWARE
+    HARDWARE --> INTERACTIVE
+
+    [*] --> SENSORS
+    SENSORS --> INTERACTIVE
+
+    [*] --> TRACKING
+    TRACKING --> INTERACTIVE
+
+    INTERACTIVE --> INTERACTIVE_ANCHOR
+    INTERACTIVE_ANCHOR --> TOUCHDESIGNER
+    INTERACTIVE_ANCHOR --> ABLETON
+
+
+    %% =========================================================
+    %% 4. WEB PIPELINE
+    %% =========================================================
+    [*] --> SVELTE
+    SVELTE --> WEB
+
+    [*] --> VITE
+    VITE --> WEB
+
+    [*] --> WEB_AUDIO
+    WEB_AUDIO --> WEB
+
+    [*] --> P5
+    P5 --> WEB
+
+    WEB --> WEB_ANCHOR
+    WEB_ANCHOR --> SIGNAL
+
+
+    %% =========================================================
+    %% 5. CORE SYSTEM & OSC/MIDI ROUTING
+    %% =========================================================
+    TOUCHDESIGNER --> OSC_MIDI
+    OSC_MIDI --> ABLETON
+
+    ABLETON --> OSC_MIDI
+    OSC_MIDI --> TOUCHDESIGNER
+
+    TOUCHDESIGNER --> SIGNAL
+    ABLETON --> SIGNAL
+
+
+    %% =========================================================
+    %% 6. OUTPUT PIPELINE
+    %% =========================================================
+    SIGNAL --> MEDIA
+    SIGNAL --> INTERACTIVE_OUTPUT
+    SIGNAL --> INSTALLATION
+    SIGNAL --> LIVE
+
+    MEDIA --> [*]
+    INTERACTIVE_OUTPUT --> [*]
+    INSTALLATION --> [*]
+    LIVE --> [*]
