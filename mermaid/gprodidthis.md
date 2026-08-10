@@ -1,108 +1,33 @@
 ```mermaid
 
----
-config:
-  state:
-    titleTopMargin: 10
-    dividerMargin: 8
-    padding: 8
-    nodeSpacing: 10
-    rankSpacing: 15
----
+flowchart LR
+    %% Subgraphs for clean layout without wasted space
+    subgraph Control_Layer [라이브 & 타임라인 제어]
+        direction TB
+        MIDI([MIDI Controller])
+        Ableton[Ableton Live]
+        MIDI -.-> |MIDI 제어| Ableton
+    end
 
-stateDiagram-v2
-    direction TB
+    subgraph Hub_Layer [메인 허브]
+        TD{{"TouchDesigner"}}
+    end
 
-    %% =========================================================
-    %% 01. LIVE CODING & SCRIPTING (Foundation Layer)
-    %% =========================================================
-    state "01. LIVE CODING & SCRIPTING" as SCRIPT_SEC {
-        JS_TS : JavaScript / TypeScript
-        PY : Python
-        STRUDEL : Strudel (JS Live Coding)
-        TIDAL : TidalCycles (Live System)
+    subgraph Output_Layer [통합 출력]
+        Visuals(["Visuals (통합 에셋)"])
+    end
 
-        JS_TS --> STRUDEL : Engine Base
-    }
+    %% Main flow
+    Ableton == "TDAbleton / OSC / MIDI\n(파라미터 동기화 및 관리)" ==> TD
+    TD == "데이터 기반 실시간 렌더링" ==> Visuals
 
-    %% =========================================================
-    %% 02. 3D & MOTION ASSETS
-    %% =========================================================
-    state "02. 3D & MOTION ASSETS" as ASSET_SEC {
-        BLENDER : Blender
-        CAVALRY : Cavalry
-    }
+    %% Styling
+    classDef hub fill:#ff7e67,stroke:#333,stroke-width:4px,color:#fff,font-size:18px,font-weight:bold;
+    classDef control fill:#4a90e2,stroke:#333,stroke-width:2px,color:#fff;
+    classDef output fill:#50c878,stroke:#333,stroke-width:2px,color:#fff;
+    classDef sub bg:#f4f4f4,stroke:#ccc,stroke-width:2px,stroke-dasharray: 5 5;
 
-    %% =========================================================
-    %% 03. GENAI PIPELINE
-    %% =========================================================
-    state "03. GENAI PIPELINE" as GENAI_SEC {
-        AI_MODELS : FLUX / SD / Kling / H3
-        COMFY : ComfyUI Workflows
-
-        AI_MODELS --> COMFY
-    }
-
-    %% =========================================================
-    %% 04. AUDIO PIPELINE
-    %% =========================================================
-    state "04. AUDIO PIPELINE" as AUDIO_SEC {
-        ABLETON : Ableton Live
-        MAX : Max / MSP
-        BITWIG : Bitwig Studio
-
-        ABLETON --> MAX
-    }
-
-    %% =========================================================
-    %% 00. GENERATIVE ART & CORE HUB (Central Integration)
-    %% =========================================================
-    state "00. GENERATIVE ART & CORE HUB" as CORE_SEC {
-        TD : TouchDesigner\n(Main Hub / Media Server / Visuals)
-        P5_GLSL : p5.js / GLSL
-    }
-
-    %% =========================================================
-    %% 05. POST PRODUCTION & TARGET OUTPUTS
-    %% =========================================================
-    state "05. POST & CREATIVE OUTPUTS" as OUT_SEC {
-        POST : After Effects / PS / Topaz
-        MEDIA_OUT : Final Media Render
-        LIVE_OUT : Live Performance\n(Ableton / TD / Resolume)
-        INSTALL_OUT : Physical Installation
-        WEB_OUT : Web Systems & Archive
-
-        POST --> MEDIA_OUT
-    }
-
-    %% =========================================================
-    %% SYSTEM CROSS-ROUTING (다이렉트 연결망)
-    %% =========================================================
-    
-    %% JS & Python Logic
-    JS_TS --> P5_GLSL : Web App Logic
-    PY --> TD : System Logic & Data processing
-    MAX <--> JS_TS : node.script / Bridge
-
-    %% Creative Coding to Audio Sequencing
-    STRUDEL --> ABLETON : Algorithmic MIDI
-    TIDAL --> ABLETON : Algorithmic OSC
-
-    %% 3D Data to AI & Core
-    BLENDER --> AI_MODELS : Camera / Depth / Structure Data
-    BLENDER --> POST : 3D Render
-    CAVALRY --> TD : Motion Assets
-
-    %% GenAI to Core & Media
-    COMFY --> POST : Generated Media
-    COMFY --> TD : Realtime GenAI Textures
-
-    %% Audio to Generative Core
-    MAX --> TD : Audio-Reactive Sync
-    BITWIG --> TD : Audio-Reactive Sync
-
-    %% Core to Final Outputs
-    P5_GLSL --> WEB_OUT
-    TD --> LIVE_OUT : VJ / Media Server Output
-    TD --> INSTALL_OUT : Projection Mapping / Space
-    ABLETON --> LIVE_OUT : Audio Output
+    class TD hub;
+    class Ableton,MIDI control;
+    class Visuals output;
+    class Control_Layer,Hub_Layer,Output_Layer sub;
