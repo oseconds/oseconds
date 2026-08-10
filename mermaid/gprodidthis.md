@@ -1,33 +1,92 @@
 ```mermaid
 
-flowchart LR
-    %% Subgraphs for clean layout without wasted space
-    subgraph Control_Layer [라이브 & 타임라인 제어]
-        direction TB
-        MIDI([MIDI Controller])
-        Ableton[Ableton Live]
-        MIDI -.-> |MIDI 제어| Ableton
-    end
+---
+config:
+  state:
+    titleTopMargin: 10
+    dividerMargin: 8
+    padding: 10
+    nodeSpacing: 15
+    rankSpacing: 20
+---
 
-    subgraph Hub_Layer [메인 허브]
-        TD{{"TouchDesigner"}}
-    end
+stateDiagram-v2
+    direction TB
 
-    subgraph Output_Layer [통합 출력]
-        Visuals(["Visuals (통합 에셋)"])
-    end
+    %% =========================================================
+    %% [TOP LAYER] 소스 생성 및 로직 (위에서 아래로 데이터 공급)
+    %% =========================================================
+    state "01. CODE & LIVE SCRIPTING" as TOP_SCRIPT {
+        JS_TS : JavaScript / TypeScript
+        PY : Python
+        STRUDEL : Strudel (JS Live Coding)
+        TIDAL : TidalCycles
+    }
 
-    %% Main flow
-    Ableton == "TDAbleton / OSC / MIDI\n(파라미터 동기화 및 관리)" ==> TD
-    TD == "데이터 기반 실시간 렌더링" ==> Visuals
+    state "02. VISUAL & AI ASSETS (통합 에셋)" as TOP_VISUAL {
+        BLENDER : Blender (3D / Camera Data)
+        CAVALRY : Cavalry (2D Motion)
+        AI_MODELS : GenAI (FLUX / SD / Kling)
+        COMFY : ComfyUI Workflows
 
-    %% Styling
-    classDef hub fill:#ff7e67,stroke:#333,stroke-width:4px,color:#fff,font-size:18px,font-weight:bold;
-    classDef control fill:#4a90e2,stroke:#333,stroke-width:2px,color:#fff;
-    classDef output fill:#50c878,stroke:#333,stroke-width:2px,color:#fff;
-    classDef sub bg:#f4f4f4,stroke:#ccc,stroke-width:2px,stroke-dasharray: 5 5;
+        %% 3D Data to AI flow
+        BLENDER --> AI_MODELS : Depth / Structure / Camera
+        AI_MODELS --> COMFY
+    }
 
-    class TD hub;
-    class Ableton,MIDI control;
-    class Visuals output;
-    class Control_Layer,Hub_Layer,Output_Layer sub;
+    %% =========================================================
+    %% [MIDDLE LAYER] 컨트롤 및 메인 허브 (나란히 배치)
+    %% =========================================================
+    state "03. TIMELINE & AUDIO (제어부)" as MID_AUDIO {
+        ABLETON : Ableton Live (Timeline / Live Control)
+        MAX : Max / MSP
+        BITWIG : Bitwig Studio
+
+        ABLETON --> MAX
+    }
+
+    state "04. MAIN CORE HUB (통합부)" as MID_CORE {
+        TD : TouchDesigner (Central Hub / Media Server)
+        P5_GLSL : p5.js / GLSL
+    }
+
+    %% =========================================================
+    %% [BOTTOM LAYER] 최종 아웃풋 (가장 아래에 위치)
+    %% =========================================================
+    state "05. CREATIVE OUTPUTS (종착지)" as BOT_OUT {
+        POST : After Effects / PS
+        MEDIA_OUT : Final Media
+        LIVE_OUT : Live Performance (Ableton / TD / Resolume)
+        INSTALL_OUT : Physical Installation
+        WEB_OUT : Web Systems & Archive
+
+        POST --> MEDIA_OUT
+    }
+
+    %% =========================================================
+    %% FLOW ROUTING (위 -> 중간 -> 아래 흐름 고정)
+    %% =========================================================
+
+    %% 1. Top -> Middle (데이터 및 스크립트 전송)
+    JS_TS --> P5_GLSL : Web App Logic
+    PY --> TD : System Logic & Data Processing
+    MAX <--> JS_TS : node.script Bridge
+    STRUDEL --> ABLETON : Algorithmic MIDI
+    TIDAL --> ABLETON : Algorithmic OSC
+
+    %% 2. Top -> Middle & Bottom (에셋 및 미디어 흐름)
+    CAVALRY --> TD : Motion Assets
+    BLENDER --> POST : 3D Render to Post
+    COMFY --> TD : Realtime Textures (GenAI)
+    COMFY --> POST : Generated Media to Post
+
+    %% 3. Middle <-> Middle (에이블톤 -> 터치디자이너 핵심 연동)
+    ABLETON --> TD : TDAbleton / OSC / MIDI (Timeline & Parameter Sync)
+    BITWIG --> TD : Audio & Sync
+    MAX --> TD : Control Data
+
+    %% 4. Middle -> Bottom (허브에서 최종 아웃풋으로 분배)
+    P5_GLSL --> WEB_OUT
+    TD --> LIVE_OUT : VJ / Media Server Output
+    TD --> INSTALL_OUT : Projection Mapping / Interactive Space
+    ABLETON --> LIVE_OUT : Live Audio Output
