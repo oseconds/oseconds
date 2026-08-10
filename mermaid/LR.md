@@ -39,7 +39,7 @@ stateDiagram-v2
 
 
     state "03. MEDIA & AUDIO HUB" as CORE_HUB {
-        state "TOUCHDESIGNER & ABLETON" as ROUTING {
+        state "TD & ABLETON" as ROUTING {
             TD : TouchDesigner
             ABLETON : Ableton Live
         }
