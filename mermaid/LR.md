@@ -66,7 +66,7 @@ stateDiagram-v2
 
     %% CODE → CORE
     PY --> TD
-    MAX --> TD
+    MAX --> ABLETON
     STRUDEL --> WEB_NULL
     STRUDEL --> ABLETON
 
