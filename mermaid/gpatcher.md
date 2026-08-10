@@ -2,252 +2,122 @@
 
 ---
 config:
-  state:
-    titleTopMargin: 20
-    dividerMargin: 12
-    padding: 14
+  theme: dark
+  flowchart:
+    nodeSpacing: 8
+    rankSpacing: 22
+    curve: linear
 ---
-
-stateDiagram-v2
-    direction TB
+flowchart TD
 
     %% =========================================================
-    %% 01. INLETS / PHYSICAL & USER INPUTS
+    %% [LEVEL 1] INPUT TOOLS & SOURCES
     %% =========================================================
-    [*] --> INPUT
+    subgraph L1[" LEVEL 1 : INPUT TOOLS "]
+        direction LR
+        V_GENAI["GenAI"]
+        V_CAVALRY["Cavalry"]
+        V_AE["After Effects"]
+        V_BLENDER["Blender"]
 
-    state "01. INLETS (Physical & User Inputs)" as INPUT {
-        [*] --> HARDWARE
-        [*] --> SENSORS
-        [*] --> TRACKING
-        [*] --> WEB_INPUT
+        A_MAX["Max / MSP"]
+        A_BITWIG["Bitwig"]
 
-        HARDWARE : [inlet 1] Hardware Interface
-        SENSORS : [inlet 2] Sensor Stream
-        TRACKING : [inlet 3] Spatial Tracking
-        WEB_INPUT : [inlet 4] Web Client Event
+        I_HW["Hardware"]
+        I_SENSORS["Sensors"]
+        I_TRACKING["Tracking"]
 
-        HARDWARE --> INTERACTIVE : physical input
-        SENSORS --> INTERACTIVE : sensor data
-        TRACKING --> INTERACTIVE : tracking data
-        WEB_INPUT --> JAVASCRIPT : user input
-    }
-
+        W_SVELTE["Svelte / Vite"]
+        W_P5["p5.js / WebAudio"]
+    end
 
     %% =========================================================
-    %% 02. SUBPATCHER: VISUAL GENERATION
+    %% [LEVEL 2] PROCESSING & DOMAINS
     %% =========================================================
-    state "02. [p Visual_Generator]" as VISUAL_SUB {
-        GENAI : GenAI (Diffusion/LLM)
-        CAVALRY : Cavalry (2D Motion)
-        AFTER_EFFECTS : After Effects (Compositing)
-        BLENDER : Blender (3D Mesh)
-
-        GENERATIVE : Generative Engine
-        VISUAL_2D : 2D Graphics Pass
-        VISUAL_3D : 3D Scene Pass
-        VISUAL : Visual Bus (Combined)
-
-        GENAI --> GENERATIVE : generate
-        CAVALRY --> VISUAL_2D : motion / design
-        AFTER_EFFECTS --> VISUAL_2D : compositing
-        BLENDER --> VISUAL_3D : 3D render
-
-        GENERATIVE --> VISUAL
-        VISUAL_2D --> VISUAL
-        VISUAL_3D --> VISUAL
-    }
-
-    VISUAL --> VISUAL_ANCHOR_1
-    VISUAL_ANCHOR_1 --> VISUAL_ANCHOR_2
-    VISUAL_ANCHOR_2 --> TOUCHDESIGNER
-
+    subgraph L2[" LEVEL 2 : PROCESSING & METHODS "]
+        direction LR
+        V_PROC["Visual Processing<br/>(Generative / 2D / 3D)"]
+        A_PROC["Audio Processing<br/>(Synthesis / DSP)"]
+        I_PROC["Interactive Bus<br/>(Control State)"]
+        W_PROC["JavaScript Engine<br/>(Application State)"]
+    end
 
     %% =========================================================
-    %% 03. SUBPATCHER: AUDIO SYNTHESIS
+    %% [LEVEL 3] CORE ENGINES & MATRIX
     %% =========================================================
-    state "03. [p Audio_Synthesis]" as AUDIO_SUB {
-        MAX : Max / MSP Engine
-        BITWIG : Bitwig Studio
-
-        SYNTHESIS : MSP Sound Synthesis
-        AUDIO_PROCESS : Audio Processing Bus
-        AUDIO : Audio Main Bus
-
-        MAX --> SYNTHESIS : synthesis
-        BITWIG --> GENERATIVE : generative audio
-
-        SYNTHESIS --> AUDIO_PROCESS
-        GENERATIVE --> AUDIO_PROCESS : generative audio
-        AUDIO_PROCESS --> AUDIO
-    }
-
-    AUDIO --> AUDIO_ANCHOR
-    AUDIO_ANCHOR --> ABLETON
-
+    subgraph L3[" LEVEL 3 : CORE SYSTEM HUB "]
+        direction LR
+        CORE_TD["TouchDesigner<br/>(Visual Engine)"]
+        CORE_SYNC["OSC / MIDI Bridge<br/>(Bidirectional Sync)"]
+        CORE_ABLETON["Ableton Live<br/>(Audio Engine)"]
+    end
 
     %% =========================================================
-    %% 04. SUBPATCHER: WEB & JAVASCRIPT BRIDGE
+    %% [LEVEL 4] SIGNAL ROUTING
     %% =========================================================
-    state "04. [p Web_JS_Bridge]" as WEB_SUB {
-        SVELTE : Svelte UI Framework
-        VITE : Vite Bundler
-        P5 : p5.js Canvas
-        WEB_AUDIO : Web Audio API
-        WEB : Web Domain Bus
-        JAVASCRIPT : Central JS Engine [node.script]
-
-        SVELTE --> WEB : UI state
-        VITE --> WEB : build
-        P5 --> WEB : canvas render
-        WEB_AUDIO --> WEB : audio node
-
-        WEB --> JAVASCRIPT : application state
-
-        P5 --> JAVASCRIPT : parameters
-        JAVASCRIPT --> P5 : render / update
-
-        WEB_AUDIO --> JAVASCRIPT : analysis
-        JAVASCRIPT --> WEB_AUDIO : audio control
-    }
-
-    WEB --> WEB_ANCHOR
-    WEB_ANCHOR --> SIGNAL
-
+    CORE_SIGNAL["[matrix~] COMBINED REALTIME SIGNAL HUB"]
 
     %% =========================================================
-    %% 05. SUBPATCHER: INTERACTIVE CONTROL
+    %% [LEVEL 5] OUTPUTS
     %% =========================================================
-    INTERACTIVE : INTERACTIVE Control Bus
-
-    INTERACTIVE --> INTERACTIVE_ANCHOR
-    INTERACTIVE_ANCHOR --> TOUCHDESIGNER
-    INTERACTIVE_ANCHOR --> ABLETON
-
-    INTERACTIVE --> JAVASCRIPT : interaction state
-    INTERACTIVE --> P5 : interaction
-    INTERACTIVE --> WEB : browser state
-
+    subgraph L5[" LEVEL 5 : TARGET OUTPUTS "]
+        direction LR
+        OUT_MEDIA["Media Output<br/>(Video / Render)"]
+        OUT_LIVE["Live Performance<br/>(AV Show)"]
+        OUT_INSTALL["Physical Installation<br/>(Interactive Space)"]
+        OUT_WEB["Interactive Web<br/>(Browser App)"]
+    end
 
     %% =========================================================
-    %% 06. CENTRAL ROUTING & CORE ENGINE (Matrix / OSC / MIDI)
+    %% WORKFLOW FLOW CONNECTIONS (색상별 흐름 추적)
     %% =========================================================
-    TOUCHDESIGNER : TouchDesigner (Visual Core)
-    ABLETON : Ableton Live (Audio Core)
-    OSC_MIDI : [udpsend / udpreceive] OSC / MIDI Router
-    MAX_JAVASCRIPT : [js] Max Scripting Object
 
-    TOUCHDESIGNER --> OSC_MIDI : control OSC
-    OSC_MIDI --> ABLETON : control MIDI
+    %% 🟣 1. VISUAL WORKFLOW
+    V_GENAI & V_CAVALRY & V_AE & V_BLENDER ==> V_PROC
+    V_PROC ==> CORE_TD
+    CORE_TD ==> CORE_SIGNAL
+    CORE_SIGNAL ==> OUT_MEDIA & OUT_LIVE
 
-    ABLETON --> OSC_MIDI : automation MIDI
-    OSC_MIDI --> TOUCHDESIGNER : automation OSC
+    %% 🟡 2. AUDIO WORKFLOW
+    A_MAX & A_BITWIG ==> A_PROC
+    A_PROC ==> CORE_ABLETON
+    CORE_ABLETON ==> CORE_SIGNAL
+    CORE_SIGNAL ==> OUT_LIVE & OUT_MEDIA
 
-    MAX --> MAX_JAVASCRIPT : scripting
-    MAX_JAVASCRIPT --> MAX : internal control
+    %% 🩵 3. INTERACTIVE WORKFLOW
+    I_HW & I_SENSORS & I_TRACKING ==> I_PROC
+    I_PROC ==> CORE_TD & CORE_ABLETON
+    CORE_SIGNAL ==> OUT_INSTALL
 
-    MAX_JAVASCRIPT --> JAVASCRIPT : node bridge
-    JAVASCRIPT --> MAX_JAVASCRIPT : command
+    %% 🟢 4. WEB WORKFLOW
+    W_SVELTE & W_P5 ==> W_PROC
+    W_PROC ==> CORE_TD & CORE_ABLETON
+    W_PROC ==> CORE_SIGNAL
+    CORE_SIGNAL ==> OUT_WEB
 
-    MAX --> TOUCHDESIGNER : processing / spout / syphon
-    TOUCHDESIGNER --> MAX : control
-
-    MAX --> ABLETON : Max for Live device
-    ABLETON --> MAX : automation
-
-
-    %% =========================================================
-    %% 07. JAVASCRIPT PARAMETER CROSS ROUTING
-    %% =========================================================
-    JAVASCRIPT --> TOUCHDESIGNER : parameter
-    TOUCHDESIGNER --> JAVASCRIPT : state / data
-
-    JAVASCRIPT --> ABLETON : parameter
-    ABLETON --> JAVASCRIPT : parameter
-
-    JAVASCRIPT --> MAX : command
-    MAX --> JAVASCRIPT : data
-
+    %% ⚡ CORE INTERACTION LOOP
+    CORE_TD <==> CORE_SYNC <==> CORE_ABLETON
 
     %% =========================================================
-    %% 08. REALTIME MATRIX SIGNAL HUB
+    %% STYLING (워크플로우별 트랙 색상 지정)
     %% =========================================================
-    SIGNAL : [matrix~] CONTROL SIGNAL HUB
+    classDef visStyle fill:#2e1065,stroke:#a855f7,color:#f3e8ff,stroke-width:2px;
+    classDef audStyle fill:#451a03,stroke:#f59e0b,color:#fef3c7,stroke-width:2px;
+    classDef itxStyle fill:#042f2e,stroke:#14b8a6,color:#ccfbf1,stroke-width:2px;
+    classDef webStyle fill:#064e3b,stroke:#10b981,color:#d1fae5,stroke-width:2px;
+    classDef coreStyle fill:#0f172a,stroke:#38bdf8,color:#f8fafc,stroke-width:3px;
+    classDef signalStyle fill:#1e1b4b,stroke:#818cf8,color:#ffffff,stroke-width:3px;
 
-    TOUCHDESIGNER --> SIGNAL : visual signal
-    ABLETON --> SIGNAL : audio signal
-    JAVASCRIPT --> SIGNAL : web / control signal
-    WEB_AUDIO --> SIGNAL : audio analysis
-    INTERACTIVE --> SIGNAL : interaction signal
+    %% Class Assignment
+    class V_GENAI,V_CAVALRY,V_AE,V_BLENDER,V_PROC,OUT_MEDIA visStyle;
+    class A_MAX,A_BITWIG,A_PROC,OUT_LIVE audStyle;
+    class I_HW,I_SENSORS,I_TRACKING,I_PROC,OUT_INSTALL itxStyle;
+    class W_SVELTE,W_P5,W_PROC,OUT_WEB webStyle;
+    class CORE_TD,CORE_SYNC,CORE_ABLETON coreStyle;
+    class CORE_SIGNAL signalStyle;
 
-    SIGNAL --> TOUCHDESIGNER : realtime sync
-    SIGNAL --> ABLETON : realtime sync
-    SIGNAL --> JAVASCRIPT : realtime sync
-
-
-    %% =========================================================
-    %% 09. CROSS DOMAIN MODULATION
-    %% =========================================================
-    VISUAL --> WEB : visual data
-    VISUAL --> P5 : visual parameters
-    VISUAL --> JAVASCRIPT : visual state
-
-    AUDIO --> WEB_AUDIO : audio data
-    AUDIO --> JAVASCRIPT : audio state
-
-    TOUCHDESIGNER --> VISUAL : render feedback
-    TOUCHDESIGNER --> VISUAL_2D : realtime visual
-    TOUCHDESIGNER --> VISUAL_3D : realtime visual
-
-    ABLETON --> AUDIO : realtime audio
-    ABLETON --> SYNTHESIS : synthesis control
-
-    P5 --> TOUCHDESIGNER : visual control
-    TOUCHDESIGNER --> P5 : visual feedback
-
-    WEB_AUDIO --> ABLETON : browser audio
-    ABLETON --> WEB_AUDIO : audio feedback
-
-
-    %% =========================================================
-    %% 10. FEEDBACK LOOPS & RECURSION
-    %% =========================================================
-    INTERACTIVE --> AUDIO : trigger
-    INTERACTIVE --> VISUAL : trigger
-
-    SENSORS --> AUDIO : modulation
-    SENSORS --> VISUAL : modulation
-
-    TRACKING --> VISUAL : spatial control
-    TRACKING --> AUDIO : spatial control
-
-    WEB --> INTERACTIVE : remote control
-    WEB --> VISUAL : parameter update
-    WEB --> AUDIO : parameter update
-
-    AUDIO --> VISUAL : audio-reactive [env~]
-    VISUAL --> AUDIO : visual-reactive [jit.analysis]
-
-    TOUCHDESIGNER --> ABLETON : visual → audio
-    ABLETON --> TOUCHDESIGNER : audio → visual
-
-
-    %% =========================================================
-    %% 11. OUTLETS / FINAL OUTPUT & HARDWARE FEEDBACK
-    %% =========================================================
-    MEDIA : [outlet 1] MEDIA
-    INTERACTIVE_OUTPUT : [outlet 2] INTERACTIVE
-    INSTALLATION : [outlet 3] INSTALLATION
-    LIVE : [outlet 4] LIVE
-
-    SIGNAL --> MEDIA : render
-    SIGNAL --> INTERACTIVE_OUTPUT : response
-    SIGNAL --> INSTALLATION : installation
-    SIGNAL --> LIVE : performance
-
-    MEDIA --> VISUAL : revise
-    INTERACTIVE_OUTPUT --> INTERACTIVE : feedback
-    INSTALLATION --> SENSORS : physical feedback
-    LIVE --> AUDIO : performance feedback
-
-    SIGNAL --> INPUT : master feedback loop
+    %% Subgraph Styling
+    style L1 fill:#0d0f12,stroke:#262a30,color:#8e96a0
+    style L2 fill:#0d0f12,stroke:#262a30,color:#8e96a0
+    style L3 fill:#0a131a,stroke:#1e3a5f,color:#38bdf8
+    style L5 fill:#0d0f12,stroke:#262a30,color:#8e96a0
