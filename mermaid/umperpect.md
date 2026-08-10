@@ -51,21 +51,21 @@ stateDiagram-v2
     }
 
 
-state "OUTPUTS" as OUTPUTS {
+state "04. OUTPUTS" as OUTPUTS {
 
-    state "WEB" as WEB {
+    state "WEB SYSTEMS" as WEB {
         WEB_OUT : Interactive Web
     }
 
-    state "LIVE" as LIVE {
+    state "LIVE PERFORMANCE" as LIVE {
         LIVE_OUT : Audio Visual
     }
 
-    state "INTERACTIVE" as INTERACTIVE {
+    state "INTERACTIVE " as INTERACTIVE {
         INSTALL_OUT : Installation
     }
 
-    state "MEDIA" as MEDIA {
+    state "MEDIA POST-PRODUCTION" as MEDIA {
         MEDIA_OUT : Final Media
     }
 }
