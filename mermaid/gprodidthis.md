@@ -1,0 +1,119 @@
+```mermaid
+
+---
+config:
+  state:
+    titleTopMargin: 10
+    dividerMargin: 8
+    padding: 8
+    nodeSpacing: 10
+    rankSpacing: 10
+---
+
+stateDiagram-v2
+    direction TB
+
+    %% =========================================================
+    %% 01. CODE & SCRIPTING (Foundation Layer)
+    %% =========================================================
+    state "01. CODE & SCRIPTING" as CODE_SEC {
+        JS_TS : JavaScript / TypeScript
+        PY : Python
+        P5 : p5.js Canvas
+
+        JS_TS --> P5 : Web Visuals / Logic
+    }
+
+    %% =========================================================
+    %% 02. AUDIO PIPELINE
+    %% =========================================================
+    state "02. AUDIO PIPELINE" as AUDIO_SEC {
+        ABLETON : Ableton Live
+        BITWIG : Bitwig Studio
+        MAX : Max / MSP
+        CODE_AUDIO : TidalCycles / Strudel
+        AUDIO_BUS : Audio Signal Bus
+
+        ABLETON --> MAX
+        BITWIG --> AUDIO_BUS
+        MAX --> AUDIO_BUS
+        CODE_AUDIO --> AUDIO_BUS
+    }
+
+    %% =========================================================
+    %% 03. VISUAL ASSETS (Sources)
+    %% =========================================================
+    state "03. VISUAL ASSETS" as VISUAL_SEC {
+        CAVALRY : Cavalry (2D Motion)
+        BLENDER : Blender
+        GLSL : GLSL / WebGL
+        RENDER : 3D / Render
+
+        BLENDER --> RENDER
+    }
+
+    %% =========================================================
+    %% 04. GENAI & MEDIA PIPELINE
+    %% =========================================================
+    state "04. GENAI & MEDIA PIPELINE" as GENAI_MEDIA_SEC {
+        AI_MODELS : FLUX / SD / Seedance / Kling / H3
+        COMFY : ComfyUI Workflows
+        POST : After Effects / PS / Topaz
+
+        AI_MODELS --> COMFY
+        COMFY --> POST : AI Generated Media
+    }
+
+    %% =========================================================
+    %% 05. INTERACTIVE INPUTS
+    %% =========================================================
+    state "05. INTERACTIVE INPUTS" as INTERACTION_SEC {
+        HARDWARE : OSC / MIDI / Arduino / Firmata
+        USER_IN : User Interaction / Gaze
+    }
+
+    %% =========================================================
+    %% 00. TOUCHDESIGNER (Main Core Hub & Media Server)
+    %% =========================================================
+    state "00. TOUCHDESIGNER (Main Core Hub)" as CORE_SEC {
+        TD : TouchDesigner\n(Visual Engine / System Integration / Media Server / Live Tool)
+    }
+
+    %% =========================================================
+    %% 06. CREATIVE EXPERIENCES (Target Outputs)
+    %% =========================================================
+    state "06. CREATIVE EXPERIENCES (Outputs)" as OUTPUT_SEC {
+        MEDIA_OUT : Final Media Render
+        LIVE_OUT : Live Performance (Ableton / Bitwig / TD / Resolume / rekordbox)
+        INSTALLATION_OUT : Physical Installation
+        INTERACTIVE_OUT : Interactive Application
+        WEB_OUT : Web Systems & Archive
+    }
+
+    %% =========================================================
+    %% ROOT-LEVEL CROSS-DOMAIN CONNECTIONS (Funneling to TD)
+    %% =========================================================
+    
+    %% 1. All Roads Lead to TouchDesigner (Central Control & Media Server)
+    PY --> TD : Python Logic / Data Processing
+    HARDWARE --> TD : Central Interaction Control
+    USER_IN --> TD : Central Interaction Control
+    CAVALRY --> TD : Motion Assets
+    GLSL --> TD : Shaders / Texture
+    COMFY --> TD : GenAI Realtime Textures
+    AUDIO_BUS --> TD : Audio-Reactive Sync
+
+    %% 2. Outward Routing from TouchDesigner
+    TD --> LIVE_OUT : VJing / Media Server Output
+    TD --> INSTALLATION_OUT : Space / Projection Mapping
+    TD --> INTERACTIVE_OUT : App / System Logic Target
+
+    %% 3. Independent Bridges & Workflows
+    MAX <--> JS_TS : node.script / OSC Bridge
+    JS_TS --> WEB_OUT : Web Application Logic
+    P5 --> WEB_OUT : Canvas Preview
+    
+    %% Media Rendering Workflow
+    RENDER --> POST
+    POST --> MEDIA_OUT
+    AUDIO_BUS --> LIVE_OUT : Live Audio Output
