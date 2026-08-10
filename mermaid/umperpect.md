@@ -66,7 +66,6 @@ stateDiagram-v2
     %% CODE → CORE
 
     PY --> TD
-    JS --> MAX
     MAX --> TD
     STRUDEL --> ABLETON
 
