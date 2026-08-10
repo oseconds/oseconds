@@ -1,4 +1,6 @@
-swimlane-beta LR
+```mermaid
+
+swimlane-beta TB
     subgraph lane1 [01. Code & Creative]
         JS[JavaScript] --> P5[p5.js]
         JS --> STRUDEL[Strudel]
