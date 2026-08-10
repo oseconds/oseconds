@@ -1,247 +1,237 @@
-```mermaid
+'''mermaid
 
 ---
 config:
-  flowchart:
-    curve: basis
-    nodeSpacing: 38
-    rankSpacing: 70
+  layout: elk
+  elk:
+    nodePlacementStrategy: BRANDES_KOEPF
+    mergeEdges: false
+
   theme: base
+  themeVariables:
+    background: "#0d0f12"
+    primaryColor: "#15181d"
+    primaryTextColor: "#d7dbe0"
+    primaryBorderColor: "#303640"
+    lineColor: "#59616b"
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "13px"
+
+  flowchart:
+    curve: step
+    nodeSpacing: 100
+    rankSpacing: 100
 ---
 
-flowchart LR
+flowchart TD
 
     %% =========================================================
-    %% CREATION
+    %% VISUAL
     %% =========================================================
 
-    subgraph CREATION["CREATION"]
+    GENAI["GENAI"]
+    CAVALRY["CAVALRY"]
+    AE["AFTER EFFECTS"]
+    BLENDER["BLENDER"]
 
-        subgraph AUDIO["AUDIO"]
-            ABLETON["Ableton Live"]
-            MAX["Max / Max for Live"]
-        end
+    subgraph VISUAL_METHOD[" "]
+        direction TB
 
-        subgraph VISUAL["VISUAL"]
-            BLENDER["Blender"]
-            GLSL["GLSL"]
-            MOTION["2D / Motion"]
-        end
+        VISUAL_GENERATIVE["GENERATIVE"]
+        VISUAL_3D["3D"]
+        VISUAL_2D["2D"]
 
-        subgraph GENERATIVE["GENERATIVE"]
-
-            subgraph IMAGE["IMAGE"]
-                COMFY["ComfyUI"]
-                SD["Stable Diffusion"]
-                FLUX["FLUX"]
-            end
-
-            subgraph VIDEO["VIDEO"]
-                SEEDANCE["Seedance"]
-                KLING["Kling"]
-                H3["MiniMax H3"]
-            end
-
-        end
-
+        VISUAL_GENERATIVE ~~~ VISUAL_3D
+        VISUAL_3D ~~~ VISUAL_2D
     end
 
+    VISUAL["VISUAL"]
+
+    VISUAL_ANCHOR_1[" "]
+    VISUAL_ANCHOR_2[" "]
+
+    GENAI --> VISUAL_METHOD
+    CAVALRY --> VISUAL_METHOD
+    AE --> VISUAL_METHOD
+    BLENDER --> VISUAL_METHOD
+
+    VISUAL_METHOD --> VISUAL
+
+    VISUAL --> VISUAL_ANCHOR_1
+    VISUAL_ANCHOR_1 --> VISUAL_ANCHOR_2
+    VISUAL_ANCHOR_2 --> TD
+
 
     %% =========================================================
-    %% CORE COMPOSITION
+    %% AUDIO
     %% =========================================================
 
-    subgraph COMPOSITION["COMPOSITION"]
+    MAX["MAX"]
+    BITWIG["BITWIG"]
 
-        TD["TouchDesigner"]
+    subgraph AUDIO_METHOD[" "]
+        direction TB
 
-        subgraph POST["POST"]
-            AE["After Effects"]
-            TOPAZ["Topaz"]
-        end
+        AUDIO_SYNTHESIS["SYNTHESIS"]
+        AUDIO_GENERATIVE["GENERATIVE"]
 
+        AUDIO_SYNTHESIS ~~~ AUDIO_GENERATIVE
     end
 
+    AUDIO["AUDIO"]
+    AUDIO_ANCHOR[" "]
 
-    %% =========================================================
-    %% COMMUNICATION
-    %% =========================================================
+    MAX --> AUDIO_METHOD
+    BITWIG --> AUDIO_METHOD
 
-    subgraph COMMUNICATION["COMMUNICATION"]
-
-        OSC["OSC"]
-        MIDI["MIDI"]
-        FIRMATA["Firmata / Serial"]
-
-    end
+    AUDIO_METHOD --> AUDIO
+    AUDIO --> AUDIO_ANCHOR
+    AUDIO_ANCHOR --> ABLETON
 
 
     %% =========================================================
-    %% HARDWARE
+    %% INTERACTIVE
     %% =========================================================
 
-    HARDWARE["Arduino / Hardware"]
+    HARDWARE["HARDWARE"]
+    SENSORS["SENSORS"]
+    TRACKING["TRACKING"]
 
-
-    %% =========================================================
-    %% OUTPUT
-    %% =========================================================
-
-    subgraph OUTPUT["OUTPUT"]
-
-        MEDIA["MEDIA"]
-        INTERACTIVE["INTERACTIVE"]
-        INSTALLATION["INSTALLATION"]
-        LIVE["LIVE"]
-        SYSTEM["SYSTEM"]
-
-    end
-
-
-    %% =========================================================
-    %% AUDIO CORE
-    %% =========================================================
-
-    ABLETON <--> MAX
-
-    MAX ==>|audio / control| ABLETON
-
-
-    %% =========================================================
-    %% VISUAL → TD
-    %% =========================================================
-
-    BLENDER --> TD
-    GLSL --> TD
-    MOTION --> TD
-
-
-    %% =========================================================
-    %% GENERATIVE
-    %% =========================================================
-
-    SD --> COMFY
-    FLUX --> COMFY
-
-    COMFY <--> BLENDER
-
-    COMFY --> SEEDANCE
-    COMFY --> KLING
-    COMFY --> H3
-
-    BLENDER --> SEEDANCE
-    BLENDER --> KLING
-    BLENDER --> H3
-
-    SEEDANCE --> TD
-    KLING --> TD
-    H3 --> TD
-
-
-    %% =========================================================
-    %% POST LOOP
-    %% =========================================================
-
-    TD --> AE
-    AE --> TOPAZ
-
-    TOPAZ --> TD
-    AE --> TD
-
-
-    %% =========================================================
-    %% CORE ↔ COMMUNICATION
-    %% =========================================================
-
-    TD -.-> OSC
-    OSC -.-> MAX
-
-    TD -.-> MIDI
-    MIDI -.-> ABLETON
-
-    TD -.-> FIRMATA
-    FIRMATA -.-> HARDWARE
-
-
-    %% =========================================================
-    %% HARDWARE → EXPERIENCE
-    %% =========================================================
+    INTERACTIVE["INTERACTIVE"]
+    INTERACTIVE_ANCHOR[" "]
 
     HARDWARE --> INTERACTIVE
-    HARDWARE --> INSTALLATION
+    SENSORS --> INTERACTIVE
+    TRACKING --> INTERACTIVE
+
+    INTERACTIVE --> INTERACTIVE_ANCHOR
+
+    INTERACTIVE_ANCHOR --> TD
+    INTERACTIVE_ANCHOR --> ABLETON
+
+
+    %% =========================================================
+    %% WEB
+    %% =========================================================
+
+    SVELTE["SVELTE"]
+    VITE["VITE"]
+    WEB_AUDIO["WEB AUDIO"]
+    P5["p5.js"]
+
+    WEB["WEB"]
+    WEB_ANCHOR[" "]
+
+    SVELTE --> WEB
+    VITE --> WEB
+    WEB_AUDIO --> WEB
+    P5 --> WEB
+
+    WEB --> WEB_ANCHOR
+    WEB_ANCHOR --> SIGNAL
+
+
+    %% =========================================================
+    %% CORE
+    %% =========================================================
+
+    TD["TOUCHDESIGNER"]
+    ABLETON["ABLETON LIVE"]
+
+    MID["OSC / MIDI"]
+
+    ABLETON <--> MID
+    MID <--> TD
+
+    ABLETON ~~~ MID
+    MID ~~~ TD
+
+
+    %% =========================================================
+    %% SIGNAL
+    %% =========================================================
+
+    SIGNAL[" "]
+
+    TD --> SIGNAL
+    ABLETON --> SIGNAL
 
 
     %% =========================================================
     %% OUTPUT
     %% =========================================================
 
-    TD ==> MEDIA
-    AE ==> MEDIA
-    TOPAZ --> MEDIA
+    subgraph OUTPUT[" "]
+        direction LR
 
-    TD ==> INTERACTIVE
+        MEDIA["MEDIA"]
+        INTERACTIVE_OUT["INTERACTIVE"]
+        INSTALLATION["INSTALLATION"]
+        LIVE["LIVE"]
 
-    TD ==> INSTALLATION
-    ABLETON --> INSTALLATION
-    MAX --> INSTALLATION
+        MEDIA ~~~ INTERACTIVE_OUT
+        INTERACTIVE_OUT ~~~ INSTALLATION
+        INSTALLATION ~~~ LIVE
+    end
 
-    TD ==> LIVE
-    ABLETON ==> LIVE
-    MAX --> LIVE
-
-    TD --> SYSTEM
-    MAX --> SYSTEM
-    ABLETON --> SYSTEM
+    SIGNAL --> OUTPUT
 
 
     %% =========================================================
-    %% SYSTEM FEEDBACK
+    %% HIDDEN
     %% =========================================================
 
-    SYSTEM -.-> COMFY
-    SYSTEM -.-> TD
-    SYSTEM -.-> ABLETON
+    style VISUAL_METHOD fill:none,stroke:none
+    style AUDIO_METHOD fill:none,stroke:none
+
+    style VISUAL_ANCHOR_1 fill:none,stroke:none
+    style VISUAL_ANCHOR_2 fill:none,stroke:none
+    style AUDIO_ANCHOR fill:none,stroke:none
+    style INTERACTIVE_ANCHOR fill:none,stroke:none
+    style WEB_ANCHOR fill:none,stroke:none
+    style SIGNAL fill:none,stroke:none
+    style OUTPUT fill:none,stroke:none
 
 
     %% =========================================================
     %% STYLES
     %% =========================================================
 
-    classDef audio fill:#111,stroke:#ff9d00,color:#ffb84d,stroke-width:1.5px;
-    classDef visual fill:#111,stroke:#36d7ff,color:#6fe4ff,stroke-width:1.5px;
-    classDef ai fill:#111,stroke:#b66cff,color:#c99aff,stroke-width:1.5px;
+    classDef domain fill:#111419,stroke:#737b84,color:#f0f2f4,stroke-width:2px,font-size:13px;
 
-    classDef coreTD fill:#111,stroke:#36d7ff,color:#fff,stroke-width:4px,font-size:18px;
-    classDef coreAudio fill:#111,stroke:#ff9d00,color:#fff,stroke-width:4px,font-size:18px;
+    classDef visualTool fill:#17191d,stroke:#69747e,color:#e6eaed,stroke-width:2px,font-size:11px;
+    classDef visualMethod fill:#17191d,stroke:#69747e,color:#e6eaed,stroke-width:2px,font-size:11px;
 
-    classDef post fill:#111,stroke:#ff4d8d,color:#ff8ab3,stroke-width:2px;
-    classDef communication fill:#111,stroke:#777,color:#bbb,stroke-width:2px,stroke-dasharray:5 5;
-    classDef hardware fill:#111,stroke:#7cffb2,color:#a5ffc8,stroke-width:2px;
+    classDef audioTool fill:#191813,stroke:#9c8245,color:#fff7df,stroke-width:2px,font-size:11px;
+    classDef audioMethod fill:#191813,stroke:#9c8245,color:#fff7df,stroke-width:2px,font-size:11px;
 
-    classDef output fill:#111,stroke:#fff,color:#fff,stroke-width:2px,font-size:15px;
+    classDef coreTD fill:#10191b,stroke:#55c3d2,color:#eefbfc,stroke-width:3px,font-size:14px;
+    classDef coreAudio fill:#191813,stroke:#c19a45,color:#fff7df,stroke-width:3px,font-size:14px;
+
+    classDef communication fill:#16151b,stroke:#9b7bd3,color:#eee8ff,stroke-width:1px,font-size:7px;
+
+    classDef webTool fill:#15181d,stroke:#69747e,color:#e6eaed,stroke-width:2px,font-size:11px;
+
+    classDef output fill:#17191d,stroke:#aeb5bd,color:#f1f3f5,stroke-width:4px,font-size:22px;
 
 
-    %% Apply classes
+    class VISUAL,AUDIO,INTERACTIVE,WEB domain;
 
-    class ABLETON coreAudio;
-    class MAX audio;
+    class GENAI,CAVALRY,AE,BLENDER visualTool;
+    class VISUAL_GENERATIVE,VISUAL_3D,VISUAL_2D visualMethod;
+
+    class MAX,BITWIG audioTool;
+    class AUDIO_SYNTHESIS,AUDIO_GENERATIVE audioMethod;
+
+    class HARDWARE,SENSORS,TRACKING domain;
+
+    class SVELTE,VITE,WEB_AUDIO,P5 webTool;
 
     class TD coreTD;
+    class ABLETON coreAudio;
 
-    class BLENDER,GLSL,MOTION visual;
-    class COMFY,SD,FLUX,SEEDANCE,KLING,H3 ai;
+    class MID communication;
 
-    class AE,TOPAZ post;
-
-    class OSC,MIDI,FIRMATA communication;
-    class HARDWARE hardware;
-
-    class MEDIA,INTERACTIVE,INSTALLATION,LIVE,SYSTEM output;
-
-
-    %% Link emphasis
-
-    linkStyle 0,1 stroke:#ff9d00,stroke-width:3px;
-
+    class MEDIA,INTERACTIVE_OUT,INSTALLATION,LIVE output;
 
 ```
