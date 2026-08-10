@@ -36,9 +36,6 @@ stateDiagram-v2
         BITWIG --> AUDIO_BUS
         MAX --> AUDIO_BUS
         CODE_AUDIO --> AUDIO_BUS
-        
-        %% Max <-> JavaScript Bridge (node.script)
-        MAX <--> JS_TS : node.script Bridge
     }
 
 
@@ -68,7 +65,6 @@ stateDiagram-v2
         COMFY : ComfyUI Workflows
         POST : After Effects / PS / Topaz
 
-        PY --> AI_MODELS : Python Automation & Control
         AI_MODELS --> COMFY
         COMFY --> POST : AI Generated Media
         COMFY --> TD : GenAI Media as TD Texture Input
@@ -100,15 +96,23 @@ stateDiagram-v2
 
 
     %% =========================================================
-    %% CROSS-DOMAIN CONNECTIONS & FLOWS
+    %% ROOT-LEVEL CROSS-DOMAIN CONNECTIONS & BRIDGES
     %% =========================================================
+    
+    %% Code to other domains
+    PY --> AI_MODELS : Python Automation & Control
+    JS_TS --> WEB_OUT : Web Application Logic
+    
+    %% Max/MSP <-> JavaScript Bridge (External Root Connection)
+    MAX <--> JS_TS : node.script / OSC Bridge
+
+    %% Render & Media Flow
     RENDER --> POST
     AUDIO_BUS --> LIVE_OUT
     REALTIME --> LIVE_OUT
 
+    %% Final Outputs
     POST --> MEDIA_OUT
     REALTIME --> INSTALLATION_OUT
     REALTIME --> INTERACTIVE_OUT
     P5 --> WEB_OUT : Canvas Preview
-    JS_TS --> WEB_OUT : Web Application Logic
-
