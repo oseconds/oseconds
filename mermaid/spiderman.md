@@ -4,137 +4,155 @@
 config:
   state:
     titleTopMargin: 20
-    dividerMargin: 10
-    padding: 12
-    textHeight: 14
+    dividerMargin: 12
+    padding: 14
 ---
 
 stateDiagram-v2
     direction TB
 
+
+    %% =========================================================
+    %% INPUT
+    %% =========================================================
+
+    [*] --> INPUT
+
+    state INPUT {
+
+        [*] --> HARDWARE
+        [*] --> SENSORS
+        [*] --> TRACKING
+        [*] --> WEB_INPUT
+
+        HARDWARE : HARDWARE
+        SENSORS : SENSORS
+        TRACKING : TRACKING
+        WEB_INPUT : WEB INPUT
+
+        HARDWARE --> INTERACTIVE : physical input
+        SENSORS --> INTERACTIVE : sensor data
+        TRACKING --> INTERACTIVE : tracking data
+        WEB_INPUT --> JAVASCRIPT : user input
+    }
+
+
     %% =========================================================
     %% VISUAL
     %% =========================================================
 
-    [*] --> GENAI
-    [*] --> CAVALRY
-    [*] --> AFTER_EFFECTS
-    [*] --> BLENDER
+    GENAI : GENAI
+    CAVALRY : CAVALRY
+    AFTER_EFFECTS : AFTER EFFECTS
+    BLENDER : BLENDER
 
-    GENAI --> GENERATIVE
-    CAVALRY --> GENERATIVE
-    AFTER_EFFECTS --> 2D
-    BLENDER --> 3D
+    GENERATIVE : GENERATIVE
+    VISUAL_2D : 2D
+    VISUAL_3D : 3D
+
+    VISUAL : VISUAL
+
+    GENAI --> GENERATIVE : generate
+    CAVALRY --> VISUAL_2D : motion / design
+    AFTER_EFFECTS --> VISUAL_2D : compositing
+    BLENDER --> VISUAL_3D : 3D
 
     GENERATIVE --> VISUAL
-    2D --> VISUAL
-    3D --> VISUAL
+    VISUAL_2D --> VISUAL
+    VISUAL_3D --> VISUAL
 
     VISUAL --> VISUAL_ANCHOR_1
     VISUAL_ANCHOR_1 --> VISUAL_ANCHOR_2
     VISUAL_ANCHOR_2 --> TOUCHDESIGNER
-
-    VISUAL --> WEB : visual asset
-    VISUAL --> P5 : visual data
-    VISUAL --> JAVASCRIPT : parameter
 
 
     %% =========================================================
     %% AUDIO
     %% =========================================================
 
-    [*] --> MAX
-    [*] --> BITWIG
+    MAX : MAX
+    BITWIG : BITWIG
 
-    MAX --> SYNTHESIS
-    MAX --> MAX_JAVASCRIPT
-    BITWIG --> GENERATIVE_AUDIO
+    SYNTHESIS : SYNTHESIS
+    AUDIO_PROCESS : PROCESS
+    AUDIO : AUDIO
 
-    SYNTHESIS --> AUDIO
-    GENERATIVE_AUDIO --> AUDIO
+    MAX --> SYNTHESIS : synthesis
+    BITWIG --> GENERATIVE : generative audio
+
+    SYNTHESIS --> AUDIO_PROCESS
+    GENERATIVE --> AUDIO_PROCESS : generative audio
+
+    AUDIO_PROCESS --> AUDIO
 
     AUDIO --> AUDIO_ANCHOR
     AUDIO_ANCHOR --> ABLETON
-
-    AUDIO --> WEB_AUDIO : audio data
-    AUDIO --> JAVASCRIPT : control data
-
-    MAX_JAVASCRIPT --> MAX
-    MAX_JAVASCRIPT --> JAVASCRIPT : bridge
-    JAVASCRIPT --> MAX_JAVASCRIPT : control
-
-
-    %% =========================================================
-    %% INTERACTIVE
-    %% =========================================================
-
-    [*] --> HARDWARE
-    [*] --> SENSORS
-    [*] --> TRACKING
-
-    HARDWARE --> INTERACTIVE
-    SENSORS --> INTERACTIVE
-    TRACKING --> INTERACTIVE
-
-    INTERACTIVE --> INTERACTIVE_ANCHOR
-
-    INTERACTIVE_ANCHOR --> TOUCHDESIGNER
-    INTERACTIVE_ANCHOR --> ABLETON
-
-    INTERACTIVE --> JAVASCRIPT : interaction
-    INTERACTIVE --> P5 : input
-    INTERACTIVE --> WEB : input
-
-    TOUCHDESIGNER --> INTERACTIVE : feedback
-    ABLETON --> INTERACTIVE : feedback
 
 
     %% =========================================================
     %% WEB
     %% =========================================================
 
-    [*] --> SVELTE
-    [*] --> VITE
-    [*] --> P5
-    [*] --> WEB_AUDIO
-    [*] --> JAVASCRIPT
+    SVELTE : SVELTE
+    VITE : VITE
+    P5 : p5.js
+    WEB_AUDIO : WEB AUDIO
+    WEB : WEB
+    JAVASCRIPT : JAVASCRIPT
 
-    SVELTE --> WEB
-    VITE --> WEB
-    P5 --> WEB
-    WEB_AUDIO --> WEB
-    JAVASCRIPT --> WEB
+    SVELTE --> WEB : UI
+    VITE --> WEB : build
+    P5 --> WEB : canvas
+    WEB_AUDIO --> WEB : audio
+
+    WEB --> JAVASCRIPT : application state
+
+    P5 --> JAVASCRIPT : parameters
+    JAVASCRIPT --> P5 : render / update
+
+    WEB_AUDIO --> JAVASCRIPT : analysis
+    JAVASCRIPT --> WEB_AUDIO : audio control
 
     WEB --> WEB_ANCHOR
     WEB_ANCHOR --> SIGNAL
 
-    P5 --> JAVASCRIPT : canvas / parameters
-    JAVASCRIPT --> P5 : render / update
 
-    WEB_AUDIO --> JAVASCRIPT : audio analysis
-    JAVASCRIPT --> WEB_AUDIO : audio control
+    %% =========================================================
+    %% INTERACTIVE
+    %% =========================================================
 
-    WEB --> TOUCHDESIGNER : web control
-    WEB --> ABLETON : web audio / control
+    INTERACTIVE : INTERACTIVE
 
-    SIGNAL --> WEB : realtime feedback
+    INTERACTIVE --> INTERACTIVE_ANCHOR
+
+    INTERACTIVE_ANCHOR --> TOUCHDESIGNER
+    INTERACTIVE_ANCHOR --> ABLETON
+
+    INTERACTIVE --> JAVASCRIPT : interaction state
+    INTERACTIVE --> P5 : interaction
+    INTERACTIVE --> WEB : browser state
 
 
     %% =========================================================
     %% CORE
     %% =========================================================
 
-    TOUCHDESIGNER --> OSC_MIDI
-    OSC_MIDI --> ABLETON
+    TOUCHDESIGNER : TOUCHDESIGNER
+    ABLETON : ABLETON LIVE
+    OSC_MIDI : OSC / MIDI
+    MAX_JAVASCRIPT : MAX / JavaScript
 
-    ABLETON --> OSC_MIDI
-    OSC_MIDI --> TOUCHDESIGNER
+    TOUCHDESIGNER --> OSC_MIDI : control
+    OSC_MIDI --> ABLETON : control
 
-    TOUCHDESIGNER --> JAVASCRIPT : scripting
-    JAVASCRIPT --> TOUCHDESIGNER : control
+    ABLETON --> OSC_MIDI : automation
+    OSC_MIDI --> TOUCHDESIGNER : automation
 
-    ABLETON --> JAVASCRIPT : parameter
-    JAVASCRIPT --> ABLETON : parameter
+    MAX --> MAX_JAVASCRIPT : scripting
+    MAX_JAVASCRIPT --> MAX : internal control
+
+    MAX_JAVASCRIPT --> JAVASCRIPT : bridge
+    JAVASCRIPT --> MAX_JAVASCRIPT : command
 
     MAX --> TOUCHDESIGNER : processing
     TOUCHDESIGNER --> MAX : control
@@ -142,18 +160,32 @@ stateDiagram-v2
     MAX --> ABLETON : device / signal
     ABLETON --> MAX : automation
 
-    BITWIG --> ABLETON : audio
-    ABLETON --> BITWIG : control
+
+    %% =========================================================
+    %% JAVASCRIPT CROSS SYSTEM
+    %% =========================================================
+
+    JAVASCRIPT --> TOUCHDESIGNER : parameter
+    TOUCHDESIGNER --> JAVASCRIPT : state / data
+
+    JAVASCRIPT --> ABLETON : parameter
+    ABLETON --> JAVASCRIPT : parameter
+
+    JAVASCRIPT --> MAX : command
+    MAX --> JAVASCRIPT : data
 
 
     %% =========================================================
-    %% SIGNAL
+    %% REALTIME SIGNAL
     %% =========================================================
 
-    TOUCHDESIGNER --> SIGNAL
-    ABLETON --> SIGNAL
-    JAVASCRIPT --> SIGNAL
-    WEB_AUDIO --> SIGNAL
+    SIGNAL : CONTROL SIGNAL
+
+    TOUCHDESIGNER --> SIGNAL : visual signal
+    ABLETON --> SIGNAL : audio signal
+    JAVASCRIPT --> SIGNAL : web / control signal
+    WEB_AUDIO --> SIGNAL : audio analysis
+    INTERACTIVE --> SIGNAL : interaction signal
 
     SIGNAL --> TOUCHDESIGNER : realtime
     SIGNAL --> ABLETON : realtime
@@ -161,50 +193,71 @@ stateDiagram-v2
 
 
     %% =========================================================
+    %% CROSS DOMAIN
+    %% =========================================================
+
+    VISUAL --> WEB : visual data
+    VISUAL --> P5 : visual parameters
+    VISUAL --> JAVASCRIPT : visual state
+
+    AUDIO --> WEB_AUDIO : audio data
+    AUDIO --> JAVASCRIPT : audio state
+
+    TOUCHDESIGNER --> VISUAL : render feedback
+    TOUCHDESIGNER --> VISUAL_2D : realtime visual
+    TOUCHDESIGNER --> VISUAL_3D : realtime visual
+
+    ABLETON --> AUDIO : realtime audio
+    ABLETON --> SYNTHESIS : synthesis control
+
+    P5 --> TOUCHDESIGNER : visual control
+    TOUCHDESIGNER --> P5 : visual feedback
+
+    WEB_AUDIO --> ABLETON : browser audio
+    ABLETON --> WEB_AUDIO : audio feedback
+
+
+    %% =========================================================
     %% OUTPUT
     %% =========================================================
-
-    SIGNAL --> MEDIA
-    SIGNAL --> INTERACTIVE_OUTPUT
-    SIGNAL --> INSTALLATION
-    SIGNAL --> LIVE
-
-    MEDIA --> [*]
-    INTERACTIVE_OUTPUT --> [*]
-    INSTALLATION --> [*]
-    LIVE --> [*]
-
-
-    %% =========================================================
-    %% STATE LABELS
-    %% =========================================================
-
-    VISUAL : VISUAL
-    AUDIO : AUDIO
-    INTERACTIVE : INTERACTIVE
-    WEB : WEB
-
-    GENERATIVE : GENERATIVE
-    2D : 2D
-    3D : 3D
-
-    SYNTHESIS : SYNTHESIS
-    GENERATIVE_AUDIO : GENERATIVE
-
-    HARDWARE : HARDWARE
-    SENSORS : SENSORS
-    TRACKING : TRACKING
-
-    JAVASCRIPT : JAVASCRIPT
-    MAX_JAVASCRIPT : MAX / JavaScript
-
-    TOUCHDESIGNER : TOUCHDESIGNER
-    ABLETON : ABLETON LIVE
-    OSC_MIDI : OSC / MIDI
-
-    SIGNAL : CONTROL SIGNAL
 
     MEDIA : MEDIA
     INTERACTIVE_OUTPUT : INTERACTIVE
     INSTALLATION : INSTALLATION
     LIVE : LIVE
+
+    SIGNAL --> MEDIA : render
+    SIGNAL --> INTERACTIVE_OUTPUT : response
+    SIGNAL --> INSTALLATION : installation
+    SIGNAL --> LIVE : performance
+
+    MEDIA --> VISUAL : revise
+    INTERACTIVE_OUTPUT --> INTERACTIVE : feedback
+    INSTALLATION --> SENSORS : physical feedback
+    LIVE --> AUDIO : performance feedback
+
+
+    %% =========================================================
+    %% FEEDBACK LOOPS
+    %% =========================================================
+
+    INTERACTIVE --> AUDIO : trigger
+    INTERACTIVE --> VISUAL : trigger
+
+    SENSORS --> AUDIO : modulation
+    SENSORS --> VISUAL : modulation
+
+    TRACKING --> VISUAL : spatial control
+    TRACKING --> AUDIO : spatial control
+
+    WEB --> INTERACTIVE : remote control
+    WEB --> VISUAL : parameter update
+    WEB --> AUDIO : parameter update
+
+    AUDIO --> VISUAL : audio-reactive
+    VISUAL --> AUDIO : visual-reactive
+
+    TOUCHDESIGNER --> ABLETON : visual → audio
+    ABLETON --> TOUCHDESIGNER : audio → visual
+
+    SIGNAL --> INPUT : feedback
