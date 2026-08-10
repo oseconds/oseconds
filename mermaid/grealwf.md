@@ -1,6 +1,6 @@
 ```mermaid
 
-    ---
+---
 config:
   state:
     titleTopMargin: 12
@@ -12,7 +12,7 @@ stateDiagram-v2
     direction TB
 
     %% =========================================================
-    %% 01. CODE & FOUNDATION
+    %% 01. CODE (Foundation)
     %% =========================================================
     state "01. CODE (Foundation)" as CODE_SEC {
         JS_TS : JavaScript / TypeScript
@@ -27,7 +27,7 @@ stateDiagram-v2
         ABLETON : Ableton Live
         MAX : Max / MSP
         CODE_AUDIO : TidalCycles / Strudel
-        AUDIO_BUS : Audio Signal Bus
+        AUDIO_BUS : Audio Signal
 
         ABLETON --> MAX
         MAX --> AUDIO_BUS
@@ -57,13 +57,11 @@ stateDiagram-v2
     %% 04. GENAI & MEDIA POST
     %% =========================================================
     state "04. GENAI & MEDIA PIPELINE" as GENAI_MEDIA_SEC {
-        IMG_MODELS : FLUX / Stable Diffusion
-        VID_MODELS : Seedance / Kling / MiniMax H3
+        AI_MODELS : FLUX / SD / Seedance / Kling / H3
         COMFY : ComfyUI Workflows
         POST : After Effects / PS / Topaz
 
-        IMG_MODELS --> COMFY : Image Gen
-        VID_MODELS --> COMFY : Video Gen
+        AI_MODELS --> COMFY
         COMFY --> POST : AI Generated Media
     }
 
@@ -71,13 +69,13 @@ stateDiagram-v2
     %% =========================================================
     %% 05. INTERACTIVE SYSTEMS (Central Hub)
     %% =========================================================
-    state "05. INTERACTIVE SYSTEMS HUB" as HUB_SEC {
+    state "05. INTERACTIVE SYSTEMS" as HUB_SEC {
         HARDWARE : OSC / MIDI / Arduino / Firmata
-        USER_IN : User Interaction / Gaze
-        SYSTEM_HUB : Signal Rack / Logic Engine
+        USER_IN : User Interaction
+        SIGNAL_RACK : Signal Rack / System Logic
 
-        HARDWARE --> SYSTEM_HUB : Sensor / HW Control
-        USER_IN --> SYSTEM_HUB : Trigger / Input
+        HARDWARE --> SIGNAL_RACK : Input
+        USER_IN --> SIGNAL_RACK : Interaction
     }
 
 
@@ -85,51 +83,44 @@ stateDiagram-v2
     %% 06. CREATIVE EXPERIENCES (Target Outputs)
     %% =========================================================
     state "06. CREATIVE EXPERIENCES (Outputs)" as OUTPUT_SEC {
-        MEDIA_OUT : Media (Final Render)
-        LIVE_OUT : Live (Resolume / rekordbox)
+        MEDIA_OUT : Final Media
+        LIVE_OUT : Live (Ableton / TD / Resolume / rekordbox)
         INSTALLATION_OUT : Physical Installation
-        INTERACTIVE_OUT : Interactive Application
-        WEB_OUT : Web (Void-a / Candy)
+        INTERACTIVE_OUT : Interactive Systems
+        WEB_OUT : Web (Void-a Archive)
     }
 
 
     %% =========================================================
-    %% CROSS-DOMAIN ROUTING
+    %% PIPELINE CONNECTIONS (정제된 흐름)
     %% =========================================================
 
-    %% Code Integration
+    %% Code -> Target Domains
     JS_TS --> WEB_VIS
-    JS_TS --> SYSTEM_HUB
-    PY --> COMFY
+    PY --> AI_MODELS
 
-    %% Audio & Visual to Hub
-    AUDIO_BUS --> SYSTEM_HUB : Control Update
-    REALTIME --> SYSTEM_HUB
-    WEB_VIS --> SYSTEM_HUB
+    %% Render -> Media Post
+    RENDER --> POST
 
-    %% Hub Feedback & Processing
-    SYSTEM_HUB --> AUDIO_BUS : Reactive Sync
-    SYSTEM_HUB --> REALTIME : Reactive Sync
-    RENDER --> POST : Rendered Sequence
+    %% Signal Rack Update Loops (README 명세 반영)
+    %% Input -> System -> Audio / Visual Update
+    AUDIO_BUS --> SIGNAL_RACK
+    REALTIME --> SIGNAL_RACK
+    WEB_VIS --> SIGNAL_RACK
+
+    SIGNAL_RACK --> AUDIO_BUS : Control Update
+    SIGNAL_RACK --> REALTIME : Control Update
 
 
     %% =========================================================
-    %% OUTFLOW TO OUTPUTS (최종 도달점)
+    %% FINAL OUTFLOW
     %% =========================================================
-
-    %% 1. Media
+    
     POST --> MEDIA_OUT
 
-    %% 2. Live Environment
     AUDIO_BUS --> LIVE_OUT
     REALTIME --> LIVE_OUT
 
-    %% 3. Physical Installation
-    SYSTEM_HUB --> INSTALLATION_OUT : Hardware Loop & Space
-
-    %% 4. Interactive Systems
-    SYSTEM_HUB --> INTERACTIVE_OUT : Digital Logic & State
-
-    %% 5. Web Systems
-    SYSTEM_HUB --> WEB_OUT : System Archive & Logic
-    WEB_VIS --> WEB_OUT : Canvas Render
+    SIGNAL_RACK --> INSTALLATION_OUT
+    SIGNAL_RACK --> INTERACTIVE_OUT
+    SIGNAL_RACK --> WEB_OUT
