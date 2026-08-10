@@ -1,10 +1,19 @@
 ```mermaid
 
+---
+config:
+  flowchart:
+    curve: basis
+    nodeSpacing: 38
+    rankSpacing: 70
+  theme: base
+---
+
 flowchart LR
 
-    %% =========================
+    %% =========================================================
     %% CREATION
-    %% =========================
+    %% =========================================================
 
     subgraph CREATION["CREATION"]
 
@@ -35,25 +44,16 @@ flowchart LR
 
         end
 
-        subgraph INTERACTION["INTERACTION"]
-            KINECT["Kinect"]
-            CAMERA["Camera"]
-            GAZE["Gaze"]
-            SENSORS["Sensors"]
-        end
-
     end
 
 
-    %% =========================
-    %% COMPOSITION
-    %% =========================
+    %% =========================================================
+    %% CORE COMPOSITION
+    %% =========================================================
 
     subgraph COMPOSITION["COMPOSITION"]
 
-        subgraph REALTIME["REALTIME"]
-            TD["TouchDesigner"]
-        end
+        TD["TouchDesigner"]
 
         subgraph POST["POST"]
             AE["After Effects"]
@@ -63,14 +63,34 @@ flowchart LR
     end
 
 
-    %% =========================
+    %% =========================================================
+    %% COMMUNICATION
+    %% =========================================================
+
+    subgraph COMMUNICATION["COMMUNICATION"]
+
+        OSC["OSC"]
+        MIDI["MIDI"]
+        FIRMATA["Firmata / Serial"]
+
+    end
+
+
+    %% =========================================================
+    %% HARDWARE
+    %% =========================================================
+
+    HARDWARE["Arduino / Hardware"]
+
+
+    %% =========================================================
     %% OUTPUT
-    %% =========================
+    %% =========================================================
 
     subgraph OUTPUT["OUTPUT"]
 
         MEDIA["MEDIA"]
-        INTERACTIVE_OUT["INTERACTIVE"]
+        INTERACTIVE["INTERACTIVE"]
         INSTALLATION["INSTALLATION"]
         LIVE["LIVE"]
         SYSTEM["SYSTEM"]
@@ -78,132 +98,150 @@ flowchart LR
     end
 
 
-    %% =========================
-    %% CREATION → COMPOSITION
-    %% =========================
+    %% =========================================================
+    %% AUDIO CORE
+    %% =========================================================
 
     ABLETON <--> MAX
 
-    ABLETON --> TD
-    MAX --> TD
-    TD --> ABLETON
-    TD --> MAX
+    MAX ==>|audio / control| ABLETON
+
+
+    %% =========================================================
+    %% VISUAL → TD
+    %% =========================================================
 
     BLENDER --> TD
     GLSL --> TD
     MOTION --> TD
 
-    COMFY --> TD
+
+    %% =========================================================
+    %% GENERATIVE
+    %% =========================================================
+
     SD --> COMFY
     FLUX --> COMFY
 
-    COMFY --> BLENDER
-    BLENDER --> COMFY
+    COMFY <--> BLENDER
 
-    SEEDANCE --> TD
-    KLING --> TD
-    H3 --> TD
+    COMFY --> SEEDANCE
+    COMFY --> KLING
+    COMFY --> H3
 
     BLENDER --> SEEDANCE
     BLENDER --> KLING
     BLENDER --> H3
 
-    AUDIO_SIGNAL["Audio / Signal"] --> H3
-
-    KINECT --> TD
-    CAMERA --> TD
-    GAZE --> TD
-    SENSORS --> TD
+    SEEDANCE --> TD
+    KLING --> TD
+    H3 --> TD
 
 
-    %% =========================
-    %% REALTIME ↔ POST
-    %% =========================
+    %% =========================================================
+    %% POST LOOP
+    %% =========================================================
 
     TD --> AE
+    AE --> TOPAZ
+
+    TOPAZ --> TD
     AE --> TD
 
-    TD --> TOPAZ
-    TOPAZ --> TD
 
-    AE <--> TOPAZ
+    %% =========================================================
+    %% CORE ↔ COMMUNICATION
+    %% =========================================================
+
+    TD -.-> OSC
+    OSC -.-> MAX
+
+    TD -.-> MIDI
+    MIDI -.-> ABLETON
+
+    TD -.-> FIRMATA
+    FIRMATA -.-> HARDWARE
 
 
-    %% =========================
-    %% COMPOSITION → OUTPUT
-    %% =========================
+    %% =========================================================
+    %% HARDWARE → EXPERIENCE
+    %% =========================================================
 
-    TD --> MEDIA
-    AE --> MEDIA
+    HARDWARE --> INTERACTIVE
+    HARDWARE --> INSTALLATION
+
+
+    %% =========================================================
+    %% OUTPUT
+    %% =========================================================
+
+    TD ==> MEDIA
+    AE ==> MEDIA
     TOPAZ --> MEDIA
 
-    TD --> INTERACTIVE_OUT
-    TD --> INSTALLATION
-    TD --> LIVE
+    TD ==> INTERACTIVE
 
-    ABLETON --> LIVE
-    MAX --> LIVE
-
+    TD ==> INSTALLATION
     ABLETON --> INSTALLATION
     MAX --> INSTALLATION
+
+    TD ==> LIVE
+    ABLETON ==> LIVE
+    MAX --> LIVE
 
     TD --> SYSTEM
     MAX --> SYSTEM
     ABLETON --> SYSTEM
 
 
-    %% =========================
-    %% OUTPUT FEEDBACK
-    %% =========================
+    %% =========================================================
+    %% SYSTEM FEEDBACK
+    %% =========================================================
 
-    MEDIA -.-> SYSTEM
-    SYSTEM -.-> CREATION
-
-
-    %% =========================
-    %% COMMUNICATION
-    %% =========================
-
-    OSC["OSC"]
-    MIDI["MIDI"]
-    FIRMATA["Firmata / Serial"]
-
-    TD -. OSC .-> MAX
-    MAX -. OSC .-> TD
-
-    TD -. MIDI .-> ABLETON
-    ABLETON -. MIDI .-> TD
-
-    TD -. Firmata .-> FIRMATA
-    FIRMATA -.-> SENSORS
+    SYSTEM -.-> COMFY
+    SYSTEM -.-> TD
+    SYSTEM -.-> ABLETON
 
 
-    %% =========================
+    %% =========================================================
     %% STYLES
-    %% =========================
+    %% =========================================================
 
-    classDef creation fill:#111,stroke:#888,color:#fff;
-    classDef audio fill:#111,stroke:#ff9d00,color:#ff9d00;
-    classDef visual fill:#111,stroke:#00d9ff,color:#00d9ff;
-    classDef ai fill:#111,stroke:#b56cff,color:#b56cff;
-    classDef interaction fill:#111,stroke:#00ff88,color:#00ff88;
+    classDef audio fill:#111,stroke:#ff9d00,color:#ffb84d,stroke-width:1.5px;
+    classDef visual fill:#111,stroke:#36d7ff,color:#6fe4ff,stroke-width:1.5px;
+    classDef ai fill:#111,stroke:#b66cff,color:#c99aff,stroke-width:1.5px;
 
-    classDef realtime fill:#111,stroke:#00d9ff,stroke-width:3px,color:#00d9ff;
-    classDef post fill:#111,stroke:#ff4d8d,stroke-width:2px,color:#ff4d8d;
+    classDef coreTD fill:#111,stroke:#36d7ff,color:#fff,stroke-width:4px,font-size:18px;
+    classDef coreAudio fill:#111,stroke:#ff9d00,color:#fff,stroke-width:4px,font-size:18px;
 
-    classDef output fill:#111,stroke:#fff,stroke-width:2px,color:#fff;
-    classDef communication fill:#111,stroke:#777,color:#aaa;
+    classDef post fill:#111,stroke:#ff4d8d,color:#ff8ab3,stroke-width:2px;
+    classDef communication fill:#111,stroke:#777,color:#bbb,stroke-width:2px,stroke-dasharray:5 5;
+    classDef hardware fill:#111,stroke:#7cffb2,color:#a5ffc8,stroke-width:2px;
 
-    class ABLETON,MAX audio;
+    classDef output fill:#111,stroke:#fff,color:#fff,stroke-width:2px,font-size:15px;
+
+
+    %% Apply classes
+
+    class ABLETON coreAudio;
+    class MAX audio;
+
+    class TD coreTD;
+
     class BLENDER,GLSL,MOTION visual;
     class COMFY,SD,FLUX,SEEDANCE,KLING,H3 ai;
-    class KINECT,CAMERA,GAZE,SENSORS interaction;
 
-    class TD realtime;
     class AE,TOPAZ post;
 
-    class MEDIA,INTERACTIVE_OUT,INSTALLATION,LIVE,SYSTEM output;
-
     class OSC,MIDI,FIRMATA communication;
+    class HARDWARE hardware;
+
+    class MEDIA,INTERACTIVE,INSTALLATION,LIVE,SYSTEM output;
+
+
+    %% Link emphasis
+
+    linkStyle 0,1 stroke:#ff9d00,stroke-width:3px;
+
 
 ```
