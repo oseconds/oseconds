@@ -27,12 +27,15 @@ stateDiagram-v2
 
 
     state "02. VISUAL & AI ASSETS" as TOP_VISUAL {
-        CAVALRY : Cavalry
+        
         BLENDER : Blender
         AI_MODELS : GenAI
         COMFY : ComfyUI
+        CAVALRY : Cavalry
 
         AI_MODELS --> COMFY
+        BLENDER --> TD
+        BLENDER --> COMFY
     }
 
 
@@ -77,7 +80,7 @@ stateDiagram-v2
 
     CAVALRY --> TD
     CAVALRY --> MEDIA_NULL
-    BLENDER --> TD
+    
 
 
     %% OUTPUT ROUTING
