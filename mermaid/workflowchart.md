@@ -1,21 +1,27 @@
 ```mermaid
 
 flowchart LR
+
     IDEA["IDEA"]
 
-    subgraph INPUT["INPUT / SOURCE"]
+    subgraph SOURCE["SOURCE"]
         KINECT["Kinect"]
         CAMERA["Camera"]
-        TEXT["Text"]
-        AUDIOIN["Audio"]
+        TEXT["Text / Prompt"]
+        AUDIO_SRC["Audio / Sound"]
         REFERENCE["Reference"]
     end
 
-    subgraph CREATIVE["CREATIVE TOOLS"]
-        TD["TouchDesigner"]
+    subgraph AUDIO["AUDIO"]
         ABLETON["Ableton"]
-        MAX["Max/MSP"]
+        MAX["Max / Max for Live"]
+    end
 
+    subgraph REALTIME["REALTIME / VISUAL"]
+        TD["TouchDesigner"]
+    end
+
+    subgraph GENAI["GENERATIVE AI"]
         COMFY["ComfyUI"]
         SD["Stable Diffusion"]
         FLUX["FLUX"]
@@ -23,90 +29,150 @@ flowchart LR
         SEEDANCE["Seedance"]
         KLING["Kling"]
         H3["MiniMax H3"]
+    end
 
+    subgraph THREE_D["3D / SPACE"]
         BLENDER["Blender"]
     end
 
-    subgraph POST["MEDIA / POST"]
+    subgraph POST["POST / FINISH"]
         AE["After Effects"]
         TOPAZ["Topaz"]
     end
 
+    subgraph COMM["COMMUNICATION"]
+        OSC["OSC"]
+        MIDI["MIDI"]
+        FIRMATA["Firmata / Serial"]
+    end
+
+    subgraph PHYSICAL["PHYSICAL"]
+        ARDUINO["Arduino"]
+        SERVO["Servo"]
+        SPEAKER["Directional Speaker"]
+        SCREEN["Screen / Projection"]
+    end
+
     subgraph OUTPUT["OUTPUT"]
-        SCREEN["Screen / Mapping"]
-        SPEAKER["Hardware / Speaker"]
         WEB["Web / Archive"]
-        LIVE["Live Performance"]
+        LIVE["Live / Installation"]
+        VIDEO["Final Video"]
     end
 
 
+    %% IDEA / SOURCE
     IDEA --> TEXT
     IDEA --> REFERENCE
     IDEA --> ABLETON
     IDEA --> TD
     IDEA --> COMFY
+    IDEA --> BLENDER
 
     KINECT --> TD
     CAMERA --> TD
-    AUDIOIN --> MAX
+    AUDIO_SRC --> MAX
 
-    TEXT --> SD
+
+    %% AUDIO
+    ABLETON <--> MAX
+    MAX <--> OSC
+    ABLETON <--> OSC
+
+    OSC <--> TD
+
+    ABLETON --> AUDIO_SRC
+    MAX --> AUDIO_SRC
+
+
+    %% REALTIME
+    KINECT --> TD
+    TD --> SCREEN
+
+
+    %% IMAGE GENERATION
+    TEXT --> COMFY
     REFERENCE --> COMFY
 
-    MAX <--> ABLETON
-    ABLETON <--> TD
-
-    TD <--> COMFY
-    TD <--> SD
-    TD <--> BLENDER
-
-    COMFY <--> SD
+    COMFY --> SD
     COMFY --> FLUX
 
-    SD --> SEEDANCE
-    SEEDANCE --> KLING
-    KLING --> H3
+    SD --> COMFY
+    FLUX --> COMFY
 
-    H3 --> TD
+    COMFY <--> TD
+
+
+    %% IMAGE → 3D
+    COMFY -->|"depth / image / reference"| BLENDER
+
+    BLENDER -->|"camera / render / reference"| COMFY
+    BLENDER <--> TD
+
+
+    %% VIDEO GENERATION
+    TEXT --> SEEDANCE
+    TEXT --> KLING
+    TEXT --> H3
+
+    COMFY -->|"image / reference"| SEEDANCE
+    COMFY -->|"image / reference"| KLING
+    COMFY -->|"image / reference"| H3
+
+    BLENDER -->|"camera / 3D reference"| SEEDANCE
+    BLENDER -->|"camera / 3D reference"| KLING
+    BLENDER -->|"camera / 3D reference"| H3
+
+    AUDIO_SRC -->|"audio / sync"| H3
+
     SEEDANCE --> TD
     KLING --> TD
+    H3 --> TD
 
+    SEEDANCE --> AE
+    KLING --> AE
+    H3 --> AE
+
+
+    %% POST
     TD --> AE
-    TD --> SCREEN
-    TD --> SPEAKER
-    TD --> LIVE
+    BLENDER --> AE
+
+    AE <--> TOPAZ
+
+    AE --> TD
+    TOPAZ --> TD
+
+
+    %% SIGNAL / HARDWARE
+    TD --> OSC
+    TD --> MIDI
+    TD --> FIRMATA
+
+    FIRMATA --> ARDUINO
+    ARDUINO --> SERVO
+    SERVO --> SPEAKER
 
     ABLETON --> SPEAKER
     MAX --> SPEAKER
 
-    AE --> TOPAZ
-    TOPAZ --> TD
-    TOPAZ --> WEB
+    TD --> SCREEN
 
-    AE --> TD
 
-    BLENDER --> TD
-    BLENDER --> AE
+    %% OUTPUT
+    TD --> VIDEO
+    AE --> VIDEO
+    TOPAZ --> VIDEO
 
     TD --> WEB
+    BLENDER --> WEB
+    AE --> WEB
+    VIDEO --> WEB
+
+    TD --> LIVE
     ABLETON --> LIVE
+    MAX --> LIVE
+    ARDUINO --> LIVE
 
     WEB --> IDEA
 
-    classDef idea fill:#080808,stroke:#d9ff00,color:#d9ff00,stroke-width:3px;
-    classDef input fill:#151515,stroke:#777,color:#fff;
-    classDef audio fill:#111,stroke:#ff8a00,color:#fff;
-    classDef visual fill:#111,stroke:#00d9ff,color:#fff;
-    classDef ai fill:#111,stroke:#b56cff,color:#fff;
-    classDef media fill:#111,stroke:#ff4d8d,color:#fff;
-    classDef output fill:#111,stroke:#00ff88,color:#fff;
-
-    class IDEA idea;
-    class KINECT,CAMERA,TEXT,AUDIOIN,REFERENCE input;
-
-    class ABLETON,MAX audio;
-    class TD,BLENDER visual;
-    class COMFY,SD,FLUX,SEEDANCE,KLING,H3 ai;
-    class AE,TOPAZ media;
-    class SCREEN,SPEAKER,WEB,LIVE output;
 ```
