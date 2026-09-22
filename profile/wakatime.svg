@@ -135,11 +135,11 @@
         class="stat"
         x="205"
         y="12.5"
-      >16 hrs 56 mins</text>
+      >11 hrs 35 mins</text>
       
     <svg width="75" x="110" y="4">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="75" height="8"></rect>
-      <svg data-testid="lang-progress" width="65.58%">
+      <svg data-testid="lang-progress" width="57.97%">
         <rect
             height="8"
             
@@ -158,11 +158,11 @@
         class="stat"
         x="205"
         y="12.5"
-      >5 hrs 39 mins</text>
+      >4 hrs 53 mins</text>
       
     <svg width="75" x="110" y="4">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="75" height="8"></rect>
-      <svg data-testid="lang-progress" width="21.91%">
+      <svg data-testid="lang-progress" width="24.48%">
         <rect
             height="8"
             
@@ -185,7 +185,7 @@
       
     <svg width="75" x="110" y="4">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="75" height="8"></rect>
-      <svg data-testid="lang-progress" width="5.33%">
+      <svg data-testid="lang-progress" width="6.89%">
         <rect
             height="8"
             
@@ -208,7 +208,7 @@
       
     <svg width="75" x="110" y="4">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="75" height="8"></rect>
-      <svg data-testid="lang-progress" width="4.75%">
+      <svg data-testid="lang-progress" width="6.13%">
         <rect
             height="8"
             
@@ -227,11 +227,11 @@
         class="stat"
         x="205"
         y="12.5"
-      >37 mins</text>
+      >56 mins</text>
       
     <svg width="75" x="110" y="4">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="75" height="8"></rect>
-      <svg data-testid="lang-progress" width="2.42%">
+      <svg data-testid="lang-progress" width="4.73%">
         <rect
             height="8"
             
