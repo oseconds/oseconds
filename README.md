@@ -7,7 +7,9 @@
 <p align="center">
   <sub>
     Ableton Certified Training<br>
-    DALL-E 2 · Midjourney · Runway Gen-1/2 Beta Tester<br>
+    DALL·E 2 Early Access Beta · Midjourney Early Beta<br>
+    Runway Gen-1/2 Early Access Beta<br>
+    Ableton User Testing Live Conversation<br>
     Ableton Live 12 Public Beta · Extensions SDK Developer Program
   </sub>
 </p>
