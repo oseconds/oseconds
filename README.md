@@ -16,6 +16,8 @@
 
 <p align="center">
   <img src="./metrics-languages-indepth.svg">
+  <br>
+  <img src="./metrics-genai.svg">
 </p>
 
 
