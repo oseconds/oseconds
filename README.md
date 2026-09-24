@@ -9,7 +9,7 @@
   <sub><samp>DALL·E 2 Early Access Beta — 2022</samp></sub><br>
   <sub><samp>Midjourney Early Beta — 2022</samp></sub><br>
   <sub><samp>Runway Gen-1/2 Early Access Beta — 2023</samp></sub><br>
-  <sub><samp>Ableton Live 12 Public Beta · Extensions SDK Developer Program — 2026</samp></sub>
+  <sub><samp>Ableton Live 12 Public Beta · Extensions SDK — 2026</samp></sub>
 </p>
 
 <br>
