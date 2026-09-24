@@ -1,5 +1,4 @@
 ```mermaid
-
 ---
 config:
   state:
@@ -25,22 +24,17 @@ stateDiagram-v2
         MAX --> RNBO
     }
 
-
     state "02. VISUAL & AI ASSETS" as TOP_VISUAL {
-        
         BLENDER : Blender
         AI_MODELS : GenAI
         COMFY : ComfyUI
         CAVALRY : Cavalry
 
         AI_MODELS --> COMFY
-        BLENDER --> TD
         BLENDER --> COMFY
     }
 
-
     state "03. MEDIA & AUDIO HUB" as CORE_HUB {
-
         state "TOUCHDESIGNER & ABLETON" as ROUTING {
             TD : TouchDesigner
             ABLETON : Ableton Live
@@ -50,50 +44,42 @@ stateDiagram-v2
         MEDIA_NULL : AE / Photoshop
     }
 
+    state "04. OUTPUTS" as OUTPUTS {
+        state "WEB SYSTEMS" as WEB {
+            WEB_OUT : Interactive Web
+        }
 
-state "04. OUTPUTS" as OUTPUTS {
+        state "LIVE PERFORMANCE" as LIVE {
+            LIVE_OUT : Audio Visual
+        }
 
-    state "WEB SYSTEMS" as WEB {
-        WEB_OUT : Interactive Web
+        state "INTERACTIVE" as INTERACTIVE {
+            INSTALL_OUT : Installation
+        }
+
+        state "MEDIA POST-PRODUCTION" as MEDIA {
+            MEDIA_OUT : Final Media
+        }
     }
-
-    state "LIVE PERFORMANCE" as LIVE {
-        LIVE_OUT : Audio Visual
-    }
-
-    state "INTERACTIVE " as INTERACTIVE {
-        INSTALL_OUT : Installation
-    }
-
-    state "MEDIA POST-PRODUCTION" as MEDIA {
-        MEDIA_OUT : Final Media
-    }
-}
-
 
     %% CODE → CORE
-
     PY --> TD
     MAX --> ABLETON
     STRUDEL --> WEB_NULL
     STRUDEL --> ABLETON
 
-
     %% VISUAL → CORE
-
+    BLENDER --> TD
     CAVALRY --> TD
     CAVALRY --> MEDIA_NULL
-    
-
 
     %% OUTPUT ROUTING
-
     P5 --> WEB_NULL
     RNBO --> WEB_NULL
     COMFY --> MEDIA_NULL
 
     WEB_NULL --> WEB
     MEDIA_NULL --> MEDIA
-
     ROUTING --> LIVE
     ROUTING --> INTERACTIVE
+```
