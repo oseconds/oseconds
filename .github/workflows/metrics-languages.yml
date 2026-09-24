@@ -34,10 +34,10 @@ jobs:
           plugin_languages_other: no
           plugin_languages_threshold: "0%"
 
-          # Keep this card focused on actual development languages.
+          # Actual development languages only.
           plugin_languages_categories: programming,markup
-          plugin_languages_ignored: Markdown,AsciiDoc,Mermaid,Batchfile,PowerShell,Jupyter Notebook,MiniMax H3,Seedance,Kling,GPT Image,Z-Image,FLUX,Seedream
-          plugin_languages_aliases: Thrift:MiniMax H3,INI:Seedance,Kotlin:Kling,Gherkin:GPT Image,Crystal:GPT Image,C:Seedream,Zig:Z-Image,Fantom:FLUX,TSX:TypeScript
+          plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling,Gherkin:GPTImage,Crystal:GPTImage,C:Seedream,Zig:ZImage,Fantom:FLUX,TSX:TypeScript
+          plugin_languages_ignored: Markdown,AsciiDoc,Mermaid,Batchfile,PowerShell,MiniMaxH3,Seedance,Kling,GPTImage,ZImage,FLUX,Seedream
 
           plugin_languages_skipped: metrics
           plugin_languages_analysis_timeout: 60
