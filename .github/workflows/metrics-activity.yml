@@ -1,0 +1,27 @@
+name: Metrics Activity
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  activity:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Activity
+        uses: oseconds/metrics@master
+        with:
+          use_prebuilt_image: no
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: oseconds
+
+          template: classic
+          base: header,activity
+          filename: profile/activity.svg
+
+          config_timezone: Asia/Seoul

@@ -1,0 +1,66 @@
+name: Metrics Full Debug
+
+on:
+  schedule:
+    - cron: "0 0 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  full:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Full Debug Snapshot
+        uses: oseconds/metrics@master
+        with:
+          use_prebuilt_image: no
+          debug: yes
+          debug_print: yes
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: oseconds
+
+          template: classic
+          filename: profile/metrics_Full.svg
+
+          base: header,activity
+          base_indepth: yes
+
+          config_timezone: Asia/Seoul
+          retries: 3
+          retries_delay: 300
+
+          # Raw language snapshot: intentionally no aliases or presentation filters.
+          plugin_languages: yes
+          plugin_languages_skipped: metrics
+          plugin_languages_limit: 0
+          plugin_languages_sections: most-used
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 600
+          plugin_languages_analysis_timeout_repositories: 180
+          plugin_languages_categories: programming,data,markup,prose
+          plugin_languages_other: no
+          plugin_languages_details: lines,percentage
+
+          plugin_code: yes
+          plugin_code_lines: 30
+          plugin_code_load: 1000
+          plugin_code_days: 30
+          plugin_code_visibility: all
+
+          plugin_topics: yes
+          plugin_topics_mode: labels
+          plugin_topics_limit: 20
+
+          plugin_habits: yes
+          plugin_habits_days: 30
+          plugin_habits_facts: no
+          plugin_habits_charts: yes
+          plugin_habits_from: 500
+          plugin_habits_languages_limit: 8
+
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
+          plugin_wakatime_sections: time,languages
