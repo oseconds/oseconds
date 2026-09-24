@@ -32,13 +32,13 @@ jobs:
           plugin_languages_details: lines,percentage
           plugin_languages_limit: 8
           plugin_languages_other: no
-          plugin_languages_threshold: "0%"
+          plugin_languages_threshold: "1%"
 
           # Prompt/workflow families represented through .gitattributes.
           # Keep aliases space-free because the forked action input path truncates on spaces.
           plugin_languages_categories: programming,data
           plugin_languages_aliases: Thrift:MiniMaxH3,INI:Seedance,Kotlin:Kling,Gherkin:GPTImage,Crystal:GPTImage,C:Seedream,Zig:ZImage,Fantom:FLUX
-          plugin_languages_ignored: JavaScript,Python,Svelte,TypeScript,TSX,CSS,Batchfile,PowerShell,JSON,TSV,YAML,CSV,TOML,Dotenv,Vue,SVG
+          plugin_languages_ignored: JavaScript,Python,Svelte,TypeScript,TSX,CSS,Batchfile,PowerShell,JSON,TSV,YAML,CSV,TOML,Dotenv,Vue,SVG,XML
           plugin_languages_colors: minimaxh3:#84cc16,seedance:#ef4444,kling:#8b5cf6,gptimage:#a855f7,zimage:#3b82f6,flux:#f59e0b,seedream:#14b8a6
 
           plugin_languages_skipped: metrics
